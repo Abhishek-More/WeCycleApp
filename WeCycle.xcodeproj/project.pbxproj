@@ -9,19 +9,31 @@
 /* Begin PBXBuildFile section */
 		461B4E06221BBE0700A8DB3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E05221BBE0700A8DB3A /* AppDelegate.swift */; };
 		461B4E08221BBE0700A8DB3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E07221BBE0700A8DB3A /* ViewController.swift */; };
-		461B4E0B221BBE0700A8DB3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461B4E09221BBE0700A8DB3A /* Main.storyboard */; };
 		461B4E0D221BBE0800A8DB3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 461B4E0C221BBE0800A8DB3A /* Assets.xcassets */; };
-		461B4E10221BBE0800A8DB3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461B4E0E221BBE0800A8DB3A /* LaunchScreen.storyboard */; };
+		461B4E18221BC05F00A8DB3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461B4E17221BC05F00A8DB3A /* Main.storyboard */; };
+		461B4E1A221BC0B900A8DB3A /* ClarifaiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E19221BC0B900A8DB3A /* ClarifaiHelper.swift */; };
+		461B4E1C221BC0EB00A8DB3A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E1B221BC0EB00A8DB3A /* CameraViewController.swift */; };
+		461B4E1E221BC0F100A8DB3A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E1D221BC0F100A8DB3A /* PreviewViewController.swift */; };
+		461B4E20221BC34A00A8DB3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 461B4E1F221BC34A00A8DB3A /* GoogleService-Info.plist */; };
+		461B4E22221BC3CB00A8DB3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461B4E21221BC3CB00A8DB3A /* LaunchScreen.storyboard */; };
+		F36815A2438F24E133BF4328 /* Pods_WeCycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D92FB4F574C763932FCA17 /* Pods_WeCycle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06D92FB4F574C763932FCA17 /* Pods_WeCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		243DAF92CAF23CA2ED7DB968 /* Pods-WeCycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeCycle.debug.xcconfig"; path = "Target Support Files/Pods-WeCycle/Pods-WeCycle.debug.xcconfig"; sourceTree = "<group>"; };
 		461B4E02221BBE0700A8DB3A /* WeCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		461B4E05221BBE0700A8DB3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		461B4E07221BBE0700A8DB3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		461B4E0A221BBE0700A8DB3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		461B4E0C221BBE0800A8DB3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		461B4E0F221BBE0800A8DB3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		461B4E11221BBE0800A8DB3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		461B4E17221BC05F00A8DB3A /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		461B4E19221BC0B900A8DB3A /* ClarifaiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClarifaiHelper.swift; sourceTree = "<group>"; };
+		461B4E1B221BC0EB00A8DB3A /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		461B4E1D221BC0F100A8DB3A /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		461B4E1F221BC34A00A8DB3A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		461B4E21221BC3CB00A8DB3A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FD126D1984AB0359882E69CE /* Pods-WeCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeCycle.release.xcconfig"; path = "Target Support Files/Pods-WeCycle/Pods-WeCycle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F36815A2438F24E133BF4328 /* Pods_WeCycle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +53,8 @@
 			children = (
 				461B4E04221BBE0700A8DB3A /* WeCycle */,
 				461B4E03221BBE0700A8DB3A /* Products */,
+				792A0819CB5AE2EEF5FD5F88 /* Pods */,
+				73B5D97697DB628A854676BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +71,33 @@
 			children = (
 				461B4E05221BBE0700A8DB3A /* AppDelegate.swift */,
 				461B4E07221BBE0700A8DB3A /* ViewController.swift */,
-				461B4E09221BBE0700A8DB3A /* Main.storyboard */,
+				461B4E19221BC0B900A8DB3A /* ClarifaiHelper.swift */,
+				461B4E1B221BC0EB00A8DB3A /* CameraViewController.swift */,
+				461B4E1D221BC0F100A8DB3A /* PreviewViewController.swift */,
+				461B4E17221BC05F00A8DB3A /* Main.storyboard */,
 				461B4E0C221BBE0800A8DB3A /* Assets.xcassets */,
-				461B4E0E221BBE0800A8DB3A /* LaunchScreen.storyboard */,
+				461B4E1F221BC34A00A8DB3A /* GoogleService-Info.plist */,
+				461B4E21221BC3CB00A8DB3A /* LaunchScreen.storyboard */,
 				461B4E11221BBE0800A8DB3A /* Info.plist */,
 			);
 			path = WeCycle;
+			sourceTree = "<group>";
+		};
+		73B5D97697DB628A854676BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06D92FB4F574C763932FCA17 /* Pods_WeCycle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		792A0819CB5AE2EEF5FD5F88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				243DAF92CAF23CA2ED7DB968 /* Pods-WeCycle.debug.xcconfig */,
+				FD126D1984AB0359882E69CE /* Pods-WeCycle.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 461B4E14221BBE0800A8DB3A /* Build configuration list for PBXNativeTarget "WeCycle" */;
 			buildPhases = (
+				0F54E5ACBE7A933694AEF42B /* [CP] Check Pods Manifest.lock */,
 				461B4DFE221BBE0700A8DB3A /* Sources */,
 				461B4DFF221BBE0700A8DB3A /* Frameworks */,
 				461B4E00221BBE0700A8DB3A /* Resources */,
+				E2FE3BA9784AACB227EBAB1A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,44 +160,86 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				461B4E10221BBE0800A8DB3A /* LaunchScreen.storyboard in Resources */,
+				461B4E20221BC34A00A8DB3A /* GoogleService-Info.plist in Resources */,
 				461B4E0D221BBE0800A8DB3A /* Assets.xcassets in Resources */,
-				461B4E0B221BBE0700A8DB3A /* Main.storyboard in Resources */,
+				461B4E22221BC3CB00A8DB3A /* LaunchScreen.storyboard in Resources */,
+				461B4E18221BC05F00A8DB3A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F54E5ACBE7A933694AEF42B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeCycle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2FE3BA9784AACB227EBAB1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WeCycle/Pods-WeCycle-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WeCycle/Pods-WeCycle-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		461B4DFE221BBE0700A8DB3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461B4E1A221BC0B900A8DB3A /* ClarifaiHelper.swift in Sources */,
+				461B4E1C221BC0EB00A8DB3A /* CameraViewController.swift in Sources */,
 				461B4E08221BBE0700A8DB3A /* ViewController.swift in Sources */,
+				461B4E1E221BC0F100A8DB3A /* PreviewViewController.swift in Sources */,
 				461B4E06221BBE0700A8DB3A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		461B4E09221BBE0700A8DB3A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				461B4E0A221BBE0700A8DB3A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		461B4E0E221BBE0800A8DB3A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				461B4E0F221BBE0800A8DB3A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		461B4E12221BBE0800A8DB3A /* Debug */ = {
@@ -280,10 +360,11 @@
 		};
 		461B4E15221BBE0800A8DB3A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 243DAF92CAF23CA2ED7DB968 /* Pods-WeCycle.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V79782M5XQ;
+				DEVELOPMENT_TEAM = 3VQJV9CA53;
 				INFOPLIST_FILE = WeCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,10 +379,11 @@
 		};
 		461B4E16221BBE0800A8DB3A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD126D1984AB0359882E69CE /* Pods-WeCycle.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V79782M5XQ;
+				DEVELOPMENT_TEAM = 3VQJV9CA53;
 				INFOPLIST_FILE = WeCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
