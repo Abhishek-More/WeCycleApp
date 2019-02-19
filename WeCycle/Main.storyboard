@@ -200,6 +200,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Cancel" translatesAutoresizingMaskIntoConstraints="NO" id="hyT-zI-Ng6">
                                 <rect key="frame" x="0.0" y="0.0" width="70" height="72"/>
                             </imageView>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89J-zb-of4" userLabel="Black View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afy-F6-hsf">
                                 <rect key="frame" x="11" y="12" width="48" height="48"/>
                                 <state key="normal">
@@ -209,10 +213,6 @@
                                     <action selector="cancelButton:" destination="hYK-JK-qw6" eventType="touchUpInside" id="yI5-86-s75"/>
                                 </connections>
                             </button>
-                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89J-zb-of4" userLabel="Black View">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Card" translatesAutoresizingMaskIntoConstraints="NO" id="Tez-tM-Ypq">
                                 <rect key="frame" x="0.0" y="430" width="375" height="290"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -248,8 +248,10 @@
                     </view>
                     <connections>
                         <outlet property="TagName" destination="Lgt-2j-ZFD" id="EWC-KB-upe"/>
+                        <outlet property="blackView" destination="89J-zb-of4" id="7Y0-VW-By6"/>
                         <outlet property="cancel" destination="afy-F6-hsf" id="yFP-rW-oHg"/>
                         <outlet property="cancelX" destination="hyT-zI-Ng6" id="R3L-xl-bzQ"/>
+                        <outlet property="card" destination="Tez-tM-Ypq" id="4yp-MW-oe9"/>
                         <outlet property="photo" destination="BCI-Lv-t4f" id="Ziq-Jk-Iga"/>
                     </connections>
                 </viewController>

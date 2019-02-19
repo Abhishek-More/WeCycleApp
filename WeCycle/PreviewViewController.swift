@@ -25,14 +25,22 @@ class PreviewViewController: UIViewController {
     @IBOutlet var photo: UIImageView!
     @IBOutlet var TagName: UILabel!
     var tagList: [String] = []
-
+    @IBOutlet var card: UIImageView!
+    @IBOutlet var blackView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        TagName.center.y += 300
+        card.center.y += 300
+        blackView.alpha = 0
+        
         uploadImageToFirebaseStorage(data: imageData! as NSData)
-    
         cancelX.alpha = 0
         cancelX.center.y -= 15
+        
+        
+
 
         photo.image = image
         
@@ -88,7 +96,12 @@ class PreviewViewController: UIViewController {
                                     self.tagList.append(tag.0)
                                 }
                                 print(self.tagList)
-                                
+                                self.TagName.text = self.tagList[0]
+                                UIView.animate(withDuration: 1) {
+                                    self.card.center.y -= 300
+                                    self.TagName.center.y -= 300
+                                    self.blackView.alpha = 0.5
+                                }
                                 
                             }  else {
                                 
