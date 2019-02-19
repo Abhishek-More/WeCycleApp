@@ -30,10 +30,6 @@ class PreviewViewController: UIViewController {
         super.viewDidLoad()
         
         uploadImageToFirebaseStorage(data: imageData! as NSData)
-        
-        
-
-    
     
         cancelX.alpha = 0
         cancelX.center.y -= 15
@@ -88,8 +84,6 @@ class PreviewViewController: UIViewController {
                         helper.getTags(url: urlString) { (tags) in
                             if let tags = tags {
                                 
-                                let alert = UIAlertController(title: "ClariGay says that", message: "this is a \(tags[0].0)", preferredStyle: .alert)
-                                self.present(alert, animated: true, completion: nil)
                                 for tag in tags  {
                                     self.tagList.append(tag.0)
                                 }

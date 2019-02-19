@@ -209,10 +209,18 @@
                                     <action selector="cancelButton:" destination="hYK-JK-qw6" eventType="touchUpInside" id="yI5-86-s75"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgt-2j-ZFD">
-                                <rect key="frame" x="166" y="212" width="0.0" height="0.0"/>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="89J-zb-of4" userLabel="Black View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Card" translatesAutoresizingMaskIntoConstraints="NO" id="Tez-tM-Ypq">
+                                <rect key="frame" x="0.0" y="430" width="375" height="290"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thing Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgt-2j-ZFD">
+                                <rect key="frame" x="15" y="445" width="164" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -221,12 +229,16 @@
                         <constraints>
                             <constraint firstItem="hyT-zI-Ng6" firstAttribute="leading" secondItem="N01-Fx-oPf" secondAttribute="leading" id="0mf-PA-c3h"/>
                             <constraint firstItem="N01-Fx-oPf" firstAttribute="trailing" secondItem="afy-F6-hsf" secondAttribute="trailing" constant="316" id="3wn-l5-wX1"/>
+                            <constraint firstItem="89J-zb-of4" firstAttribute="top" secondItem="N01-Fx-oPf" secondAttribute="top" constant="-20" id="5Va-kW-ZKf"/>
                             <constraint firstItem="afy-F6-hsf" firstAttribute="top" secondItem="N01-Fx-oPf" secondAttribute="top" constant="-8" id="8MS-iX-ikr"/>
+                            <constraint firstItem="N01-Fx-oPf" firstAttribute="trailing" secondItem="89J-zb-of4" secondAttribute="trailing" id="Gf9-gS-IIj"/>
                             <constraint firstItem="hyT-zI-Ng6" firstAttribute="top" secondItem="69o-Ii-8nX" secondAttribute="top" id="Jnn-ZX-wy3"/>
+                            <constraint firstItem="N01-Fx-oPf" firstAttribute="bottom" secondItem="89J-zb-of4" secondAttribute="bottom" id="N3w-QB-mz2"/>
                             <constraint firstItem="afy-F6-hsf" firstAttribute="centerY" secondItem="hyT-zI-Ng6" secondAttribute="centerY" id="RNK-OU-7o0"/>
                             <constraint firstItem="N01-Fx-oPf" firstAttribute="bottom" secondItem="afy-F6-hsf" secondAttribute="bottom" constant="607" id="Z56-mA-Gpt"/>
                             <constraint firstItem="afy-F6-hsf" firstAttribute="leading" secondItem="N01-Fx-oPf" secondAttribute="leading" constant="11" id="crq-1F-Geh"/>
                             <constraint firstItem="BCI-Lv-t4f" firstAttribute="leading" secondItem="N01-Fx-oPf" secondAttribute="leading" id="dkY-Ne-kd1"/>
+                            <constraint firstItem="89J-zb-of4" firstAttribute="leading" secondItem="N01-Fx-oPf" secondAttribute="leading" id="jOu-L1-l2x"/>
                             <constraint firstItem="N01-Fx-oPf" firstAttribute="bottom" secondItem="BCI-Lv-t4f" secondAttribute="bottom" id="kAu-he-nX9"/>
                             <constraint firstItem="BCI-Lv-t4f" firstAttribute="top" secondItem="N01-Fx-oPf" secondAttribute="top" constant="-20" id="qYC-Ee-pPG"/>
                             <constraint firstItem="hyT-zI-Ng6" firstAttribute="centerX" secondItem="afy-F6-hsf" secondAttribute="centerX" id="tDj-Wa-Zlo"/>
@@ -308,6 +320,7 @@
     <resources>
         <image name="Bubble" width="270" height="50"/>
         <image name="Cancel" width="67" height="67"/>
+        <image name="Card" width="375" height="238"/>
         <image name="Firewatch Back Big" width="858" height="496"/>
         <image name="Gradient Bottom" width="547" height="1899"/>
         <image name="Line" width="272" height="1"/>
