@@ -82,7 +82,12 @@ class CameraViewController: UIViewController {
         UIView.animate(withDuration: 0.25) {
             self.blackView.alpha = 0
         }
+
+        pulseAnimation()
         
+    }
+    
+    func pulseAnimation() {
         
         let basicAnimation = CABasicAnimation(keyPath: "lineWidth")
         
@@ -95,7 +100,6 @@ class CameraViewController: UIViewController {
         basicAnimation.isRemovedOnCompletion = false
         
         shapeLayer.add(basicAnimation, forKey: "urSoBasic")
-        
     }
 
     
@@ -186,7 +190,11 @@ class CameraViewController: UIViewController {
         
     }
     
-    @IBAction func shutterButton(_ sender: Any) {
+    
+    
+    
+    @IBAction func shutterTouched(_ sender: Any) {
+        
         
         let reverse = CABasicAnimation(keyPath: "lineWidth")
         reverse.toValue = 0
@@ -201,12 +209,27 @@ class CameraViewController: UIViewController {
         
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-        self.shapeLayer.removeAllAnimations()
-        let settings = AVCapturePhotoSettings()
-        self.photoOutput?.capturePhoto(with: settings, delegate: self)
+            self.shapeLayer.removeAllAnimations()
+
         }
         
     }
+    
+    @IBAction func shutterDrag(_ sender: Any) {
+        
+        pulseAnimation()
+        
+    }
+    
+    
+    @IBAction func shutterRelease(_ sender: Any) {
+        
+        let settings = AVCapturePhotoSettings()
+        self.photoOutput?.capturePhoto(with: settings, delegate: self)
+
+
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "pictureTaken" {

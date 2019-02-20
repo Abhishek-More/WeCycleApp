@@ -58,6 +58,16 @@ class PreviewViewController: UIViewController {
         
     }
     
+    func optimizeList() {
+        for i in 0...(tagList.count - 3) {
+            tagList[i] = tagList[i].capitalizingFirstLetter()
+            if tagList[i] == "No person" || tagList[i] == "No person"  {
+                tagList.remove(at: i)
+            }
+        }
+        
+    }
+    
     @IBAction func cancelButton(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)
@@ -96,7 +106,10 @@ class PreviewViewController: UIViewController {
                                     self.tagList.append(tag.0)
                                 }
                                 print(self.tagList)
+                                self.optimizeList()
                                 self.TagName.text = self.tagList[0]
+                                
+                                
                                 UIView.animate(withDuration: 1) {
                                     self.card.center.y -= 300
                                     self.TagName.center.y -= 300
@@ -121,5 +134,15 @@ class PreviewViewController: UIViewController {
 
 
 
+    }
+}
+
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+    
+    mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
     }
 }
