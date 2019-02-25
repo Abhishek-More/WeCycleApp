@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     var emailGest: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(emailUp))
     var passGest: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(passUp))
     var confirmGest: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(confirmUp))
+    
     var left: Bool = true
     var emailTextUp: Bool = false
     var passTextUp: Bool = false
@@ -82,6 +83,10 @@ class ViewController: UIViewController {
         
     }
     
+    func authenticate() {
+        //authenticate Data
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.HideKeyboard()
@@ -118,25 +123,6 @@ class ViewController: UIViewController {
         
         confirmGest = UITapGestureRecognizer(target: self, action: #selector(confirmUp))
         confirmText.addGestureRecognizer(confirmGest)
-        
-        let urlt = "https://samples.clarifai.com/metro-north.jpg"
-        
-        let helper = ClarifaiAPIHelper.defaultHelper
-        
-        helper.getTags(url: urlt) { (tags) in
-            if let tags = tags {
-                
-                print(String(tags[0].0))
-                
-                
-            }  else {
-                
-                print("E")
-                
-            }
-            
-            // Do any additional setup after loading the view, typically from a nib.
-        }
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -237,12 +223,21 @@ class ViewController: UIViewController {
             left = false
         }
         
+    }
+    
+    @IBAction func signInTouched(_ sender: Any) {
+        bubble.alpha = 0.5
         
-        
+    }
+    
+    @IBAction func signInRelease(_ sender: Any) {
+        bubble.alpha = 1
     }
     
     @IBAction func signInClicked(_ sender: Any) {
         
+        bubble.alpha = 1
+
         UIView.animate(withDuration: 1) {
             self.view.center.y -= 800
         }
@@ -251,16 +246,17 @@ class ViewController: UIViewController {
             self.performSegue(withIdentifier: "signInSegue", sender: self)
         }
         
-        //        UIView.animate(withDuration: 0.25) {
-        //            self.titleText.alpha = 0
-        //            self.quoteText.alpha = 0
-        //            self.emailText.alpha = 0
-        //            self.emailLabel.alpha = 0
-        //            self.bubble.alpha = 0
-        //            self.passwordText.alpha = 0
-        //            self.passwordLabel.alpha = 0
-        //
-        //        }
+//                UIView.animate(withDuration: 0.25) {
+//                    self.titleText.alpha = 0
+//                    self.quoteText.alpha = 0
+//                    self.emailText.alpha = 0
+//                    self.emailLabel.alpha = 0
+//                    self.bubble.alpha = 0
+//                    self.passwordText.alpha = 0
+//                    self.passwordLabel.alpha = 0
+//                    
+//        
+//               }
         
     }
     

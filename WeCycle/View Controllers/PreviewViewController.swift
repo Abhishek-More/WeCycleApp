@@ -12,10 +12,10 @@ import Alamofire
 import Firebase
 import SwiftyJSON
 
-class PreviewViewController: UIViewController {
-    
 
+class PreviewViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIViewControllerTransitioningDelegate {
 
+    @IBOutlet var collectionView: UICollectionView!
     private var tags: [String]?
     @IBOutlet var cancel: UIButton!
     var image:UIImage?
@@ -23,28 +23,24 @@ class PreviewViewController: UIViewController {
     var urlLink: URL?
     @IBOutlet var cancelX: UIImageView!
     @IBOutlet var photo: UIImageView!
-    @IBOutlet var TagName: UILabel!
     var tagList: [String] = []
-    @IBOutlet var card: UIImageView!
     @IBOutlet var blackView: UIView!
+    let transition = CircularTransition()
+    
+    @IBOutlet var menuButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TagName.center.y += 300
-        card.center.y += 300
+        collectionView.center.x += 350
         blackView.alpha = 0
         
         uploadImageToFirebaseStorage(data: imageData! as NSData)
         cancelX.alpha = 0
         cancelX.center.y -= 15
-        
-        
-
 
         photo.image = image
-        
-
         
         // Do any additional setup after loading the view.
     }
@@ -58,10 +54,73 @@ class PreviewViewController: UIViewController {
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+       
+        return tagList.count
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MainCollectionViewCell
+        
+        cell.tagName.text = tagList[indexPath.item]
+        
+        return cell
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let secondVC = segue.destination as! StatsViewController
+        secondVC.transitioningDelegate = self
+        secondVC.modalPresentationStyle = .custom
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = menuButton.center
+        transition.circleColor = menuButton.backgroundColor!
+        
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = menuButton.center
+        transition.circleColor = menuButton.backgroundColor!
+        
+        return transition
+    }
+
+/*
+    func animateView() {
+        
+        collectionView.reloadData()
+        let cells = collectionView.visibleCells
+        let width = collectionView.bounds.size.width
+        
+        for cell in cells {
+            cell.transform = CGAffineTransform(translationX: 0, y: width)
+        }
+        
+        var delayCounter = 0
+        for cell in cells {
+            UIView.animate(withDuration: 1.75, delay: Double(delayCounter) * 0.05, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                cell.transform = CGAffineTransform.identity
+                
+            }, completion:nil )
+                delayCounter += 1
+            }
+        }
+*/
+    
+    
+    
+    
     func optimizeList() {
         for i in 0...(tagList.count - 3) {
             tagList[i] = tagList[i].capitalizingFirstLetter()
-            if tagList[i] == "No person" || tagList[i] == "No person"  {
+            if tagList[i] == "No person" || tagList[i] == "People"  {
                 tagList.remove(at: i)
             }
         }
@@ -107,32 +166,27 @@ class PreviewViewController: UIViewController {
                                 }
                                 print(self.tagList)
                                 self.optimizeList()
-                                self.TagName.text = self.tagList[0]
+                                self.collectionView.reloadData()
                                 
                                 
                                 UIView.animate(withDuration: 1) {
-                                    self.card.center.y -= 300
-                                    self.TagName.center.y -= 300
+                                    self.collectionView.center.x -= 350
                                     self.blackView.alpha = 0.5
                                 }
                                 
                             }  else {
                                 
-                                self.TagName.text = "invalid"
-                                
                             }
                             
                         }
+                        
                     }
+                    
                 }
 
             }
             
-            
         }
-        
-
-
 
     }
 }

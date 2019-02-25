@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import Alamofire
 
-class CameraViewController: UIViewController {
+class CameraViewController: UIViewController, UIScrollViewDelegate {
 
     var shapeLayer = CAShapeLayer()
     var loadLayer = CAShapeLayer()
@@ -27,7 +27,7 @@ class CameraViewController: UIViewController {
     @IBOutlet var cameraFrame: UIView!
     @IBOutlet var blackView: UIView!
     @IBOutlet var shutterFrame: UIButton!
-    
+    @IBOutlet var blur: UIVisualEffectView!
     
     override func viewDidLoad() {
         
@@ -190,9 +190,6 @@ class CameraViewController: UIViewController {
         
     }
     
-    
-    
-    
     @IBAction func shutterTouched(_ sender: Any) {
         
         
@@ -221,15 +218,12 @@ class CameraViewController: UIViewController {
         
     }
     
-    
     @IBAction func shutterRelease(_ sender: Any) {
         
         let settings = AVCapturePhotoSettings()
         self.photoOutput?.capturePhoto(with: settings, delegate: self)
 
-
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "pictureTaken" {
@@ -238,6 +232,14 @@ class CameraViewController: UIViewController {
             previewViewController.imageData = (self.imageByte as! Data)
             blackView.alpha = 1
         }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        self.blur.alpha = 1 
+        
+        
+        
     }
 
     /*
@@ -252,6 +254,7 @@ class CameraViewController: UIViewController {
     
 
 }
+
 
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
     
