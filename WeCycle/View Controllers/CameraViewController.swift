@@ -10,7 +10,17 @@ import UIKit
 import AVFoundation
 import Alamofire
 
-class CameraViewController: UIViewController, UIScrollViewDelegate {
+class CameraViewController: UIViewController{
+
+    
+    
+    func blurring(num: Double) {
+        
+        self.blur.alpha = CGFloat(abs(375.0 - num) / 375.0)
+        print(String(Dou ble(self.blur.alpha)))
+        
+    }
+    
 
     var shapeLayer = CAShapeLayer()
     var loadLayer = CAShapeLayer()
@@ -234,13 +244,6 @@ class CameraViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        self.blur.alpha = 1 
-        
-        
-        
-    }
 
     /*
     // MARK: - Navigation
@@ -254,6 +257,7 @@ class CameraViewController: UIViewController, UIScrollViewDelegate {
     
 
 }
+
 
 
 extension CameraViewController: AVCapturePhotoCaptureDelegate {

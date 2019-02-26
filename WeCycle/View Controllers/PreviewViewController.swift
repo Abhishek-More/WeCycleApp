@@ -91,31 +91,6 @@ class PreviewViewController: UIViewController, UICollectionViewDataSource, UICol
         
         return transition
     }
-
-/*
-    func animateView() {
-        
-        collectionView.reloadData()
-        let cells = collectionView.visibleCells
-        let width = collectionView.bounds.size.width
-        
-        for cell in cells {
-            cell.transform = CGAffineTransform(translationX: 0, y: width)
-        }
-        
-        var delayCounter = 0
-        for cell in cells {
-            UIView.animate(withDuration: 1.75, delay: Double(delayCounter) * 0.05, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                cell.transform = CGAffineTransform.identity
-                
-            }, completion:nil )
-                delayCounter += 1
-            }
-        }
-*/
-    
-    
-    
     
     func optimizeList() {
         for i in 0...(tagList.count - 3) {

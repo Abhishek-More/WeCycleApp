@@ -12,5 +12,4 @@ class MainCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var tagName: UILabel!
     
-    
 }

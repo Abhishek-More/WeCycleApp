@@ -12,8 +12,9 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
 
     @IBOutlet var cameraButton: UIButton!
     
-
     @IBOutlet var scrollView: UIScrollView!
+    
+    var middle: CameraViewController!
     var left = false
     var right = false
     
@@ -27,7 +28,7 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
         self.scrollView.addSubview(left.view)
         self.didMove(toParent: self)
         
-        let middle = self.storyboard?.instantiateViewController(withIdentifier: "middle") as! CameraViewController
+        middle = self.storyboard?.instantiateViewController(withIdentifier: "middle") as! CameraViewController
         self.addChild(middle)
         self.scrollView.addSubview(middle.view)
         self.didMove(toParent: self)
@@ -49,14 +50,13 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
         scrollView.contentOffset.x = view.frame.width
         
         print(scrollView.contentOffset.x)
-        
 
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        self.cameraButton.setTitle(String(Int(scrollView.contentOffset.x)), for: .normal)
+        middle.blurring(num: Double(scrollView.contentOffset.x))
     }
-
+    
     
     @IBAction func cameraButtonPressed(_ sender: Any) {
         
@@ -65,7 +65,6 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
         }
         
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -83,3 +82,4 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
     */
 
 }
+
