@@ -7,34 +7,34 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>281953574738-8ihc3u3aj0ns03llaljklrjrvcbsifot.apps.googleusercontent.com</string>
+	<string>295581143363-fbre3543s7g0sgfu4hbl1mcmssji3s19.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.281953574738-8ihc3u3aj0ns03llaljklrjrvcbsifot</string>
+	<string>com.googleusercontent.apps.295581143363-fbre3543s7g0sgfu4hbl1mcmssji3s19</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDHgEhiwiVZScn0rdVK2X08Mgh02PVkF0g</string>
+	<string>AIzaSyDWoxQnjaLE8YaL-o2p-6wCr8ESyFhh59A</string>
 	<key>GCM_SENDER_ID</key>
-	<string>281953574738</string>
+	<string>295581143363</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>playground.WeCycle</string>
+	<string>com.wecycle</string>
 	<key>PROJECT_ID</key>
-	<string>wecycle-4206f</string>
+	<string>wecycle-316c1</string>
 	<key>STORAGE_BUCKET</key>
-	<string>wecycle-4206f.appspot.com</string>
+	<string>wecycle-316c1.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:281953574738:ios:c49d049634d058c1</string>
+	<string>1:295581143363:ios:09daf038e644e47f</string>
 	<key>DATABASE_URL</key>
-	<string>https://wecycle-4206f.firebaseio.com</string>
+	<string>https://wecycle-316c1.firebaseio.com</string>
 </dict>
 </plist>

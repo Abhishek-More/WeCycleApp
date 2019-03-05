@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import WebKit
 import AVFoundation
 
-class LeftScreenViewController: UIViewController, UIViewControllerTransitioningDelegate {
+class LeftScreenViewController: UIViewController, UIViewControllerTransitioningDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+    
 
+    
+    @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var menuButton: UIButton!
     let transition = CircularTransition()
     
@@ -19,16 +23,18 @@ class LeftScreenViewController: UIViewController, UIViewControllerTransitioningD
         super.viewDidLoad()
 
         menuButton.layer.cornerRadius = menuButton.frame.size.width / 2
+        collectionView.reloadData()
+        
         
         // Do any additional setup after loading the view.
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let secondVC = segue.destination as! StatsViewController
-        secondVC.transitioningDelegate = self
-        secondVC.modalPresentationStyle = .custom
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let secondVC = segue.destination as! StatsViewController
+//        secondVC.transitioningDelegate = self
+//        secondVC.modalPresentationStyle = .custom
+//    }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         transition.transitionMode = .present
@@ -48,16 +54,34 @@ class LeftScreenViewController: UIViewController, UIViewControllerTransitioningD
         
     }
     
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
     }
-    */
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NewsCell", for: indexPath) as! NewsCollectionViewCell
+        cell.card.image = UIImage(named: "News Card")
+        return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "newsSegue", sender: self)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        print("yes")
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        print("no")
+    }
+    
 
 }
 

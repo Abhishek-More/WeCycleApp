@@ -1,36 +1,30 @@
 //
-//  AccountViewController.swift
+//  NewsViewController.swift
 //  WeCycle
 //
-//  Created by Abhishek More on 2/21/19.
+//  Created by Abhishek More on 3/3/19.
 //  Copyright © 2019 Abhishek More. All rights reserved.
 //
 
 import UIKit
+import WebKit
 
-class StatsViewController: UIViewController {
+class NewsViewController: UIViewController {
 
-    
-    @IBOutlet var dismissButton: UIButton!
-    @IBOutlet var titleText: UILabel!
+    @IBOutlet var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        dismissButton.layer.cornerRadius = dismissButton.frame.size.width / 2
-  
+        let url = URL(string: "https://www.latimes.com/business/la-fi-recycling-centers-california-crv-20190228-story.html")
+        let request = URLRequest(url: url!)
+        webView.load(request)
+        
+        
+        
     }
-    
     
 
-    @IBAction func dismissView(_ sender: Any) {
-        
-        self.dismiss(animated: true, completion: nil)
-        
-    }
-    
-    
-    
     /*
     // MARK: - Navigation
 

@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     @IBOutlet var confirmText: UITextField!
     @IBOutlet var confirmLabel: UILabel!
     @IBOutlet var bubble: UIImageView!
+    @IBOutlet var SignUpReal: UIButton!
+    @IBOutlet var signInReal: UIButton!
     
     var emailGest: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(emailUp))
     var passGest: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(passUp))
@@ -39,8 +41,10 @@ class ViewController: UIViewController {
     var confirmTextUp: Bool = false
     
     func HideKeyboard() {
+        
         let Tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(Tap)
+        
     }
     
     @objc func dismissKeyboard () {
@@ -192,6 +196,8 @@ class ViewController: UIViewController {
                 self.confirmLabel.center.x += 400
                 self.confirmText.center.x += 400
                 self.confirmLine.center.x += 400
+                self.SignUpReal.center.x += 400
+                self.signInReal.center.x += 400
                 self.forgotText.alpha = 1
             }
             
@@ -218,6 +224,8 @@ class ViewController: UIViewController {
                 self.confirmLabel.center.x -= 400
                 self.confirmText.center.x -= 400
                 self.confirmLine.center.x -= 400
+                self.SignUpReal.center.x -= 400
+                self.signInReal.center.x -= 400
             }
             
             left = false

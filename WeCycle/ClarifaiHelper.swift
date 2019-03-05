@@ -62,25 +62,5 @@ class ClarifaiAPIHelper {
             }
         }
         
-//        Alamofire.request(urlToExecute, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { (response) in
-//            if let content = response.result.value as? [String: Any] {
-//                if let outputs = content["outputs"] as? [[String: Any]] {
-//                    if let data = outputs[0]["data"] as? [String: Any] {
-//                        if let concepts = data["concepts"] as? [[String: Any]] {
-//                            let result = concepts.map { ($0["name"] as! String, $0["value"] as! Double) }
-//                            completion(result)
-//                        } else {
-//                            completion(nil)
-//                        }
-//                    } else {
-//                        completion(nil)
-//                    }
-//                } else {
-//                    completion(nil)
-//                }
-//            } else {
-//                completion(nil)
-//            }
-//        }
-}
+    }
 }

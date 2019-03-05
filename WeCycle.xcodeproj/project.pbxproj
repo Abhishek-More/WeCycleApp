@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		460CA91F222B4AA00015A2BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 460CA91E222B4AA00015A2BE /* GoogleService-Info.plist */; };
+		460CA925222B9D990015A2BE /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460CA924222B9D990015A2BE /* NewsViewController.swift */; };
+		460CA927222BA1890015A2BE /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460CA926222BA1890015A2BE /* NewsCollectionViewCell.swift */; };
 		461B4E06221BBE0700A8DB3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E05221BBE0700A8DB3A /* AppDelegate.swift */; };
 		461B4E08221BBE0700A8DB3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E07221BBE0700A8DB3A /* ViewController.swift */; };
 		461B4E0D221BBE0800A8DB3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 461B4E0C221BBE0800A8DB3A /* Assets.xcassets */; };
@@ -14,7 +17,6 @@
 		461B4E1A221BC0B900A8DB3A /* ClarifaiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E19221BC0B900A8DB3A /* ClarifaiHelper.swift */; };
 		461B4E1C221BC0EB00A8DB3A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E1B221BC0EB00A8DB3A /* CameraViewController.swift */; };
 		461B4E1E221BC0F100A8DB3A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E1D221BC0F100A8DB3A /* PreviewViewController.swift */; };
-		461B4E20221BC34A00A8DB3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 461B4E1F221BC34A00A8DB3A /* GoogleService-Info.plist */; };
 		461B4E22221BC3CB00A8DB3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461B4E21221BC3CB00A8DB3A /* LaunchScreen.storyboard */; };
 		469DB9F9221E0B760051279D /* RightScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DB9F8221E0B760051279D /* RightScreenViewController.swift */; };
 		469DB9FB221E0B850051279D /* LeftScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DB9FA221E0B850051279D /* LeftScreenViewController.swift */; };
@@ -28,6 +30,9 @@
 /* Begin PBXFileReference section */
 		06D92FB4F574C763932FCA17 /* Pods_WeCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		243DAF92CAF23CA2ED7DB968 /* Pods-WeCycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeCycle.debug.xcconfig"; path = "Target Support Files/Pods-WeCycle/Pods-WeCycle.debug.xcconfig"; sourceTree = "<group>"; };
+		460CA91E222B4AA00015A2BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		460CA924222B9D990015A2BE /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		460CA926222BA1890015A2BE /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		461B4E02221BBE0700A8DB3A /* WeCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		461B4E05221BBE0700A8DB3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		461B4E07221BBE0700A8DB3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,7 +42,6 @@
 		461B4E19221BC0B900A8DB3A /* ClarifaiHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClarifaiHelper.swift; sourceTree = "<group>"; };
 		461B4E1B221BC0EB00A8DB3A /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		461B4E1D221BC0F100A8DB3A /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
-		461B4E1F221BC34A00A8DB3A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		461B4E21221BC3CB00A8DB3A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		469DB9F8221E0B760051279D /* RightScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightScreenViewController.swift; sourceTree = "<group>"; };
 		469DB9FA221E0B850051279D /* LeftScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftScreenViewController.swift; sourceTree = "<group>"; };
@@ -85,10 +89,11 @@
 				461B4E19221BC0B900A8DB3A /* ClarifaiHelper.swift */,
 				469DBA00221E46E60051279D /* View Controllers */,
 				469DB9FE221E46C40051279D /* MainCollectionViewCell.swift */,
+				460CA926222BA1890015A2BE /* NewsCollectionViewCell.swift */,
 				461B4E17221BC05F00A8DB3A /* Main.storyboard */,
 				46FEB9B3221F727C0031A93F /* CircularTransition.swift */,
 				461B4E0C221BBE0800A8DB3A /* Assets.xcassets */,
-				461B4E1F221BC34A00A8DB3A /* GoogleService-Info.plist */,
+				460CA91E222B4AA00015A2BE /* GoogleService-Info.plist */,
 				461B4E21221BC3CB00A8DB3A /* LaunchScreen.storyboard */,
 				461B4E11221BBE0800A8DB3A /* Info.plist */,
 			);
@@ -99,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				469DB9FC221E0B940051279D /* ScrollViewController.swift */,
+				460CA924222B9D990015A2BE /* NewsViewController.swift */,
 				46FEB9B5221FB12E0031A93F /* StatsViewController.swift */,
 				461B4E07221BBE0700A8DB3A /* ViewController.swift */,
 				461B4E1B221BC0EB00A8DB3A /* CameraViewController.swift */,
@@ -187,7 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				461B4E20221BC34A00A8DB3A /* GoogleService-Info.plist in Resources */,
+				460CA91F222B4AA00015A2BE /* GoogleService-Info.plist in Resources */,
 				461B4E0D221BBE0800A8DB3A /* Assets.xcassets in Resources */,
 				461B4E22221BC3CB00A8DB3A /* LaunchScreen.storyboard in Resources */,
 				461B4E18221BC05F00A8DB3A /* Main.storyboard in Resources */,
@@ -261,6 +267,8 @@
 				461B4E1A221BC0B900A8DB3A /* ClarifaiHelper.swift in Sources */,
 				469DB9FF221E46C40051279D /* MainCollectionViewCell.swift in Sources */,
 				461B4E1C221BC0EB00A8DB3A /* CameraViewController.swift in Sources */,
+				460CA927222BA1890015A2BE /* NewsCollectionViewCell.swift in Sources */,
+				460CA925222B9D990015A2BE /* NewsViewController.swift in Sources */,
 				461B4E08221BBE0700A8DB3A /* ViewController.swift in Sources */,
 				469DB9FD221E0B940051279D /* ScrollViewController.swift in Sources */,
 				46FEB9B4221F727C0031A93F /* CircularTransition.swift in Sources */,
@@ -430,7 +438,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = playground.WeCycle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wecycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WeCycle/View Controllers/WeCycle-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -453,7 +461,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = playground.WeCycle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wecycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WeCycle/View Controllers/WeCycle-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;

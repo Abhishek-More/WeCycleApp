@@ -11,24 +11,27 @@ import UIKit
 class ScrollViewController: UIViewController, UIViewControllerTransitioningDelegate, UIScrollViewDelegate {
 
     @IBOutlet var cameraButton: UIButton!
-    
     @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var shutter: UIImageView!
     
+    
+
     var middle: CameraViewController!
-    var left = false
-    var right = false
-    
+    var centerShutter: CGFloat = 0.0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scrollView.delegate = self
+        centerShutter = shutter.center.y
+        
         
         let left = self.storyboard?.instantiateViewController(withIdentifier: "left") as! LeftScreenViewController
         self.addChild(left)
         self.scrollView.addSubview(left.view)
         self.didMove(toParent: self)
         
-        middle = self.storyboard?.instantiateViewController(withIdentifier: "middle") as! CameraViewController
+        middle = (self.storyboard?.instantiateViewController(withIdentifier: "middle") as! CameraViewController)
         self.addChild(middle)
         self.scrollView.addSubview(middle.view)
         self.didMove(toParent: self)
@@ -48,21 +51,36 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
         
         self.scrollView.contentSize = CGSize(width: (self.view.frame.width) * 3 , height: (self.view.frame.height))
         scrollView.contentOffset.x = view.frame.width
-        
-        print(scrollView.contentOffset.x)
 
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        //let offset = scrollView.contentOffset.x
+        
         middle.blurring(num: Double(scrollView.contentOffset.x))
+        
+        self.shutter.transform = CGAffineTransform(scaleX: 1 - (0.3) * (abs((375 - scrollView.contentOffset.x) / 375)), y: 1 - (0.3) * (abs((375 - scrollView.contentOffset.x) / 375)))
+        
+        self.shutter.center.y = centerShutter + 20 * (abs((375 - scrollView.contentOffset.x) / 375))
+        
+        if(scrollView.contentOffset.x == 375) {
+            
+            self.cameraButton.center.y += 200
+            
+        } else {
+            
+            self.cameraButton.center = self.shutter.center
+            
+        }
+        
     }
     
-    
-    @IBAction func cameraButtonPressed(_ sender: Any) {
-        
-        UIScrollView.animate(withDuration: 0.5) {
-            self.scrollView.contentOffset.x = self.view.frame.width
-        }
+    @IBAction func cameraClick(_ sender: Any) {
+            
+            UIScrollView.animate(withDuration: 0.25) {
+                self.scrollView.contentOffset.x = self.view.frame.width
+            }
         
     }
     
@@ -70,16 +88,5 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
-

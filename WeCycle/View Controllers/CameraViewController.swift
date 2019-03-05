@@ -12,16 +12,6 @@ import Alamofire
 
 class CameraViewController: UIViewController{
 
-    
-    
-    func blurring(num: Double) {
-        
-        self.blur.alpha = CGFloat(abs(375.0 - num) / 375.0)
-        print(String(Dou ble(self.blur.alpha)))
-        
-    }
-    
-
     var shapeLayer = CAShapeLayer()
     var loadLayer = CAShapeLayer()
     var pulsatingLayer: CAShapeLayer!
@@ -37,7 +27,8 @@ class CameraViewController: UIViewController{
     @IBOutlet var cameraFrame: UIView!
     @IBOutlet var blackView: UIView!
     @IBOutlet var shutterFrame: UIButton!
-    @IBOutlet var blur: UIVisualEffectView!
+    @IBOutlet var blueBlur: UIImageView!
+    @IBOutlet var blue: UIVisualEffectView!
     
     override func viewDidLoad() {
         
@@ -52,26 +43,25 @@ class CameraViewController: UIViewController{
         startRunningCaptureSession()
         
         blackView.alpha = 1 
-        
         toggleCameraGestureRecognizer.numberOfTapsRequired = 2
         toggleCameraGestureRecognizer.addTarget(self, action: #selector(toggleCamera))
         view.addGestureRecognizer(toggleCameraGestureRecognizer)
         
         let center = self.shutterFrame.center
         
-        // create my track layer
-        let trackLayer = CAShapeLayer()
+    
+//        let trackLayer = CAShapeLayer()
+//
+//        let circularPath = UIBezierPath(arcCenter: center, radius: 37.5, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+//        trackLayer.path = circularPath.cgPath
+//
+//        trackLayer.strokeColor = UIColor.white.cgColor
+//        trackLayer.lineWidth = 5
+//        trackLayer.fillColor = UIColor.clear.cgColor
+//        trackLayer.lineCap = CAShapeLayerLineCap.round
+//        view.layer.addSublayer(trackLayer)
         
-        let circularPath = UIBezierPath(arcCenter: center, radius: 37.5, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
-        trackLayer.path = circularPath.cgPath
-        
-        trackLayer.strokeColor = UIColor.white.cgColor
-        trackLayer.lineWidth = 5
-        trackLayer.fillColor = UIColor.clear.cgColor
-        trackLayer.lineCap = CAShapeLayerLineCap.round
-        view.layer.addSublayer(trackLayer)
-        
-        let circularPath2 = UIBezierPath(arcCenter: center, radius: 41.25, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+        let circularPath2 = UIBezierPath(arcCenter: center, radius: 38.05, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
         shapeLayer.path = circularPath2.cgPath
 
         shapeLayer.strokeColor = UIColor.white.cgColor
@@ -81,12 +71,8 @@ class CameraViewController: UIViewController{
         shapeLayer.opacity = 0.35
 
         view.layer.addSublayer(shapeLayer)
-
-        
-        
-
-        // Do any additional setup after loading the view.
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 0.25) {
@@ -202,29 +188,18 @@ class CameraViewController: UIViewController{
     
     @IBAction func shutterTouched(_ sender: Any) {
         
-        
-        let reverse = CABasicAnimation(keyPath: "lineWidth")
-        reverse.toValue = 0
-        
-        reverse.duration = 0.25
-        reverse.autoreverses = true
-        reverse.repeatCount = Float.infinity
-        reverse.fillMode = CAMediaTimingFillMode.forwards
-        reverse.isRemovedOnCompletion = true
-        shapeLayer.add(reverse, forKey: "reverse")
-        
-        
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
-            self.shapeLayer.removeAllAnimations()
-
-        }
+        pulseClose()
         
     }
     
     @IBAction func shutterDrag(_ sender: Any) {
         
         pulseAnimation()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
+            self.shapeLayer.removeAllAnimations()
+            
+        }
         
     }
     
@@ -234,6 +209,29 @@ class CameraViewController: UIViewController{
         self.photoOutput?.capturePhoto(with: settings, delegate: self)
 
     }
+    
+    func blurring(num: Double) {
+        
+        self.blueBlur.alpha = CGFloat(abs(375.0 - num) / 250)
+        self.shapeLayer.opacity = Float(CGFloat(0.3 - abs(375.0 - num) / 25))
+        //self.blueBlur.alpha = CGFloat(abs(375.0 - num) / 750)
+        
+    }
+    
+    func pulseClose() {
+        
+        let reverse = CABasicAnimation(keyPath: "lineWidth")
+        reverse.toValue = 0
+        
+        reverse.duration = 0.15
+        reverse.autoreverses = true
+        reverse.repeatCount = Float.infinity
+        reverse.fillMode = CAMediaTimingFillMode.forwards
+        reverse.isRemovedOnCompletion = true
+        shapeLayer.add(reverse, forKey: "reverse")
+    
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "pictureTaken" {
@@ -254,11 +252,8 @@ class CameraViewController: UIViewController{
         // Pass the selected object to the new view controller.
     }
     */
-    
 
 }
-
-
 
 extension CameraViewController: AVCapturePhotoCaptureDelegate {
     
