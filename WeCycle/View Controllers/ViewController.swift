@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     @IBOutlet var confirmText: UITextField!
     @IBOutlet var confirmLabel: UILabel!
     @IBOutlet var bubble: UIImageView!
+    
     @IBOutlet var SignUpReal: UIButton!
     @IBOutlet var signInReal: UIButton!
     
@@ -226,9 +227,11 @@ class ViewController: UIViewController {
                 self.confirmLine.center.x -= 400
                 self.SignUpReal.center.x -= 400
                 self.signInReal.center.x -= 400
+                
             }
             
             left = false
+            
         }
         
     }

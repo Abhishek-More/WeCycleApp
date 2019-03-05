@@ -153,13 +153,22 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prf-ag-sDz">
-                                <rect key="frame" x="452" y="525" width="270" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prf-ag-sDz" userLabel="Sign in Real">
+                                <rect key="frame" x="52" y="525" width="270" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="signInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wuh-ru-llL"/>
                                     <action selector="signInRelease:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="wks-jg-ASR"/>
                                     <action selector="signInTouched:" destination="BYZ-38-t0r" eventType="touchDown" id="8wX-hy-UR0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWZ-RQ-nz7" userLabel="Sign Up Real">
+                                <rect key="frame" x="452" y="525" width="270" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="signInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FwD-jF-0TN"/>
+                                    <action selector="signInRelease:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="Enw-FN-n1t"/>
+                                    <action selector="signInTouched:" destination="BYZ-38-t0r" eventType="touchDown" id="MeS-Kl-hhe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -188,7 +197,7 @@
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="bfS-2c-uB9"/>
                     <connections>
-                        <outlet property="SignUpReal" destination="prf-ag-sDz" id="UVQ-YY-rWe"/>
+                        <outlet property="SignUpReal" destination="qWZ-RQ-nz7" id="kfd-x0-Nc7"/>
                         <outlet property="background" destination="915-60-Nho" id="SQD-Fp-9sf"/>
                         <outlet property="bottomRect" destination="dLv-Il-0ef" id="gsp-4F-xdm"/>
                         <outlet property="bubble" destination="3Dw-ri-Yrd" id="7zW-t2-vaX"/>
@@ -202,6 +211,7 @@
                         <outlet property="passwordText" destination="2Je-jj-ovD" id="m8g-fn-EJU"/>
                         <outlet property="quoteText" destination="3vA-sx-lSS" id="nwt-TQ-L5u"/>
                         <outlet property="signIn" destination="qKk-Ds-6lG" id="17l-fs-Hw7"/>
+                        <outlet property="signInReal" destination="prf-ag-sDz" id="hCp-8h-40n"/>
                         <outlet property="signInText" destination="Lcw-QF-dmT" id="yGe-Hk-N6a"/>
                         <outlet property="signUp" destination="Srl-Ez-l1d" id="Vqo-iL-42S"/>
                         <outlet property="signUpText" destination="OdR-AK-eNv" id="3ua-XD-yDR"/>
