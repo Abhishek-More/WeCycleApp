@@ -9,8 +9,9 @@ target 'WeCycle' do
   pod 'SwiftyJSON', '~> 4.0.0'
   pod 'SDWebImage', '~> 4.0'
   pod 'Firebase/Core', '5.15.0'
-  pod 'Firebase/Storage'
- 
+  pod 'Firebase/Auth', '5.15.0'
+  pod 'Firebase/Database', '5.15.0'
+  pod 'Firebase/Storage', '5.15.0'
 
 
 

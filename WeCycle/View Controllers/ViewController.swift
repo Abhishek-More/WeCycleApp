@@ -273,14 +273,34 @@ class ViewController: UIViewController {
     }
     @IBAction func signUpClicked(_ sender: Any) {
         
-        if(emailText.text != "") {
+        if(emailText.text != "" || passwordText.text != "") {
             
+            if(passwordText.text == confirmText.text) {
             let username = emailText.text
             let password = passwordText.text
+
+            let rawFilename = "/Users/abhishek/Desktop/TestApps/TestingSinge/TestingSinge/google-services.json"
+            let cStringFile = strdup(rawFilename)
+            
+            let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
+            let databaseManagerObject = UnsafeMutableRawPointer(mutating: initializeDataManager(firebaseObject))
+            
+            let accountObject = initializeAccount_basic(strdup("username"), strdup(password))
+            
+            pushData(databaseManagerObject, accountObject, strdup("Accounts"))
+                
+            } else {
+                
+                print("Password does not match")
+                
+            }
+            
+            //let array : [String] = retrieveData(databaseManagerObject, "Accounts", "email@gmail.com")
+
             
         } else {
             
-            print("E")
+            print("Nothing there")
             
         }
         
