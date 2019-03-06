@@ -200,6 +200,7 @@ class ViewController: UIViewController {
                 self.SignUpReal.center.x += 400
                 self.signInReal.center.x += 400
                 self.forgotText.alpha = 1
+                
             }
             
             left = true
@@ -268,6 +269,20 @@ class ViewController: UIViewController {
 //                    
 //        
 //               }
+        
+    }
+    @IBAction func signUpClicked(_ sender: Any) {
+        
+        if(emailText.text != "") {
+            
+            let username = emailText.text
+            let password = passwordText.text
+            
+        } else {
+            
+            print("E")
+            
+        }
         
     }
     
