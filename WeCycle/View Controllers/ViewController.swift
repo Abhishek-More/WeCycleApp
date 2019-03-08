@@ -284,8 +284,7 @@ class ViewController: UIViewController {
 //                    self.bubble.alpha = 0
 //                    self.passwordText.alpha = 0
 //                    self.passwordLabel.alpha = 0
-//                    
-//        
+//                           
 //               }
         
     }
