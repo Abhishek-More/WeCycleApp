@@ -46,4 +46,11 @@ Account::Account(std::string emailAddress, std::string password, long phoneNumbe
 Account::~Account() {
 }
 
+std::string Account::getEmail() {
+	return emailAddress;
+}
+std::string Account::getPassword() {
+	return password;
+}
+
 

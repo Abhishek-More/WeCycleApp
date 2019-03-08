@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     var emailTextUp: Bool = false
     var passTextUp: Bool = false
     var confirmTextUp: Bool = false
+   
     
     func HideKeyboard() {
         
@@ -68,10 +69,12 @@ class ViewController: UIViewController {
                 self.passwordLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
                 self.passwordLabel.center.y += 25
                 self.passwordLabel.center.x += 5
-                
+
             }
+
             passTextUp = false
             passGest.isEnabled = true
+            
         }
         
         if((confirmText.text == "" || confirmText.text == nil) && confirmTextUp) {
@@ -95,7 +98,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.HideKeyboard()
-        
+    
         bottomRect.center.y -= 400
         background.center.y -= 400
         quoteText.alpha = 0
@@ -246,13 +249,28 @@ class ViewController: UIViewController {
         bubble.alpha = 1
     }
     
+    @IBAction func signUpTouched(_ sender: Any) {
+        bubble.alpha = 0.5
+    }
+    
+    @IBAction func singUpRelease(_ sender: Any) {
+        bubble.alpha = 1
+    }
+    
     @IBAction func signInClicked(_ sender: Any) {
         
         bubble.alpha = 1
+        
+        
+        
+        
 
         UIView.animate(withDuration: 1) {
             self.view.center.y -= 800
         }
+        
+        
+        
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
             self.performSegue(withIdentifier: "signInSegue", sender: self)
@@ -279,15 +297,20 @@ class ViewController: UIViewController {
             let username = emailText.text
             let password = passwordText.text
 
-            let rawFilename = "/Users/abhishek/Desktop/TestApps/TestingSinge/TestingSinge/google-services.json"
+             
+            let rawFilename = "/Users/abhishek/Desktop/TestApps/WeCycle/WeCycle/google-services.json"
             let cStringFile = strdup(rawFilename)
-            
             let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
-            let databaseManagerObject = UnsafeMutableRawPointer(mutating: initializeDataManager(firebaseObject))
-            
-            let accountObject = initializeAccount_basic(strdup("username"), strdup(password))
-            
-            pushData(databaseManagerObject, accountObject, strdup("Accounts"))
+                
+                
+            let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject))
+            let userID = createAndRegisterAccount_string(authenticationObject, strdup(username), strdup(password))
+                
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                
+                    self.performSegue(withIdentifier: "signInSegue", sender: self)
+                
+            }
                 
             } else {
                 

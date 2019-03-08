@@ -3,3 +3,4 @@
 #include "FirebaseManagerWrapper.hpp"
 #include "PushableObjectWrapper.hpp"
 #include "StorageManagerWrapper.hpp"
+#include "AuthenticationWrapper.hpp"

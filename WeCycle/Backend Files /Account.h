@@ -1,5 +1,5 @@
 #pragma once
-//#include <iostream>
+#include <iostream>
 #include "DataManager.h"
 #include "PushableObject.h"
 #include "Rank.h"
@@ -13,15 +13,15 @@ private:
 	std::string password;
 	long phoneNumber;
 	std::vector<stringMap> dataList;
-	
 
 public:
 	Account(std::string emailAddress, std::string password);
 	Account(std::string emailAddress, std::string password, long phoneNumber);
 
-
+	std::string getEmail();
+	std::string getPassword();
 	//TODO add intialize override function and addData function
-	
+
 	~Account();
 };
 

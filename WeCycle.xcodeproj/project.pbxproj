@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46011B2F2231604900CBD2E3 /* Rank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46011B282231604800CBD2E3 /* Rank.cpp */; };
+		46011B312231604900CBD2E3 /* Crypto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46011B2C2231604900CBD2E3 /* Crypto.cpp */; };
+		46011B322231604900CBD2E3 /* Account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46011B2E2231604900CBD2E3 /* Account.cpp */; };
 		46042C7A223011670019433F /* firebase_storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C75223011640019433F /* firebase_storage.framework */; };
 		46042C7B223011670019433F /* firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C76223011650019433F /* firebase.framework */; };
 		46042C7C223011670019433F /* firebase_analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C77223011660019433F /* firebase_analytics.framework */; };
 		46042C7D223011670019433F /* firebase_database.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C78223011660019433F /* firebase_database.framework */; };
 		46042C7E223011670019433F /* firebase_auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C79223011670019433F /* firebase_auth.framework */; };
-		46042C99223012A80019433F /* Account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C7F223012A10019433F /* Account.cpp */; };
 		46042C9B223012A80019433F /* DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C84223012A20019433F /* DataManager.cpp */; };
 		46042C9C223012A80019433F /* PushableObjectWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C85223012A30019433F /* PushableObjectWrapper.cpp */; };
 		46042C9D223012A80019433F /* DataManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C8A223012A40019433F /* DataManagerWrapper.cpp */; };
 		46042C9E223012A80019433F /* StorageListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C8B223012A40019433F /* StorageListener.cpp */; };
 		46042C9F223012A80019433F /* AccountWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C8D223012A50019433F /* AccountWrapper.cpp */; };
 		46042CA0223012A80019433F /* StorageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C8E223012A50019433F /* StorageManager.cpp */; };
-		46042CA1223012A80019433F /* Rank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C8F223012A50019433F /* Rank.cpp */; };
 		46042CA2223012A80019433F /* FirebaseManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C94223012A70019433F /* FirebaseManager.cpp */; };
 		46042CA3223012A80019433F /* PushableObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C95223012A70019433F /* PushableObject.cpp */; };
 		46042CA4223012A80019433F /* StorageManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C96223012A70019433F /* StorageManagerWrapper.cpp */; };
 		46042CA5223012A80019433F /* FirebaseManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C97223012A80019433F /* FirebaseManagerWrapper.cpp */; };
+		460BE7402232A40300251611 /* google-services.json in Resources */ = {isa = PBXBuildFile; fileRef = 460BE73F2232A40200251611 /* google-services.json */; };
 		460CA91F222B4AA00015A2BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 460CA91E222B4AA00015A2BE /* GoogleService-Info.plist */; };
 		460CA925222B9D990015A2BE /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460CA924222B9D990015A2BE /* NewsViewController.swift */; };
 		460CA927222BA1890015A2BE /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460CA926222BA1890015A2BE /* NewsCollectionViewCell.swift */; };
@@ -35,6 +37,8 @@
 		461B4E1C221BC0EB00A8DB3A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E1B221BC0EB00A8DB3A /* CameraViewController.swift */; };
 		461B4E1E221BC0F100A8DB3A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E1D221BC0F100A8DB3A /* PreviewViewController.swift */; };
 		461B4E22221BC3CB00A8DB3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461B4E21221BC3CB00A8DB3A /* LaunchScreen.storyboard */; };
+		4650584D2231F7FF00B22328 /* AuthenticationWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4650584C2231F7FF00B22328 /* AuthenticationWrapper.cpp */; };
+		465058502231F82F00B22328 /* Authentication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4650584F2231F82F00B22328 /* Authentication.cpp */; };
 		469DB9F9221E0B760051279D /* RightScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DB9F8221E0B760051279D /* RightScreenViewController.swift */; };
 		469DB9FB221E0B850051279D /* LeftScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DB9FA221E0B850051279D /* LeftScreenViewController.swift */; };
 		469DB9FD221E0B940051279D /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DB9FC221E0B940051279D /* ScrollViewController.swift */; };
@@ -47,12 +51,17 @@
 /* Begin PBXFileReference section */
 		06D92FB4F574C763932FCA17 /* Pods_WeCycle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeCycle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		243DAF92CAF23CA2ED7DB968 /* Pods-WeCycle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeCycle.debug.xcconfig"; path = "Target Support Files/Pods-WeCycle/Pods-WeCycle.debug.xcconfig"; sourceTree = "<group>"; };
+		46011B1C22315E4F00CBD2E3 /* cryptopp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = cryptopp; path = ../../../../../ReCycle/cryptopp; sourceTree = "<group>"; };
+		46011B282231604800CBD2E3 /* Rank.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rank.cpp; sourceTree = "<group>"; };
+		46011B2A2231604800CBD2E3 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		46011B2C2231604900CBD2E3 /* Crypto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Crypto.cpp; path = ../../../../../WeCycle/WeCycle/Crypto.cpp; sourceTree = "<group>"; };
+		46011B2D2231604900CBD2E3 /* Crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Crypto.h; path = ../../../../../WeCycle/WeCycle/Crypto.h; sourceTree = "<group>"; };
+		46011B2E2231604900CBD2E3 /* Account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Account.cpp; sourceTree = "<group>"; };
 		46042C75223011640019433F /* firebase_storage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase_storage.framework; sourceTree = "<group>"; };
 		46042C76223011650019433F /* firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase.framework; sourceTree = "<group>"; };
 		46042C77223011660019433F /* firebase_analytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase_analytics.framework; sourceTree = "<group>"; };
 		46042C78223011660019433F /* firebase_database.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase_database.framework; sourceTree = "<group>"; };
 		46042C79223011670019433F /* firebase_auth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase_auth.framework; sourceTree = "<group>"; };
-		46042C7F223012A10019433F /* Account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Account.cpp; sourceTree = "<group>"; };
 		46042C80223012A10019433F /* StorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageManager.h; sourceTree = "<group>"; };
 		46042C82223012A20019433F /* FirebaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseManager.h; sourceTree = "<group>"; };
 		46042C83223012A20019433F /* StorageManagerWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StorageManagerWrapper.hpp; sourceTree = "<group>"; };
@@ -60,14 +69,12 @@
 		46042C85223012A30019433F /* PushableObjectWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PushableObjectWrapper.cpp; sourceTree = "<group>"; };
 		46042C86223012A30019433F /* Rank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rank.h; sourceTree = "<group>"; };
 		46042C87223012A30019433F /* DataManagerWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataManagerWrapper.hpp; sourceTree = "<group>"; };
-		46042C88223012A40019433F /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		46042C89223012A40019433F /* StorageListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageListener.h; sourceTree = "<group>"; };
 		46042C8A223012A40019433F /* DataManagerWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataManagerWrapper.cpp; sourceTree = "<group>"; };
 		46042C8B223012A40019433F /* StorageListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StorageListener.cpp; sourceTree = "<group>"; };
 		46042C8C223012A50019433F /* FirebaseManagerWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FirebaseManagerWrapper.hpp; sourceTree = "<group>"; };
 		46042C8D223012A50019433F /* AccountWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AccountWrapper.cpp; sourceTree = "<group>"; };
 		46042C8E223012A50019433F /* StorageManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StorageManager.cpp; sourceTree = "<group>"; };
-		46042C8F223012A50019433F /* Rank.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rank.cpp; sourceTree = "<group>"; };
 		46042C90223012A60019433F /* AccountWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AccountWrapper.hpp; sourceTree = "<group>"; };
 		46042C91223012A60019433F /* json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
 		46042C92223012A60019433F /* PushableObjectWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PushableObjectWrapper.hpp; sourceTree = "<group>"; };
@@ -78,6 +85,7 @@
 		46042C97223012A80019433F /* FirebaseManagerWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FirebaseManagerWrapper.cpp; sourceTree = "<group>"; };
 		46042C98223012A80019433F /* PushableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushableObject.h; sourceTree = "<group>"; };
 		46042CB62230162B0019433F /* WeCycle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeCycle-Bridging-Header.h"; sourceTree = "<group>"; };
+		460BE73F2232A40200251611 /* google-services.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "google-services.json"; sourceTree = "<group>"; };
 		460CA91E222B4AA00015A2BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		460CA924222B9D990015A2BE /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		460CA926222BA1890015A2BE /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -91,6 +99,9 @@
 		461B4E1B221BC0EB00A8DB3A /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		461B4E1D221BC0F100A8DB3A /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		461B4E21221BC3CB00A8DB3A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4650584C2231F7FF00B22328 /* AuthenticationWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AuthenticationWrapper.cpp; sourceTree = "<group>"; };
+		4650584F2231F82F00B22328 /* Authentication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Authentication.cpp; sourceTree = "<group>"; };
+		465058512231F89D00B22328 /* AuthenticationWrapper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AuthenticationWrapper.hpp; sourceTree = "<group>"; };
 		469DB9F8221E0B760051279D /* RightScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightScreenViewController.swift; sourceTree = "<group>"; };
 		469DB9FA221E0B850051279D /* LeftScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftScreenViewController.swift; sourceTree = "<group>"; };
 		469DB9FC221E0B940051279D /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
@@ -120,8 +131,15 @@
 		46042CB7223018470019433F /* Backend Files  */ = {
 			isa = PBXGroup;
 			children = (
-				46042C7F223012A10019433F /* Account.cpp */,
-				46042C88223012A40019433F /* Account.h */,
+				4650584C2231F7FF00B22328 /* AuthenticationWrapper.cpp */,
+				46011B2E2231604900CBD2E3 /* Account.cpp */,
+				46011B2A2231604800CBD2E3 /* Account.h */,
+				46011B2C2231604900CBD2E3 /* Crypto.cpp */,
+				46011B2D2231604900CBD2E3 /* Crypto.h */,
+				46011B282231604800CBD2E3 /* Rank.cpp */,
+				465058512231F89D00B22328 /* AuthenticationWrapper.hpp */,
+				4650584F2231F82F00B22328 /* Authentication.cpp */,
+				46011B1C22315E4F00CBD2E3 /* cryptopp */,
 				46042C8D223012A50019433F /* AccountWrapper.cpp */,
 				46042C90223012A60019433F /* AccountWrapper.hpp */,
 				46042C84223012A20019433F /* DataManager.cpp */,
@@ -137,7 +155,6 @@
 				46042C98223012A80019433F /* PushableObject.h */,
 				46042C85223012A30019433F /* PushableObjectWrapper.cpp */,
 				46042C92223012A60019433F /* PushableObjectWrapper.hpp */,
-				46042C8F223012A50019433F /* Rank.cpp */,
 				46042C86223012A30019433F /* Rank.h */,
 				46042C8B223012A40019433F /* StorageListener.cpp */,
 				46042C89223012A40019433F /* StorageListener.h */,
@@ -173,6 +190,7 @@
 				461B4E05221BBE0700A8DB3A /* AppDelegate.swift */,
 				46042CB7223018470019433F /* Backend Files  */,
 				461B4E19221BC0B900A8DB3A /* ClarifaiHelper.swift */,
+				460BE73F2232A40200251611 /* google-services.json */,
 				46042CB62230162B0019433F /* WeCycle-Bridging-Header.h */,
 				469DBA00221E46E60051279D /* View Controllers */,
 				469DB9FE221E46C40051279D /* MainCollectionViewCell.swift */,
@@ -289,6 +307,7 @@
 				461B4E0D221BBE0800A8DB3A /* Assets.xcassets in Resources */,
 				461B4E22221BC3CB00A8DB3A /* LaunchScreen.storyboard in Resources */,
 				461B4E18221BC05F00A8DB3A /* Main.storyboard in Resources */,
+				460BE7402232A40300251611 /* google-services.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,12 +377,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4650584D2231F7FF00B22328 /* AuthenticationWrapper.cpp in Sources */,
 				46042CA2223012A80019433F /* FirebaseManager.cpp in Sources */,
 				46042CA5223012A80019433F /* FirebaseManagerWrapper.cpp in Sources */,
 				461B4E1A221BC0B900A8DB3A /* ClarifaiHelper.swift in Sources */,
+				46011B312231604900CBD2E3 /* Crypto.cpp in Sources */,
 				469DB9FF221E46C40051279D /* MainCollectionViewCell.swift in Sources */,
 				461B4E1C221BC0EB00A8DB3A /* CameraViewController.swift in Sources */,
-				46042C99223012A80019433F /* Account.cpp in Sources */,
 				46042CA3223012A80019433F /* PushableObject.cpp in Sources */,
 				46042C9B223012A80019433F /* DataManager.cpp in Sources */,
 				460CA927222BA1890015A2BE /* NewsCollectionViewCell.swift in Sources */,
@@ -371,8 +391,8 @@
 				461B4E08221BBE0700A8DB3A /* ViewController.swift in Sources */,
 				46042C9E223012A80019433F /* StorageListener.cpp in Sources */,
 				46042CA0223012A80019433F /* StorageManager.cpp in Sources */,
-				46042CA1223012A80019433F /* Rank.cpp in Sources */,
 				469DB9FD221E0B940051279D /* ScrollViewController.swift in Sources */,
+				465058502231F82F00B22328 /* Authentication.cpp in Sources */,
 				46FEB9B4221F727C0031A93F /* CircularTransition.swift in Sources */,
 				46042C9C223012A80019433F /* PushableObjectWrapper.cpp in Sources */,
 				46042C9F223012A80019433F /* AccountWrapper.cpp in Sources */,
@@ -380,7 +400,9 @@
 				469DB9FB221E0B850051279D /* LeftScreenViewController.swift in Sources */,
 				461B4E1E221BC0F100A8DB3A /* PreviewViewController.swift in Sources */,
 				46042CA4223012A80019433F /* StorageManagerWrapper.cpp in Sources */,
+				46011B322231604900CBD2E3 /* Account.cpp in Sources */,
 				46042C9D223012A80019433F /* DataManagerWrapper.cpp in Sources */,
+				46011B2F2231604900CBD2E3 /* Rank.cpp in Sources */,
 				461B4E06221BBE0700A8DB3A /* AppDelegate.swift in Sources */,
 				46FEB9B6221FB12E0031A93F /* StatsViewController.swift in Sources */,
 			);

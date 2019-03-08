@@ -52,7 +52,7 @@ class CameraViewController: UIViewController{
     
 //        let trackLayer = CAShapeLayer()
 //
-//        let circularPath = UIBezierPath(arcCenter: center, radius: 37.5, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
+//        let circularPath = UIBezierPath(arcCenter: center, radius: 37.5, startAngle: -CGFloat.pi / 2,   endAngle: 2 * CGFloat.pi, clockwise: true)
 //        trackLayer.path = circularPath.cgPath
 //
 //        trackLayer.strokeColor = UIColor.white.cgColor
@@ -72,8 +72,7 @@ class CameraViewController: UIViewController{
 
         view.layer.addSublayer(shapeLayer)
     }
-    
-    
+
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 0.25) {
             self.blackView.alpha = 0
@@ -212,7 +211,7 @@ class CameraViewController: UIViewController{
     
     func blurring(num: Double) {
         
-        self.blueBlur.alpha = CGFloat(abs(375.0 - num) / 250)
+        self.blue.alpha = CGFloat(abs(375.0 - num) / 250)
         self.shapeLayer.opacity = Float(CGFloat(0.3 - abs(375.0 - num) / 25))
         //self.blueBlur.alpha = CGFloat(abs(375.0 - num) / 750)
         

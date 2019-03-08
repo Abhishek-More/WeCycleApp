@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "295581143363",
+    "firebase_url": "https://wecycle-316c1.firebaseio.com",
+    "project_id": "wecycle-316c1",
+    "storage_bucket": "wecycle-316c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:295581143363:android:09daf038e644e47f",
+        "android_client_info": {
+          "package_name": "com.droptable.wecycle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "295581143363-in8chld56brjhuuamuhv4dk1ulu8dkkv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQawfbZdVeStNYaBNt8rQwYRWO69veTD8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
