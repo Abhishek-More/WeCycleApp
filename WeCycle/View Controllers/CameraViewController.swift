@@ -236,7 +236,7 @@ class CameraViewController: UIViewController{
         if segue.identifier == "pictureTaken" {
             let previewViewController = segue.destination as! PreviewViewController
             previewViewController.image = self.image
-            previewViewController.imageData = (self.imageByte as! Data)
+            previewViewController.imageData = self.imageByte
             blackView.alpha = 1
         }
     }

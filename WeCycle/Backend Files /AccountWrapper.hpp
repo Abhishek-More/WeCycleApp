@@ -4,8 +4,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-	const void *initializeAccount_basic(const char *emailAddress, const char *password);
-	const void *initializeAccount_basic_phone(const char *emailAddress, const char *password, long phoneNumber);
+    const void *initializeAccount_basic(const char *emailAddress, const char *password);
+    const void *initializeAccount_basic_phone(const char *emailAddress, const char *password, long phoneNumber);
 #ifdef __cplusplus
 }
 #endif

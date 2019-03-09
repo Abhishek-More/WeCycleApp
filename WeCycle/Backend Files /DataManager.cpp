@@ -17,7 +17,7 @@ DataManager::DataManager(FirebaseManager *fbManager) {
 
 //Called at the object's termination
 DataManager::~DataManager() {
-	delete database;
+	//delete database;
 }
 
 void DataManager::pushData(PushableObject *objectToPass, std::string parent) {
@@ -27,7 +27,7 @@ void DataManager::pushData(PushableObject *objectToPass, std::string parent) {
 	//Accounts: multiple for loops that access each data point.
 	for (auto &x : objectToPass->dataMap()) {
 		std::string firstKey = x.first;
-		if (x.second.vector().size() > 0) {
+		if (x.second.is_vector()) {
 			for (auto &y : x.second.vector()) {
 				for (auto &z : y.map()) {
 					std::string keys = z.first.string_value();
@@ -72,6 +72,35 @@ const char **DataManager::retrieveData(std::string parent, std::string key) {
 
 	return resultArray;
 }
+
+const char **DataManager::retrieveData(std::string parent) {
+
+	const char **resultArray = nullptr;
+
+	firebase::Future<firebase::database::DataSnapshot> result = dbref.Child(parent).GetValue();
+
+	while (result.status() != firebase::kFutureStatusComplete) {} //Loop to wait until retrieval is complete
+	if (result.error() == firebase::database::kErrorNone) {
+		std::cout << "Retrival Complete" << std::endl;
+
+		std::vector<firebase::database::DataSnapshot> childList = result.result()->children();
+
+		unsigned int heightMax = childList.size();
+		resultArray = new const char*[heightMax];
+
+		int counter = 0;
+		for (auto &values : childList) { //Iterate through the vector of STRING VALUE
+			resultArray[counter] = strdup(values.value().string_value());  //strdup makes sure our char in the memory stays in the memory even when out of scope by creating a duplicate char array (string
+			counter++;
+		}
+	}
+	else {
+		std::cout << "Error Retrieving Data" << std::endl;
+	}
+
+	return resultArray;
+}
+
 
 firebase::database::DatabaseReference DataManager::getDBref() {
 	return dbref;

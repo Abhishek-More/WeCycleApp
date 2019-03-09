@@ -24,7 +24,7 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
         scrollView.delegate = self
         centerShutter = shutter.center.y
 
-        left = self.storyboard?.instantiateViewController(withIdentifier: "left") as! LeftScreenViewController
+        left = (self.storyboard?.instantiateViewController(withIdentifier: "left") as! LeftScreenViewController)
         self.addChild(left)
         self.scrollView.addSubview(left.view)
         self.didMove(toParent: self)
