@@ -296,15 +296,15 @@ class ViewController: UIViewController {
             let username = emailText.text
             let password = passwordText.text
 
-             
+
             let rawFilename = "/Users/abhishek/Desktop/TestApps/WeCycle/WeCycle/google-services.json"
             let cStringFile = strdup(rawFilename)
             let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
-                
-                
-            let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject))
-            let userID = createAndRegisterAccount_string(authenticationObject, strdup(username), strdup(password))
-                
+
+
+            //let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject))
+            //createAndRegisterAccount_string(authenticationObject, strdup(username), strdup(password))
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
                 
                     self.performSegue(withIdentifier: "signInSegue", sender: self)
@@ -318,15 +318,9 @@ class ViewController: UIViewController {
             }
             
             //let array : [String] = retrieveData(databaseManagerObject, "Accounts", "email@gmail.com")
-
-            
-        } else {
-            
-            print("Nothing there")
-            
-        }
         
     }
     
 }
 
+}

@@ -4,7 +4,7 @@
 #include "FirebaseManager.h"
 
 const void *initializeAuthentication(const void *fbManager, const void *dbManager) {
-	Authentication *auth = new Authentication((FirebaseManager *)fbManager, (DataManager *)dbManager);
+	Authentication *auth = new Authentication((FirebaseManager *)fbManager);
 	return (void *)auth;
 }
 
