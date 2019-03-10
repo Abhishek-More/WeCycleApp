@@ -61,7 +61,7 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
         
         self.shutter.transform = CGAffineTransform(scaleX: 1 - (0.3) * (abs((375 - scrollView.contentOffset.x) / 375)), y: 1 - (0.3) * (abs((375 - scrollView.contentOffset.x) / 375)))
         
-        self.shutter.center.y = centerShutter + 20 * (abs((375 - scrollView.contentOffset.x) / 375))
+        self.shutter.center.y = centerShutter + 30 * (abs((375 - scrollView.contentOffset.x) / 375))
         
         if(scrollView.contentOffset.x == 375) {
             
@@ -80,6 +80,8 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
             UIScrollView.animate(withDuration: 0.25) {
                 self.scrollView.contentOffset.x = self.view.frame.width
             }
+        
+            left.shrink()
         
     }
     

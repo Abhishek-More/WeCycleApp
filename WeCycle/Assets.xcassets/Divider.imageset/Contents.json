@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Firewatch Back Big.png",
+      "filename" : "Divider.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Firewatch Back Big@2x.png",
+      "filename" : "Divider@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Firewatch Back Big@3x.png",
+      "filename" : "Divider@3x.png",
       "scale" : "3x"
     }
   ],

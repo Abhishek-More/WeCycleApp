@@ -29,6 +29,7 @@
 		460CA91F222B4AA00015A2BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 460CA91E222B4AA00015A2BE /* GoogleService-Info.plist */; };
 		460CA925222B9D990015A2BE /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460CA924222B9D990015A2BE /* NewsViewController.swift */; };
 		460CA927222BA1890015A2BE /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460CA926222BA1890015A2BE /* NewsCollectionViewCell.swift */; };
+		460F872B223495F400CA4D58 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460F872A223495F400CA4D58 /* SettingsViewController.swift */; };
 		461B4E06221BBE0700A8DB3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E05221BBE0700A8DB3A /* AppDelegate.swift */; };
 		461B4E08221BBE0700A8DB3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E07221BBE0700A8DB3A /* ViewController.swift */; };
 		461B4E0D221BBE0800A8DB3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 461B4E0C221BBE0800A8DB3A /* Assets.xcassets */; };
@@ -87,6 +88,7 @@
 		460CA91E222B4AA00015A2BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		460CA924222B9D990015A2BE /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		460CA926222BA1890015A2BE /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
+		460F872A223495F400CA4D58 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		461B4E02221BBE0700A8DB3A /* WeCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		461B4E05221BBE0700A8DB3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		461B4E07221BBE0700A8DB3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				469DB9FA221E0B850051279D /* LeftScreenViewController.swift */,
 				469DB9F8221E0B760051279D /* RightScreenViewController.swift */,
 				461B4E1D221BC0F100A8DB3A /* PreviewViewController.swift */,
+				460F872A223495F400CA4D58 /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				46042C9D223012A80019433F /* DataManagerWrapper.cpp in Sources */,
 				461B4E06221BBE0700A8DB3A /* AppDelegate.swift in Sources */,
 				46FEB9B6221FB12E0031A93F /* StatsViewController.swift in Sources */,
+				460F872B223495F400CA4D58 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

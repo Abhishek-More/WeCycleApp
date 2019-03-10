@@ -9,32 +9,21 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet var background: UIImageView!
-    @IBOutlet var titleText: UILabel!
     @IBOutlet var quoteText: UILabel!
-    @IBOutlet var bottomRect: UIImageView!
     @IBOutlet var emailText: UITextField!
     @IBOutlet var emailLabel: UILabel!
     @IBOutlet var passwordText: UITextField!
     @IBOutlet var passwordLabel: UILabel!
     @IBOutlet var signUp: UIButton!
-    @IBOutlet var signIn: UIButton!
-    @IBOutlet var signInText: UILabel!
-    @IBOutlet var signUpText: UILabel!
     @IBOutlet var forgotText: UILabel!
-    @IBOutlet var confirmLine: UIImageView!
-    @IBOutlet var confirmText: UITextField!
-    @IBOutlet var confirmLabel: UILabel!
     @IBOutlet var bubble: UIImageView!
-    
-    @IBOutlet var SignUpReal: UIButton!
     @IBOutlet var signInReal: UIButton!
+    @IBOutlet var titleText: UIImageView!
     
     var emailGest: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(emailUp))
     var passGest: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(passUp))
-    var confirmGest: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(confirmUp))
     
     var left: Bool = true
     var emailTextUp: Bool = false
@@ -76,18 +65,7 @@ class ViewController: UIViewController {
             passGest.isEnabled = true
             
         }
-        
-        if((confirmText.text == "" || confirmText.text == nil) && confirmTextUp) {
-            UIView.animate(withDuration: 0.25) {
-                
-                self.confirmLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
-                self.confirmLabel.center.y += 25
-                self.confirmLabel.center.x += 5
-                
-            }
-            confirmTextUp = false
-            confirmGest.isEnabled = true
-        }
+
         
     }
     
@@ -99,21 +77,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.HideKeyboard()
     
-        bottomRect.center.y -= 400
-        background.center.y -= 400
+        titleText.alpha =  0
+        titleText.center.y -= 30
         quoteText.alpha = 0
         quoteText.center.y -= 30
-        titleText.alpha = 0
-        titleText.center.y -= 30
-        signUpText.alpha = 0
         
-        UIView.animate(withDuration: 1.5) {
-            
-            self.bottomRect.center.y += 400
-            self.background.center.y += 400
-            
-        }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+        
             UIView.animate(withDuration: 1) {
                 
                 self.titleText.center.y += 30
@@ -122,15 +91,14 @@ class ViewController: UIViewController {
                 self.titleText.alpha = 1
                 
             }
-        }
+        
+        
         emailGest = UITapGestureRecognizer(target: self, action: #selector(emailUp))
         emailText.addGestureRecognizer(emailGest)
         
         passGest = UITapGestureRecognizer(target: self, action: #selector(passUp))
         passwordText.addGestureRecognizer(passGest)
-        
-        confirmGest = UITapGestureRecognizer(target: self, action: #selector(confirmUp))
-        confirmText.addGestureRecognizer(confirmGest)
+
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -152,23 +120,6 @@ class ViewController: UIViewController {
         
     }
     
-    @objc func confirmUp() {
-        if(!confirmTextUp) {
-            UIView.animate(withDuration: 0.25) {
-                
-                self.confirmLabel.center.y -= 25
-                self.confirmLabel.center.x -= 5
-                self.confirmLabel.transform = CGAffineTransform(scaleX: 9/10 , y: 9/10)
-                
-            }
-            self.confirmText.becomeFirstResponder()
-            confirmGest.isEnabled = false
-            confirmTextUp = true
-        }
-        
-        
-    }
-    
     @objc func passUp() {
         if(!passTextUp) {
             UIView.animate(withDuration: 0.25) {
@@ -184,58 +135,42 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func Left(_ sender: Any) {
-        if(!left){
-            
-            UIView.animate(withDuration: 0.75) {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        return true
+        
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        UIView.animate(withDuration: 0.25) {
+            self.view.center.y -= 250
+        }
+        
+        if(passwordText.isFirstResponder) {
+            UIView.animate(withDuration: 0.5) {
                 
-                self.background.center.x += 50
-                self.signUp.center.x += 400
-                self.signIn.center.x += 400
-                self.signUpText.center.x += 105
-                self.signUpText.alpha = 0
-                self.signInText.center.x += 105
-                self.signInText.alpha = 1
-                self.forgotText.center.x += 400
-                self.confirmLabel.center.x += 400
-                self.confirmText.center.x += 400
-                self.confirmLine.center.x += 400
-                self.SignUpReal.center.x += 400
-                self.signInReal.center.x += 400
-                self.forgotText.alpha = 1
+                self.forgotText.alpha = 0
                 
             }
             
-            left = true
         }
         
     }
     
-    @IBAction func right(_ sender: Any) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         
-        if(left){
+        UIView.animate(withDuration: 0.25) {
+            self.view.center.y += 250
+        }
+        
+        if(passwordText.text == "") {
             
-            UIView.animate(withDuration: 0.75) {
+            UIView.animate(withDuration: 0.5) {
                 
-                self.background.center.x -= 50
-                self.signUp.center.x -= 400
-                self.signIn.center.x -= 400
-                self.signInText.center.x -= 105
-                self.signInText.alpha = 0
-                self.signUpText.center.x -= 105
-                self.signUpText.alpha = 1
-                self.forgotText.center.x -= 400
-                self.forgotText.alpha = 0
-                self.confirmLabel.center.x -= 400
-                self.confirmText.center.x -= 400
-                self.confirmLine.center.x -= 400
-                self.SignUpReal.center.x -= 400
-                self.signInReal.center.x -= 400
+                self.forgotText.alpha = 1
                 
             }
-            
-            left = false
-            
         }
         
     }
@@ -292,18 +227,18 @@ class ViewController: UIViewController {
         
         if(emailText.text != "" || passwordText.text != "") {
             
-            if(passwordText.text == confirmText.text) {
-            let username = emailText.text
-            let password = passwordText.text
-
-
-            let rawFilename = "/Users/abhishek/Desktop/TestApps/WeCycle/WeCycle/google-services.json"
-            let cStringFile = strdup(rawFilename)
-            let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
-
-
-            //let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject))
-            //createAndRegisterAccount_string(authenticationObject, strdup(username), strdup(password))
+//
+//            let username = emailText.text
+//            let password = passwordText.text
+//
+//
+//            let rawFilename = "/Users/abhishek/Desktop/TestApps/WeCycle/WeCycle/GoogleService-Info.plist"
+//            let cStringFile = strdup(rawFilename)
+//            let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
+//
+//
+//            let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject))
+//        let userID = createAndRegisterAccount_string(authenticationObject, strdup(username), strdup(password))
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
                 
@@ -321,6 +256,9 @@ class ViewController: UIViewController {
         
     }
     
-}
-
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
+    
 }

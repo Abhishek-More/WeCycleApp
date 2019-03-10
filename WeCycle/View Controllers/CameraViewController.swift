@@ -211,7 +211,7 @@ class CameraViewController: UIViewController{
     
     func blurring(num: Double) {
         
-        self.blue.alpha = CGFloat(abs(375.0 - num) / 250)
+        self.blueBlur.alpha = CGFloat(abs(375.0 - num) / 250)
         self.shapeLayer.opacity = Float(CGFloat(0.3 - abs(375.0 - num) / 25))
         //self.blueBlur.alpha = CGFloat(abs(375.0 - num) / 750)
         
