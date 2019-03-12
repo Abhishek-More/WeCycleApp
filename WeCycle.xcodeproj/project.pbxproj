@@ -30,7 +30,6 @@
 		460839D62237197000A3D643 /* AuthenticationWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460839D02237197000A3D643 /* AuthenticationWrapper.cpp */; };
 		460BE7402232A40300251611 /* google-services.json in Resources */ = {isa = PBXBuildFile; fileRef = 460BE73F2232A40200251611 /* google-services.json */; };
 		460CA91F222B4AA00015A2BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 460CA91E222B4AA00015A2BE /* GoogleService-Info.plist */; };
-		460CA925222B9D990015A2BE /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460CA924222B9D990015A2BE /* NewsViewController.swift */; };
 		460CA927222BA1890015A2BE /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460CA926222BA1890015A2BE /* NewsCollectionViewCell.swift */; };
 		460F872B223495F400CA4D58 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460F872A223495F400CA4D58 /* SettingsViewController.swift */; };
 		461B4E06221BBE0700A8DB3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E05221BBE0700A8DB3A /* AppDelegate.swift */; };
@@ -46,7 +45,6 @@
 		469DB9FD221E0B940051279D /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DB9FC221E0B940051279D /* ScrollViewController.swift */; };
 		469DB9FF221E46C40051279D /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DB9FE221E46C40051279D /* MainCollectionViewCell.swift */; };
 		46FEB9B4221F727C0031A93F /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FEB9B3221F727C0031A93F /* CircularTransition.swift */; };
-		46FEB9B6221FB12E0031A93F /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FEB9B5221FB12E0031A93F /* StatsViewController.swift */; };
 		F36815A2438F24E133BF4328 /* Pods_WeCycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D92FB4F574C763932FCA17 /* Pods_WeCycle.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,7 +91,6 @@
 		46083A3422371B1600A3D643 /* json.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = json.hpp; path = "New Group/json.hpp"; sourceTree = "<group>"; };
 		460BE73F2232A40200251611 /* google-services.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "google-services.json"; sourceTree = "<group>"; };
 		460CA91E222B4AA00015A2BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		460CA924222B9D990015A2BE /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		460CA926222BA1890015A2BE /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		460F872A223495F400CA4D58 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		461B4E02221BBE0700A8DB3A /* WeCycle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeCycle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +108,6 @@
 		469DB9FC221E0B940051279D /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		469DB9FE221E46C40051279D /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		46FEB9B3221F727C0031A93F /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
-		46FEB9B5221FB12E0031A93F /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		FD126D1984AB0359882E69CE /* Pods-WeCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeCycle.release.xcconfig"; path = "Target Support Files/Pods-WeCycle/Pods-WeCycle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -214,8 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				469DB9FC221E0B940051279D /* ScrollViewController.swift */,
-				460CA924222B9D990015A2BE /* NewsViewController.swift */,
-				46FEB9B5221FB12E0031A93F /* StatsViewController.swift */,
 				461B4E07221BBE0700A8DB3A /* ViewController.swift */,
 				461B4E1B221BC0EB00A8DB3A /* CameraViewController.swift */,
 				469DB9FA221E0B850051279D /* LeftScreenViewController.swift */,
@@ -396,7 +390,6 @@
 				46083910223718BC00A3D643 /* Rank.cpp in Sources */,
 				460CA927222BA1890015A2BE /* NewsCollectionViewCell.swift in Sources */,
 				460839D52237197000A3D643 /* AccountWrapper.cpp in Sources */,
-				460CA925222B9D990015A2BE /* NewsViewController.swift in Sources */,
 				461B4E08221BBE0700A8DB3A /* ViewController.swift in Sources */,
 				469DB9FD221E0B940051279D /* ScrollViewController.swift in Sources */,
 				46FEB9B4221F727C0031A93F /* CircularTransition.swift in Sources */,
@@ -406,7 +399,6 @@
 				4608390C223718BC00A3D643 /* StorageManager.cpp in Sources */,
 				461B4E1E221BC0F100A8DB3A /* PreviewViewController.swift in Sources */,
 				461B4E06221BBE0700A8DB3A /* AppDelegate.swift in Sources */,
-				46FEB9B6221FB12E0031A93F /* StatsViewController.swift in Sources */,
 				46083911223718BC00A3D643 /* FirebaseManager.cpp in Sources */,
 				460839D12237197000A3D643 /* StorageManagerWrapper.cpp in Sources */,
 				460F872B223495F400CA4D58 /* SettingsViewController.swift in Sources */,

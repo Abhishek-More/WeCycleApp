@@ -54,8 +54,6 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        //let offset = scrollView.contentOffset.x
-        
         middle.blurring(num: Double(scrollView.contentOffset.x))
         left.swipeReaction(num: Double(scrollView.contentOffset.x))
         
@@ -80,9 +78,7 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
             UIScrollView.animate(withDuration: 0.25) {
                 self.scrollView.contentOffset.x = self.view.frame.width
             }
-        
-            left.shrink()
-        
+
     }
     
     override func didReceiveMemoryWarning() {

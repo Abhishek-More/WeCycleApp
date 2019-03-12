@@ -14,7 +14,6 @@ class LeftScreenViewController: UIViewController {
     @IBOutlet var profileCard: UIImageView!
     @IBOutlet var rankText: UILabel!
     @IBOutlet var profileText: UILabel!
-    @IBOutlet var circle: UIImageView!
     @IBOutlet var topRect: UIImageView!
     @IBOutlet var profileHolder: UIView!
     
@@ -29,7 +28,6 @@ class LeftScreenViewController: UIViewController {
         friendsCenter = friendsCard.center.y
         topRectCenter = topRect.center.y
         
-        self.circle.transform = CGAffineTransform(scaleX: 1, y: 1)
     }
     
     
@@ -44,24 +42,6 @@ class LeftScreenViewController: UIViewController {
 
     }
     
-    func shrink() {
-        
-        UIView.animate(withDuration: 0.25) {
-            self.circle.transform = CGAffineTransform(scaleX: 1, y: 1)
-        }
-    }
-    
-    @IBAction func profileClick(_ sender: Any) {
-        
-        UIView.animate(withDuration: 0.5) {
-            self.circle.transform = CGAffineTransform(scaleX: 50, y: 50)
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.performSegue(withIdentifier: "settingsSegue", sender: self)
-        }
-        
-    }
     override var prefersStatusBarHidden: Bool {
         return true
     }

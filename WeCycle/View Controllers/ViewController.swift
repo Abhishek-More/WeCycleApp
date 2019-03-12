@@ -31,7 +31,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var passTextUp: Bool = false
     var confirmTextUp: Bool = false
    
-    
     func HideKeyboard() {
         
         let Tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -100,8 +99,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         passGest = UITapGestureRecognizer(target: self, action: #selector(passUp))
         passwordText.addGestureRecognizer(passGest)
 
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     @objc func emailUp() {
@@ -185,14 +182,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         bubble.alpha = 1
     }
     
-    @IBAction func signUpTouched(_ sender: Any) {
-        bubble.alpha = 0.5
-    }
-    
-    @IBAction func singUpRelease(_ sender: Any) {
-        bubble.alpha = 1
-    }
-    
     @IBAction func signInClicked(_ sender: Any) {
         
         bubble.alpha = 1
@@ -209,45 +198,31 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         let account = UnsafeMutableRawPointer(mutating: initializeAccount())
 
-        createAndRegisterAccount(authenticationObject, account, strdup(username), strdup(password))
-
+        signInUser(authenticationObject, account, strdup(username), strdup(password))
+        
+        if(account != nil) {
+            print("it works")
+        }
+        
+        if(account == nil) {
+            print("no")
+        }
+        
+        
+        
         UIView.animate(withDuration: 1) {
             self.view.center.y -= 800
         }
-        
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+    
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.performSegue(withIdentifier: "signInSegue", sender: self)
         }
         
-//                UIView.animate(withDuration: 0.25) {
-//                    self.titleText.alpha = 0
-//                    self.quoteText.alpha = 0
-//                    self.emailText.alpha = 0
-//                    self.emailLabel.alpha = 0
-//                    self.bubble.alpha = 0
-//                    self.passwordText.alpha = 0
-//                    self.passwordLabel.alpha = 0
-//                           
-//               }
-        
     }
+    
     @IBAction func signUpClicked(_ sender: Any) {
         
         if(emailText.text != "" || passwordText.text != "") {
-            
-//
-//            let username = emailText.text
-//            let password = passwordText.text
-//
-//
-//            let rawFilename = "/Users/abhishek/Desktop/TestApps/WeCycle/WeCycle/GoogleService-Info.plist"
-//            let cStringFile = strdup(rawFilename)
-//            let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
-//
-//
-//            let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject))
-//        let userID = createAndRegisterAccount_string(authenticationObject, strdup(username), strdup(password))
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
                 
@@ -260,8 +235,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 print("Password does not match")
                 
             }
-            
-            //let array : [String] = retrieveData(databaseManagerObject, "Accounts", "email@gmail.com")
         
     }
     
@@ -269,7 +242,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    @IBAction func signInClick(_ sender: Any) {
+    @IBAction func signUpClick(_ sender: Any) {
         
         let username = emailText.text
         let password = passwordText.text
@@ -284,7 +257,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         let account = UnsafeMutableRawPointer(mutating: initializeAccount())
         
-        signInUser(authenticationObject, account, strdup(username), strdup(password))
+        createAndRegisterAccount(authenticationObject, account, strdup(username), strdup(password))
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.performSegue(withIdentifier: "signInSegue", sender: self)
+        }
+        
     }
     
 }
