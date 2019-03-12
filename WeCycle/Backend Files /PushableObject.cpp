@@ -5,7 +5,7 @@ PushableObject::PushableObject(){}
 
 PushableObject::~PushableObject(){}
 
-void PushableObject::initialize(std::map<std::string, firebase::Variant> &map) {
+void PushableObject::initialize(std::map<firebase::Variant, firebase::Variant> &map) {
 	pushableData = map;
 }
 void PushableObject::addData(std::string key, stringMap value) {
@@ -20,10 +20,10 @@ void PushableObject::setKey(std::string key) {
 	objKey = key;
 }
 
-std::map<std::string, firebase::Variant> PushableObject::dataMap() {
-	std::map<std::string, firebase::Variant> result;
+std::map<firebase::Variant, firebase::Variant> PushableObject::dataMap() {
+	std::map<firebase::Variant, firebase::Variant> result;
 	for (auto &x : pushableData) {
-		result.insert(std::pair<std::string, firebase::Variant>(x.first, x.second));
+		result.insert(std::pair<firebase::Variant, firebase::Variant>(x.first, x.second));
 	}
 	return result;
 }

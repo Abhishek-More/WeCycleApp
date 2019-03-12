@@ -1,23 +1,26 @@
 #pragma once
 #include "Account.h"
+#include "DataManager.h"
 #include "FirebaseManager.h"
 #include <iostream>
 #include <firebase/auth.h>
 #include <firebase/future.h>
+#include "Crypto.h"
 
 class Authentication {
 
+private:
+	Crypto crypto;
+	DataManager *dbManage;
 public: 
 
 	firebase::auth::Auth* auth;
 	firebase::App* app;
 
-	Authentication(FirebaseManager *fbManager);
+	Authentication(FirebaseManager *fbManager, DataManager *dbManager);
 	~Authentication();
 
-	std::string createAndRegisterAccount(Account *account);
-	std::string createAndRegisterAccount(std::string email, std::string password);
+	void createAndRegisterAccount(Account *acc, std::string emailO, std::string passwordO);
 
-	std::string signInUser(Account *account);
-	std::string signInUser(std::string email, std::string password);
+	void signInUser(Account *acc, std::string emailO, std::string passwordO);
 };

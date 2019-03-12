@@ -7,25 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		46042C7A223011670019433F /* firebase_storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C75223011640019433F /* firebase_storage.framework */; };
 		46042C7B223011670019433F /* firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C76223011650019433F /* firebase.framework */; };
 		46042C7C223011670019433F /* firebase_analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C77223011660019433F /* firebase_analytics.framework */; };
 		46042C7D223011670019433F /* firebase_database.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C78223011660019433F /* firebase_database.framework */; };
 		46042C7E223011670019433F /* firebase_auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C79223011670019433F /* firebase_auth.framework */; };
-		46042C9C223012A80019433F /* PushableObjectWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C85223012A30019433F /* PushableObjectWrapper.cpp */; };
-		46042C9D223012A80019433F /* DataManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C8A223012A40019433F /* DataManagerWrapper.cpp */; };
-		46042C9E223012A80019433F /* StorageListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C8B223012A40019433F /* StorageListener.cpp */; };
-		46042C9F223012A80019433F /* AccountWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C8D223012A50019433F /* AccountWrapper.cpp */; };
-		46042CA0223012A80019433F /* StorageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C8E223012A50019433F /* StorageManager.cpp */; };
-		46042CA2223012A80019433F /* FirebaseManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C94223012A70019433F /* FirebaseManager.cpp */; };
-		46042CA3223012A80019433F /* PushableObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C95223012A70019433F /* PushableObject.cpp */; };
-		46042CA4223012A80019433F /* StorageManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C96223012A70019433F /* StorageManagerWrapper.cpp */; };
-		46042CA5223012A80019433F /* FirebaseManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46042C97223012A80019433F /* FirebaseManagerWrapper.cpp */; };
+		460838282236BA2700A3D643 /* firebase_storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C75223011640019433F /* firebase_storage.framework */; };
+		4608390A223718BC00A3D643 /* Account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460838F6223718BA00A3D643 /* Account.cpp */; };
+		4608390B223718BC00A3D643 /* StorageListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460838F8223718BB00A3D643 /* StorageListener.cpp */; };
+		4608390C223718BC00A3D643 /* StorageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460838F9223718BB00A3D643 /* StorageManager.cpp */; };
+		4608390D223718BC00A3D643 /* WeCycle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460838FB223718BB00A3D643 /* WeCycle.cpp */; };
+		4608390E223718BC00A3D643 /* Authentication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460838FD223718BB00A3D643 /* Authentication.cpp */; };
+		4608390F223718BC00A3D643 /* DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460838FE223718BB00A3D643 /* DataManager.cpp */; };
+		46083910223718BC00A3D643 /* Rank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46083900223718BB00A3D643 /* Rank.cpp */; };
+		46083911223718BC00A3D643 /* FirebaseManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46083902223718BB00A3D643 /* FirebaseManager.cpp */; };
+		46083912223718BC00A3D643 /* PushableObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46083903223718BB00A3D643 /* PushableObject.cpp */; };
+		46083914223718BC00A3D643 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 46083908223718BC00A3D643 /* CMakeLists.txt */; };
+		460839D12237197000A3D643 /* StorageManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460839C72237197000A3D643 /* StorageManagerWrapper.cpp */; };
+		460839D22237197000A3D643 /* DataManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460839C92237197000A3D643 /* DataManagerWrapper.cpp */; };
+		460839D32237197000A3D643 /* PushableObjectWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460839CA2237197000A3D643 /* PushableObjectWrapper.cpp */; };
+		460839D42237197000A3D643 /* FirebaseManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460839CB2237197000A3D643 /* FirebaseManagerWrapper.cpp */; };
+		460839D52237197000A3D643 /* AccountWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460839CF2237197000A3D643 /* AccountWrapper.cpp */; };
+		460839D62237197000A3D643 /* AuthenticationWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460839D02237197000A3D643 /* AuthenticationWrapper.cpp */; };
 		460BE7402232A40300251611 /* google-services.json in Resources */ = {isa = PBXBuildFile; fileRef = 460BE73F2232A40200251611 /* google-services.json */; };
-		460BE7452232A8A800251611 /* AuthenticationWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460BE7432232A8A800251611 /* AuthenticationWrapper.cpp */; };
-		460BEA282232B7B300251611 /* DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460BEA232232B7B200251611 /* DataManager.cpp */; };
-		460BEA292232B7B300251611 /* Account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460BEA242232B7B200251611 /* Account.cpp */; };
-		460BEA2A2232B7B300251611 /* Authentication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460BEA272232B7B300251611 /* Authentication.cpp */; };
 		460CA91F222B4AA00015A2BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 460CA91E222B4AA00015A2BE /* GoogleService-Info.plist */; };
 		460CA925222B9D990015A2BE /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460CA924222B9D990015A2BE /* NewsViewController.swift */; };
 		460CA927222BA1890015A2BE /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460CA926222BA1890015A2BE /* NewsCollectionViewCell.swift */; };
@@ -55,36 +58,40 @@
 		46042C77223011660019433F /* firebase_analytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase_analytics.framework; sourceTree = "<group>"; };
 		46042C78223011660019433F /* firebase_database.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase_database.framework; sourceTree = "<group>"; };
 		46042C79223011670019433F /* firebase_auth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase_auth.framework; sourceTree = "<group>"; };
-		46042C80223012A10019433F /* StorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageManager.h; sourceTree = "<group>"; };
-		46042C82223012A20019433F /* FirebaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseManager.h; sourceTree = "<group>"; };
-		46042C83223012A20019433F /* StorageManagerWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StorageManagerWrapper.hpp; sourceTree = "<group>"; };
-		46042C85223012A30019433F /* PushableObjectWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PushableObjectWrapper.cpp; sourceTree = "<group>"; };
-		46042C86223012A30019433F /* Rank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rank.h; sourceTree = "<group>"; };
-		46042C87223012A30019433F /* DataManagerWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataManagerWrapper.hpp; sourceTree = "<group>"; };
-		46042C89223012A40019433F /* StorageListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageListener.h; sourceTree = "<group>"; };
-		46042C8A223012A40019433F /* DataManagerWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataManagerWrapper.cpp; sourceTree = "<group>"; };
-		46042C8B223012A40019433F /* StorageListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StorageListener.cpp; sourceTree = "<group>"; };
-		46042C8C223012A50019433F /* FirebaseManagerWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FirebaseManagerWrapper.hpp; sourceTree = "<group>"; };
-		46042C8D223012A50019433F /* AccountWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AccountWrapper.cpp; sourceTree = "<group>"; };
-		46042C8E223012A50019433F /* StorageManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StorageManager.cpp; sourceTree = "<group>"; };
-		46042C90223012A60019433F /* AccountWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AccountWrapper.hpp; sourceTree = "<group>"; };
-		46042C91223012A60019433F /* json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
-		46042C92223012A60019433F /* PushableObjectWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PushableObjectWrapper.hpp; sourceTree = "<group>"; };
-		46042C94223012A70019433F /* FirebaseManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FirebaseManager.cpp; sourceTree = "<group>"; };
-		46042C95223012A70019433F /* PushableObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PushableObject.cpp; sourceTree = "<group>"; };
-		46042C96223012A70019433F /* StorageManagerWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StorageManagerWrapper.cpp; sourceTree = "<group>"; };
-		46042C97223012A80019433F /* FirebaseManagerWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FirebaseManagerWrapper.cpp; sourceTree = "<group>"; };
-		46042C98223012A80019433F /* PushableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushableObject.h; sourceTree = "<group>"; };
 		46042CB62230162B0019433F /* WeCycle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeCycle-Bridging-Header.h"; sourceTree = "<group>"; };
+		460838F5223718BA00A3D643 /* Rank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rank.h; path = ../../../../../WeCycle/cryptopp/Rank.h; sourceTree = "<group>"; };
+		460838F6223718BA00A3D643 /* Account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Account.cpp; path = ../../../../../WeCycle/cryptopp/Account.cpp; sourceTree = "<group>"; };
+		460838F7223718BB00A3D643 /* FirebaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirebaseManager.h; path = ../../../../../WeCycle/cryptopp/FirebaseManager.h; sourceTree = "<group>"; };
+		460838F8223718BB00A3D643 /* StorageListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StorageListener.cpp; path = ../../../../../WeCycle/cryptopp/StorageListener.cpp; sourceTree = "<group>"; };
+		460838F9223718BB00A3D643 /* StorageManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StorageManager.cpp; path = ../../../../../WeCycle/cryptopp/StorageManager.cpp; sourceTree = "<group>"; };
+		460838FA223718BB00A3D643 /* StorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StorageManager.h; path = ../../../../../WeCycle/cryptopp/StorageManager.h; sourceTree = "<group>"; };
+		460838FB223718BB00A3D643 /* WeCycle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WeCycle.cpp; path = ../../../../../WeCycle/cryptopp/WeCycle.cpp; sourceTree = "<group>"; };
+		460838FC223718BB00A3D643 /* PushableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushableObject.h; path = ../../../../../WeCycle/cryptopp/PushableObject.h; sourceTree = "<group>"; };
+		460838FD223718BB00A3D643 /* Authentication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Authentication.cpp; path = ../../../../../WeCycle/cryptopp/Authentication.cpp; sourceTree = "<group>"; };
+		460838FE223718BB00A3D643 /* DataManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataManager.cpp; path = ../../../../../WeCycle/cryptopp/DataManager.cpp; sourceTree = "<group>"; };
+		460838FF223718BB00A3D643 /* StorageListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StorageListener.h; path = ../../../../../WeCycle/cryptopp/StorageListener.h; sourceTree = "<group>"; };
+		46083900223718BB00A3D643 /* Rank.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Rank.cpp; path = ../../../../../WeCycle/cryptopp/Rank.cpp; sourceTree = "<group>"; };
+		46083901223718BB00A3D643 /* WeCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeCycle.h; path = ../../../../../WeCycle/cryptopp/WeCycle.h; sourceTree = "<group>"; };
+		46083902223718BB00A3D643 /* FirebaseManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FirebaseManager.cpp; path = ../../../../../WeCycle/cryptopp/FirebaseManager.cpp; sourceTree = "<group>"; };
+		46083903223718BB00A3D643 /* PushableObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PushableObject.cpp; path = ../../../../../WeCycle/cryptopp/PushableObject.cpp; sourceTree = "<group>"; };
+		46083905223718BB00A3D643 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = ../../../../../WeCycle/cryptopp/DataManager.h; sourceTree = "<group>"; };
+		46083907223718BC00A3D643 /* Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Authentication.h; path = ../../../../../WeCycle/cryptopp/Authentication.h; sourceTree = "<group>"; };
+		46083908223718BC00A3D643 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = ../../../../../WeCycle/cryptopp/CMakeLists.txt; sourceTree = "<group>"; };
+		46083909223718BC00A3D643 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = ../../../../../WeCycle/cryptopp/Account.h; sourceTree = "<group>"; };
+		460839C52237196F00A3D643 /* PushableObjectWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PushableObjectWrapper.hpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/PushableObjectWrapper.hpp"; sourceTree = "<group>"; };
+		460839C62237197000A3D643 /* FirebaseManagerWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FirebaseManagerWrapper.hpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/FirebaseManagerWrapper.hpp"; sourceTree = "<group>"; };
+		460839C72237197000A3D643 /* StorageManagerWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StorageManagerWrapper.cpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/StorageManagerWrapper.cpp"; sourceTree = "<group>"; };
+		460839C82237197000A3D643 /* StorageManagerWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StorageManagerWrapper.hpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/StorageManagerWrapper.hpp"; sourceTree = "<group>"; };
+		460839C92237197000A3D643 /* DataManagerWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataManagerWrapper.cpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/DataManagerWrapper.cpp"; sourceTree = "<group>"; };
+		460839CA2237197000A3D643 /* PushableObjectWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PushableObjectWrapper.cpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/PushableObjectWrapper.cpp"; sourceTree = "<group>"; };
+		460839CB2237197000A3D643 /* FirebaseManagerWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FirebaseManagerWrapper.cpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/FirebaseManagerWrapper.cpp"; sourceTree = "<group>"; };
+		460839CC2237197000A3D643 /* AuthenticationWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AuthenticationWrapper.hpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/AuthenticationWrapper.hpp"; sourceTree = "<group>"; };
+		460839CD2237197000A3D643 /* DataManagerWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DataManagerWrapper.hpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/DataManagerWrapper.hpp"; sourceTree = "<group>"; };
+		460839CE2237197000A3D643 /* AccountWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AccountWrapper.hpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/AccountWrapper.hpp"; sourceTree = "<group>"; };
+		460839CF2237197000A3D643 /* AccountWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AccountWrapper.cpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/AccountWrapper.cpp"; sourceTree = "<group>"; };
+		460839D02237197000A3D643 /* AuthenticationWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AuthenticationWrapper.cpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/AuthenticationWrapper.cpp"; sourceTree = "<group>"; };
+		46083A3422371B1600A3D643 /* json.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = json.hpp; path = "New Group/json.hpp"; sourceTree = "<group>"; };
 		460BE73F2232A40200251611 /* google-services.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "google-services.json"; sourceTree = "<group>"; };
-		460BE7432232A8A800251611 /* AuthenticationWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AuthenticationWrapper.cpp; sourceTree = "<group>"; };
-		460BE7442232A8A800251611 /* AuthenticationWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AuthenticationWrapper.hpp; sourceTree = "<group>"; };
-		460BE9712232B5A400251611 /* libcryptlib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcryptlib.a; sourceTree = "<group>"; };
-		460BEA232232B7B200251611 /* DataManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataManager.cpp; sourceTree = "<group>"; };
-		460BEA242232B7B200251611 /* Account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Account.cpp; sourceTree = "<group>"; };
-		460BEA252232B7B200251611 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
-		460BEA262232B7B300251611 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
-		460BEA272232B7B300251611 /* Authentication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Authentication.cpp; sourceTree = "<group>"; };
 		460CA91E222B4AA00015A2BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		460CA924222B9D990015A2BE /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		460CA926222BA1890015A2BE /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -103,7 +110,6 @@
 		469DB9FA221E0B850051279D /* LeftScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftScreenViewController.swift; sourceTree = "<group>"; };
 		469DB9FC221E0B940051279D /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		469DB9FE221E46C40051279D /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
-		46D6979622341B2200BC3A76 /* Authentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Authentication.h; sourceTree = "<group>"; };
 		46FEB9B3221F727C0031A93F /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		46FEB9B5221FB12E0031A93F /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		FD126D1984AB0359882E69CE /* Pods-WeCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeCycle.release.xcconfig"; path = "Target Support Files/Pods-WeCycle/Pods-WeCycle.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,8 +124,8 @@
 				46042C7D223011670019433F /* firebase_database.framework in Frameworks */,
 				F36815A2438F24E133BF4328 /* Pods_WeCycle.framework in Frameworks */,
 				46042C7E223011670019433F /* firebase_auth.framework in Frameworks */,
+				460838282236BA2700A3D643 /* firebase_storage.framework in Frameworks */,
 				46042C7B223011670019433F /* firebase.framework in Frameworks */,
-				46042C7A223011670019433F /* firebase_storage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,34 +135,38 @@
 		46042CB7223018470019433F /* Backend Files  */ = {
 			isa = PBXGroup;
 			children = (
-				460BE7432232A8A800251611 /* AuthenticationWrapper.cpp */,
-				460BE7442232A8A800251611 /* AuthenticationWrapper.hpp */,
-				46042C8D223012A50019433F /* AccountWrapper.cpp */,
-				46042C90223012A60019433F /* AccountWrapper.hpp */,
-				46042C87223012A30019433F /* DataManagerWrapper.hpp */,
-				46042C94223012A70019433F /* FirebaseManager.cpp */,
-				46042C82223012A20019433F /* FirebaseManager.h */,
-				46042C97223012A80019433F /* FirebaseManagerWrapper.cpp */,
-				460BEA242232B7B200251611 /* Account.cpp */,
-				460BEA262232B7B300251611 /* Account.h */,
-				460BEA272232B7B300251611 /* Authentication.cpp */,
-				46D6979622341B2200BC3A76 /* Authentication.h */,
-				460BEA232232B7B200251611 /* DataManager.cpp */,
-				460BEA252232B7B200251611 /* DataManager.h */,
-				46042C8C223012A50019433F /* FirebaseManagerWrapper.hpp */,
-				46042C8A223012A40019433F /* DataManagerWrapper.cpp */,
-				46042C91223012A60019433F /* json.hpp */,
-				46042C95223012A70019433F /* PushableObject.cpp */,
-				46042C98223012A80019433F /* PushableObject.h */,
-				46042C85223012A30019433F /* PushableObjectWrapper.cpp */,
-				46042C92223012A60019433F /* PushableObjectWrapper.hpp */,
-				46042C86223012A30019433F /* Rank.h */,
-				46042C8B223012A40019433F /* StorageListener.cpp */,
-				46042C89223012A40019433F /* StorageListener.h */,
-				46042C8E223012A50019433F /* StorageManager.cpp */,
-				46042C80223012A10019433F /* StorageManager.h */,
-				46042C96223012A70019433F /* StorageManagerWrapper.cpp */,
-				46042C83223012A20019433F /* StorageManagerWrapper.hpp */,
+				46083A3422371B1600A3D643 /* json.hpp */,
+				460839CF2237197000A3D643 /* AccountWrapper.cpp */,
+				460839CE2237197000A3D643 /* AccountWrapper.hpp */,
+				460839D02237197000A3D643 /* AuthenticationWrapper.cpp */,
+				460839CC2237197000A3D643 /* AuthenticationWrapper.hpp */,
+				460839C92237197000A3D643 /* DataManagerWrapper.cpp */,
+				460839CD2237197000A3D643 /* DataManagerWrapper.hpp */,
+				460839CB2237197000A3D643 /* FirebaseManagerWrapper.cpp */,
+				460839C62237197000A3D643 /* FirebaseManagerWrapper.hpp */,
+				460839CA2237197000A3D643 /* PushableObjectWrapper.cpp */,
+				460839C52237196F00A3D643 /* PushableObjectWrapper.hpp */,
+				460839C72237197000A3D643 /* StorageManagerWrapper.cpp */,
+				460839C82237197000A3D643 /* StorageManagerWrapper.hpp */,
+				460838F6223718BA00A3D643 /* Account.cpp */,
+				46083909223718BC00A3D643 /* Account.h */,
+				460838FD223718BB00A3D643 /* Authentication.cpp */,
+				46083907223718BC00A3D643 /* Authentication.h */,
+				46083908223718BC00A3D643 /* CMakeLists.txt */,
+				460838FE223718BB00A3D643 /* DataManager.cpp */,
+				46083905223718BB00A3D643 /* DataManager.h */,
+				46083902223718BB00A3D643 /* FirebaseManager.cpp */,
+				460838F7223718BB00A3D643 /* FirebaseManager.h */,
+				46083903223718BB00A3D643 /* PushableObject.cpp */,
+				460838FC223718BB00A3D643 /* PushableObject.h */,
+				46083900223718BB00A3D643 /* Rank.cpp */,
+				460838F5223718BA00A3D643 /* Rank.h */,
+				460838F8223718BB00A3D643 /* StorageListener.cpp */,
+				460838FF223718BB00A3D643 /* StorageListener.h */,
+				460838F9223718BB00A3D643 /* StorageManager.cpp */,
+				460838FA223718BB00A3D643 /* StorageManager.h */,
+				460838FB223718BB00A3D643 /* WeCycle.cpp */,
+				46083901223718BB00A3D643 /* WeCycle.h */,
 			);
 			path = "Backend Files ";
 			sourceTree = "<group>";
@@ -219,7 +229,6 @@
 		73B5D97697DB628A854676BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				460BE9712232B5A400251611 /* libcryptlib.a */,
 				46042C77223011660019433F /* firebase_analytics.framework */,
 				46042C79223011670019433F /* firebase_auth.framework */,
 				46042C78223011660019433F /* firebase_database.framework */,
@@ -302,6 +311,7 @@
 			files = (
 				460CA91F222B4AA00015A2BE /* GoogleService-Info.plist in Resources */,
 				461B4E0D221BBE0800A8DB3A /* Assets.xcassets in Resources */,
+				46083914223718BC00A3D643 /* CMakeLists.txt in Resources */,
 				461B4E22221BC3CB00A8DB3A /* LaunchScreen.storyboard in Resources */,
 				461B4E18221BC05F00A8DB3A /* Main.storyboard in Resources */,
 				460BE7402232A40300251611 /* google-services.json in Resources */,
@@ -374,33 +384,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46042CA2223012A80019433F /* FirebaseManager.cpp in Sources */,
-				460BEA292232B7B300251611 /* Account.cpp in Sources */,
-				46042CA5223012A80019433F /* FirebaseManagerWrapper.cpp in Sources */,
-				460BEA2A2232B7B300251611 /* Authentication.cpp in Sources */,
+				46083912223718BC00A3D643 /* PushableObject.cpp in Sources */,
 				461B4E1A221BC0B900A8DB3A /* ClarifaiHelper.swift in Sources */,
-				460BE7452232A8A800251611 /* AuthenticationWrapper.cpp in Sources */,
+				4608390F223718BC00A3D643 /* DataManager.cpp in Sources */,
+				4608390A223718BC00A3D643 /* Account.cpp in Sources */,
+				460839D22237197000A3D643 /* DataManagerWrapper.cpp in Sources */,
+				4608390E223718BC00A3D643 /* Authentication.cpp in Sources */,
 				469DB9FF221E46C40051279D /* MainCollectionViewCell.swift in Sources */,
+				460839D42237197000A3D643 /* FirebaseManagerWrapper.cpp in Sources */,
 				461B4E1C221BC0EB00A8DB3A /* CameraViewController.swift in Sources */,
-				46042CA3223012A80019433F /* PushableObject.cpp in Sources */,
+				46083910223718BC00A3D643 /* Rank.cpp in Sources */,
 				460CA927222BA1890015A2BE /* NewsCollectionViewCell.swift in Sources */,
+				460839D52237197000A3D643 /* AccountWrapper.cpp in Sources */,
 				460CA925222B9D990015A2BE /* NewsViewController.swift in Sources */,
 				461B4E08221BBE0700A8DB3A /* ViewController.swift in Sources */,
-				46042C9E223012A80019433F /* StorageListener.cpp in Sources */,
-				46042CA0223012A80019433F /* StorageManager.cpp in Sources */,
 				469DB9FD221E0B940051279D /* ScrollViewController.swift in Sources */,
-				460BEA282232B7B300251611 /* DataManager.cpp in Sources */,
 				46FEB9B4221F727C0031A93F /* CircularTransition.swift in Sources */,
-				46042C9C223012A80019433F /* PushableObjectWrapper.cpp in Sources */,
-				46042C9F223012A80019433F /* AccountWrapper.cpp in Sources */,
+				460839D32237197000A3D643 /* PushableObjectWrapper.cpp in Sources */,
 				469DB9F9221E0B760051279D /* RightScreenViewController.swift in Sources */,
 				469DB9FB221E0B850051279D /* LeftScreenViewController.swift in Sources */,
+				4608390C223718BC00A3D643 /* StorageManager.cpp in Sources */,
 				461B4E1E221BC0F100A8DB3A /* PreviewViewController.swift in Sources */,
-				46042CA4223012A80019433F /* StorageManagerWrapper.cpp in Sources */,
-				46042C9D223012A80019433F /* DataManagerWrapper.cpp in Sources */,
 				461B4E06221BBE0700A8DB3A /* AppDelegate.swift in Sources */,
 				46FEB9B6221FB12E0031A93F /* StatsViewController.swift in Sources */,
+				46083911223718BC00A3D643 /* FirebaseManager.cpp in Sources */,
+				460839D12237197000A3D643 /* StorageManagerWrapper.cpp in Sources */,
 				460F872B223495F400CA4D58 /* SettingsViewController.swift in Sources */,
+				460839D62237197000A3D643 /* AuthenticationWrapper.cpp in Sources */,
+				4608390D223718BC00A3D643 /* WeCycle.cpp in Sources */,
+				4608390B223718BC00A3D643 /* StorageListener.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +548,30 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuth/FirebaseAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore/FirebaseCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseDatabase/FirebaseDatabase.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseStorage/FirebaseStorage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities/GoogleUtilities.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftyJSON/SwiftyJSON.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library/leveldb.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb/nanopb.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/FirebaseAuthInterop\"",
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+					/WeCylce/cryptopp,
+				);
 				"HEADER_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/Alamofire/Alamofire.framework/Headers\"",
@@ -554,6 +590,7 @@
 					"\"${PODS_ROOT}/Headers/Public/FirebaseAuthInterop\"",
 					"$(inherited)",
 					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+					/WeCylce/cryptopp,
 				);
 				INFOPLIST_FILE = WeCycle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -564,12 +601,69 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				"OTHER_LDFLAGS[arch=*]" = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"FIRAnalyticsConnector\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseAuth\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreDiagnostics\"",
+					"-framework",
+					"\"FirebaseDatabase\"",
+					"-framework",
+					"\"FirebaseInstanceID\"",
+					"-framework",
+					"\"FirebaseStorage\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GTMSessionFetcher\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"SDWebImage\"",
+					"-framework",
+					"\"SafariServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SwiftyJSON\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"leveldb\"",
+					"-framework",
+					"\"nanopb\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.wecycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "WeCycle/WeCycle-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = /WeCylce/cryptopp;
 			};
 			name = Debug;
 		};
@@ -600,6 +694,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "WeCycle/WeCycle-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = /WeCylce/cryptopp;
 			};
 			name = Release;
 		};

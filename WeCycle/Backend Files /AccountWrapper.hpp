@@ -4,8 +4,11 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-    const void *initializeAccount_basic(const char *emailAddress, const char *password);
-    const void *initializeAccount_basic_phone(const char *emailAddress, const char *password, long phoneNumber);
+	const void *initializeAccount();
+	const void updateRank(const void *accountObj, const void *dbManager);
+	const void updateXP(const void *accountObj, int increment, const void *dbManager);
+	const void updateCoins(const void *accountObj, int incremenet, const void *dbManager);
+	const void updatePFP(const void *accountObj, const char* link, const void *dbManager);
 #ifdef __cplusplus
 }
 #endif

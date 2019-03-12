@@ -29,6 +29,7 @@ class LeftScreenViewController: UIViewController {
         friendsCenter = friendsCard.center.y
         topRectCenter = topRect.center.y
         
+        self.circle.transform = CGAffineTransform(scaleX: 1, y: 1)
     }
     
     
@@ -53,7 +54,7 @@ class LeftScreenViewController: UIViewController {
     @IBAction func profileClick(_ sender: Any) {
         
         UIView.animate(withDuration: 0.5) {
-            self.circle.transform = CGAffineTransform(scaleX: 15, y: 15)
+            self.circle.transform = CGAffineTransform(scaleX: 50, y: 50)
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {

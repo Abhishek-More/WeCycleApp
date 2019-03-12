@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var bubble: UIImageView!
     @IBOutlet var signInReal: UIButton!
     @IBOutlet var titleText: UIImageView!
+    @IBOutlet var signInUserbutton: UIButton!
     
     var emailGest: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(emailUp))
     var passGest: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(passUp))
@@ -195,16 +196,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func signInClicked(_ sender: Any) {
         
         bubble.alpha = 1
+        let username = emailText.text
+        let password = passwordText.text
         
-        
-        
-        
+        let rawFilename = "/Users/abhishek/Desktop/TestApps/WeCycle/WeCycle/google-services.json"
+        let cStringFile = strdup(rawFilename)
+        let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
+
+        let databaseManagerObject = UnsafeMutableRawPointer(mutating: initializeDataManager(firebaseObject))
+
+        let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject, databaseManagerObject))
+
+        let account = UnsafeMutableRawPointer(mutating: initializeAccount())
+
+        createAndRegisterAccount(authenticationObject, account, strdup(username), strdup(password))
 
         UIView.animate(withDuration: 1) {
             self.view.center.y -= 800
         }
-        
-        
         
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
@@ -260,5 +269,22 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    @IBAction func signInClick(_ sender: Any) {
+        
+        let username = emailText.text
+        let password = passwordText.text
+        
+        let rawFilename = "/Users/abhishek/Desktop/TestApps/WeCycle/WeCycle/google-services.json"
+        let cStringFile = strdup(rawFilename)
+        let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
+        
+        let databaseManagerObject = UnsafeMutableRawPointer(mutating: initializeDataManager(firebaseObject))
+        
+        let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject, databaseManagerObject))
+        
+        let account = UnsafeMutableRawPointer(mutating: initializeAccount())
+        
+        signInUser(authenticationObject, account, strdup(username), strdup(password))
+    }
     
 }

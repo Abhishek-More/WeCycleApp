@@ -6,11 +6,10 @@
 
 FirebaseManager::FirebaseManager(const char* filename) {
 	//Initializing firebase app
-	//firebase::AppOptions *appOps = &appOptions;
-	//loadFirebaseJSON(filename, appOps);
-    appOptions.LoadFromJsonConfig(filename);
-    app = firebase::App::Create(appOptions);
-    std::cout << "Firebase manager successfully built" << std::endl;
+	firebase::AppOptions *appOps = &appOptions;
+	loadFirebaseJSON(filename, appOps);
+	app = firebase::App::Create(appOptions);
+	std::cout << "Firebase manager successfully built" << std::endl;
 }
 
 FirebaseManager::FirebaseManager() {

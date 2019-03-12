@@ -13,7 +13,7 @@ void addData(const void *object, const char *key, const char *mapKey, const char
 	map[mapKey] = mapValue;
 	pushableObject->addData(key,map);
 }
-//MAIN.C HAS COMPILE ERRORS HERE TRY TO FIX
+
 void initializeMap_basic(const void *object, const char *keyMap, const char *keyValue) {
 	
 	PushableObject *pushableObject = (PushableObject *)object;
@@ -24,7 +24,7 @@ void initializeMap_basic(const void *object, const char *keyMap, const char *key
 	firebase::Variant keyValueVariant(keyValueString);
 	std::map<std::string, firebase::Variant> map;
 	map.insert(std::pair<std::string, firebase::Variant>(keyMapString, keyValueVariant));
-	pushableObject->initialize(map);
+	//pushableObject->initialize(map);
 	
 }
 
@@ -40,6 +40,6 @@ void initializeMap_basic_map(const void *object, const char *keyMap, const char 
 	firebase::Variant keyValueVariant(valueMap);
 	std::map<std::string, firebase::Variant> map;
 	map.insert(std::pair<std::string, firebase::Variant>(keyMapString, keyValueVariant));
-	pushableObject->initialize(map);
+	//pushableObject->initialize(map);
 
 }

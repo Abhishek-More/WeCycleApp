@@ -26,19 +26,19 @@ void DataManager::pushData(PushableObject *objectToPass, std::string parent) {
 	objectToPass->setKey(key);
 	//Accounts: multiple for loops that access each data point.
 	for (auto &x : objectToPass->dataMap()) {
-		std::string firstKey = x.first;
+		firebase::Variant firstKey = x.first;
 		if (x.second.is_vector()) {
 			for (auto &y : x.second.vector()) {
 				for (auto &z : y.map()) {
-					std::string keys = z.first.string_value();
+					firebase::Variant keys = z.first.string_value();
 					firebase::Variant values = z.second;
-					dbref.Child(parent).Child(firstKey).Child(keys).SetValue(values);
+					dbref.Child(parent).Child(firstKey.mutable_string()).Child(keys.mutable_string()).SetValue(values);
 				}
 			}
 		}
 		else {
 			firebase::Variant value = x.second;
-			dbref.Child(parent).Child(firstKey).SetValue(value);
+			dbref.Child(parent).Child(firstKey.mutable_string()).SetValue(value);
 		}
 	}
 
@@ -101,6 +101,49 @@ const char **DataManager::retrieveData(std::string parent) {
 	return resultArray;
 }
 
+void DataManager::retrieveData(std::string parent, firebase::Variant object) {
+
+	firebase::Future<firebase::database::DataSnapshot> result = dbref.Child(parent).GetValue();
+
+	while (result.status() != firebase::kFutureStatusComplete) {} //Loop to wait until retrieval is complete //TODO add a runtime exception
+	if (result.error() == firebase::database::kErrorNone) {
+		std::cout << "Retrival Complete" << std::endl;
+
+		std::vector<firebase::database::DataSnapshot> childList = result.result()->children();
+		std::vector<firebase::Variant> variantList;
+		int counter = 0;
+		for (auto &values : childList) { //Iterate through the vector of STRING VALUE
+			variantList[counter] = values.value(); 
+			counter++;
+		}
+		object = variantList;
+	}
+	else {
+		std::cout << "Error Retrieving Data" << std::endl;
+	}
+}
+
+void DataManager::retrieveData(std::string parent, std::string key, firebase::Variant object) {
+
+	firebase::Future<firebase::database::DataSnapshot> result = dbref.Child(parent).Child(key).GetValue();
+
+	while (result.status() != firebase::kFutureStatusComplete) {} //Loop to wait until retrieval is complete
+	if (result.error() == firebase::database::kErrorNone) {
+		std::cout << "Retrival Complete" << std::endl;
+
+		std::vector<firebase::database::DataSnapshot> childList = result.result()->children();
+		std::vector<firebase::Variant> variantList;
+		int counter = 0;
+		for (auto &values : childList) { //Iterate through the vector of STRING VALUE
+			variantList[counter] = values.value();
+			counter++;
+		}
+		object = variantList;
+	}
+	else {
+		std::cout << "Error Retrieving Data" << std::endl;
+	}
+}
 
 firebase::database::DatabaseReference DataManager::getDBref() {
 	return dbref;
