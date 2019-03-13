@@ -29,6 +29,8 @@ class CameraViewController: UIViewController{
     @IBOutlet var shutterFrame: UIButton!
     @IBOutlet var blueBlur: UIImageView!
     @IBOutlet var blue: UIVisualEffectView!
+    @IBOutlet var greenBlur: UIImageView!
+    
     
     override func viewDidLoad() {
         
@@ -36,11 +38,11 @@ class CameraViewController: UIViewController{
         
         self.shutterFrame.alpha = 0
         
-        setUpCaptureSession()
-        setUpDevice()
-        setUpInputOutput()
-        setUpPreviewLayer()
-        startRunningCaptureSession()
+//        setUpCaptureSession()
+//        setUpDevice()
+//        setUpInputOutput()
+//        setUpPreviewLayer()
+//        startRunningCaptureSession()
         
         blackView.alpha = 1 
         toggleCameraGestureRecognizer.numberOfTapsRequired = 2
@@ -48,18 +50,6 @@ class CameraViewController: UIViewController{
         view.addGestureRecognizer(toggleCameraGestureRecognizer)
         
         let center = self.shutterFrame.center
-        
-    
-//        let trackLayer = CAShapeLayer()
-//
-//        let circularPath = UIBezierPath(arcCenter: center, radius: 37.5, startAngle: -CGFloat.pi / 2,   endAngle: 2 * CGFloat.pi, clockwise: true)
-//        trackLayer.path = circularPath.cgPath
-//
-//        trackLayer.strokeColor = UIColor.white.cgColor
-//        trackLayer.lineWidth = 5
-//        trackLayer.fillColor = UIColor.clear.cgColor
-//        trackLayer.lineCap = CAShapeLayerLineCap.round
-//        view.layer.addSublayer(trackLayer)
         
         let circularPath2 = UIBezierPath(arcCenter: center, radius: 38.05, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
         shapeLayer.path = circularPath2.cgPath
@@ -137,7 +127,7 @@ class CameraViewController: UIViewController{
         }
         
     }
-    
+
     func setUpPreviewLayer() {
         
 
@@ -211,7 +201,9 @@ class CameraViewController: UIViewController{
     
     func blurring(num: Double) {
         
-        self.blueBlur.alpha = CGFloat(abs(375.0 - num) / 250)
+        self.blueBlur.alpha = CGFloat((375.0 - num) / 250)
+        self.greenBlur.alpha = CGFloat((num - 375) / 250)
+        
         self.shapeLayer.opacity = Float(CGFloat(0.3 - abs(375.0 - num) / 25))
         //self.blueBlur.alpha = CGFloat(abs(375.0 - num) / 750)
         

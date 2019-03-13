@@ -532,6 +532,10 @@
                                     <action selector="shutterTouched:" destination="5js-es-AtV" eventType="touchDown" id="IpL-e6-TEI"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Green Rect" translatesAutoresizingMaskIntoConstraints="NO" id="NWf-SC-eLp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4a-6H-Y0U">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3rS-st-pHG">
@@ -566,6 +570,7 @@
                         <outlet property="blue" destination="E4a-6H-Y0U" id="MNZ-Vu-OwH"/>
                         <outlet property="blueBlur" destination="uc8-ec-iYp" id="ONY-hm-lbz"/>
                         <outlet property="cameraFrame" destination="qZa-ie-yoX" id="dXz-4Z-YcO"/>
+                        <outlet property="greenBlur" destination="NWf-SC-eLp" id="15g-Iq-QZk"/>
                         <outlet property="shutterFrame" destination="dMB-52-rv4" id="0eA-dH-Oh1"/>
                         <segue destination="hYK-JK-qw6" kind="show" identifier="pictureTaken" animates="NO" id="DFg-dS-CgK"/>
                     </connections>

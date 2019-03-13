@@ -17,21 +17,21 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.wecycle</string>
+	<string>com.droptable.wecycle</string>
 	<key>PROJECT_ID</key>
 	<string>wecycle-316c1</string>
 	<key>STORAGE_BUCKET</key>
 	<string>wecycle-316c1.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:295581143363:ios:09daf038e644e47f</string>
 	<key>DATABASE_URL</key>
