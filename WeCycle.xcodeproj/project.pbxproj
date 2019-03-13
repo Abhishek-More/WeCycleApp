@@ -12,22 +12,6 @@
 		46042C7D223011670019433F /* firebase_database.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C78223011660019433F /* firebase_database.framework */; };
 		46042C7E223011670019433F /* firebase_auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C79223011670019433F /* firebase_auth.framework */; };
 		460838282236BA2700A3D643 /* firebase_storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C75223011640019433F /* firebase_storage.framework */; };
-		4608390A223718BC00A3D643 /* Account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460838F6223718BA00A3D643 /* Account.cpp */; };
-		4608390B223718BC00A3D643 /* StorageListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460838F8223718BB00A3D643 /* StorageListener.cpp */; };
-		4608390C223718BC00A3D643 /* StorageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460838F9223718BB00A3D643 /* StorageManager.cpp */; };
-		4608390D223718BC00A3D643 /* WeCycle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460838FB223718BB00A3D643 /* WeCycle.cpp */; };
-		4608390E223718BC00A3D643 /* Authentication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460838FD223718BB00A3D643 /* Authentication.cpp */; };
-		4608390F223718BC00A3D643 /* DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460838FE223718BB00A3D643 /* DataManager.cpp */; };
-		46083910223718BC00A3D643 /* Rank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46083900223718BB00A3D643 /* Rank.cpp */; };
-		46083911223718BC00A3D643 /* FirebaseManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46083902223718BB00A3D643 /* FirebaseManager.cpp */; };
-		46083912223718BC00A3D643 /* PushableObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46083903223718BB00A3D643 /* PushableObject.cpp */; };
-		46083914223718BC00A3D643 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 46083908223718BC00A3D643 /* CMakeLists.txt */; };
-		460839D12237197000A3D643 /* StorageManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460839C72237197000A3D643 /* StorageManagerWrapper.cpp */; };
-		460839D22237197000A3D643 /* DataManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460839C92237197000A3D643 /* DataManagerWrapper.cpp */; };
-		460839D32237197000A3D643 /* PushableObjectWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460839CA2237197000A3D643 /* PushableObjectWrapper.cpp */; };
-		460839D42237197000A3D643 /* FirebaseManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460839CB2237197000A3D643 /* FirebaseManagerWrapper.cpp */; };
-		460839D52237197000A3D643 /* AccountWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460839CF2237197000A3D643 /* AccountWrapper.cpp */; };
-		460839D62237197000A3D643 /* AuthenticationWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460839D02237197000A3D643 /* AuthenticationWrapper.cpp */; };
 		460BE7402232A40300251611 /* google-services.json in Resources */ = {isa = PBXBuildFile; fileRef = 460BE73F2232A40200251611 /* google-services.json */; };
 		460CA91F222B4AA00015A2BE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 460CA91E222B4AA00015A2BE /* GoogleService-Info.plist */; };
 		460CA927222BA1890015A2BE /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460CA926222BA1890015A2BE /* NewsCollectionViewCell.swift */; };
@@ -45,6 +29,22 @@
 		469DB9FD221E0B940051279D /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DB9FC221E0B940051279D /* ScrollViewController.swift */; };
 		469DB9FF221E46C40051279D /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DB9FE221E46C40051279D /* MainCollectionViewCell.swift */; };
 		46FEB9B4221F727C0031A93F /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FEB9B3221F727C0031A93F /* CircularTransition.swift */; };
+		BA2FEB0722389A6700C8DB52 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2FEB0622389A6700C8DB52 /* CircleView.swift */; };
+		BA3B90D622388C8C00EBACF3 /* WeCycle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3B90C322388C8A00EBACF3 /* WeCycle.cpp */; };
+		BA3B90D822388C8C00EBACF3 /* FirebaseManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3B90C822388C8B00EBACF3 /* FirebaseManager.cpp */; };
+		BA3B90D922388C8C00EBACF3 /* Authentication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3B90C922388C8B00EBACF3 /* Authentication.cpp */; };
+		BA3B90DA22388C8C00EBACF3 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = BA3B90CA22388C8B00EBACF3 /* CMakeLists.txt */; };
+		BA3B90DB22388C8C00EBACF3 /* Account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3B90CD22388C8B00EBACF3 /* Account.cpp */; };
+		BA3B90DC22388C8C00EBACF3 /* StorageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3B90CF22388C8B00EBACF3 /* StorageManager.cpp */; };
+		BA3B90DD22388C8C00EBACF3 /* StorageListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3B90D122388C8B00EBACF3 /* StorageListener.cpp */; };
+		BA3B90DE22388C8C00EBACF3 /* DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3B90D322388C8C00EBACF3 /* DataManager.cpp */; };
+		BA3B90DF22388C8C00EBACF3 /* PushableObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3B90D422388C8C00EBACF3 /* PushableObject.cpp */; };
+		BA3B90EC22388C9400EBACF3 /* PushableObjectWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3B90E022388C9400EBACF3 /* PushableObjectWrapper.cpp */; };
+		BA3B90ED22388C9400EBACF3 /* StorageManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3B90E222388C9400EBACF3 /* StorageManagerWrapper.cpp */; };
+		BA3B90EE22388C9400EBACF3 /* DataManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3B90E522388C9400EBACF3 /* DataManagerWrapper.cpp */; };
+		BA3B90EF22388C9400EBACF3 /* AuthenticationWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3B90E922388C9400EBACF3 /* AuthenticationWrapper.cpp */; };
+		BA3B90F022388C9400EBACF3 /* AccountWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3B90EA22388C9400EBACF3 /* AccountWrapper.cpp */; };
+		BA3B90F122388C9400EBACF3 /* FirebaseManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA3B90EB22388C9400EBACF3 /* FirebaseManagerWrapper.cpp */; };
 		F36815A2438F24E133BF4328 /* Pods_WeCycle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06D92FB4F574C763932FCA17 /* Pods_WeCycle.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,37 +57,6 @@
 		46042C78223011660019433F /* firebase_database.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase_database.framework; sourceTree = "<group>"; };
 		46042C79223011670019433F /* firebase_auth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase_auth.framework; sourceTree = "<group>"; };
 		46042CB62230162B0019433F /* WeCycle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeCycle-Bridging-Header.h"; sourceTree = "<group>"; };
-		460838F5223718BA00A3D643 /* Rank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Rank.h; path = ../../../../../WeCycle/cryptopp/Rank.h; sourceTree = "<group>"; };
-		460838F6223718BA00A3D643 /* Account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Account.cpp; path = ../../../../../WeCycle/cryptopp/Account.cpp; sourceTree = "<group>"; };
-		460838F7223718BB00A3D643 /* FirebaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirebaseManager.h; path = ../../../../../WeCycle/cryptopp/FirebaseManager.h; sourceTree = "<group>"; };
-		460838F8223718BB00A3D643 /* StorageListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StorageListener.cpp; path = ../../../../../WeCycle/cryptopp/StorageListener.cpp; sourceTree = "<group>"; };
-		460838F9223718BB00A3D643 /* StorageManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StorageManager.cpp; path = ../../../../../WeCycle/cryptopp/StorageManager.cpp; sourceTree = "<group>"; };
-		460838FA223718BB00A3D643 /* StorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StorageManager.h; path = ../../../../../WeCycle/cryptopp/StorageManager.h; sourceTree = "<group>"; };
-		460838FB223718BB00A3D643 /* WeCycle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WeCycle.cpp; path = ../../../../../WeCycle/cryptopp/WeCycle.cpp; sourceTree = "<group>"; };
-		460838FC223718BB00A3D643 /* PushableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushableObject.h; path = ../../../../../WeCycle/cryptopp/PushableObject.h; sourceTree = "<group>"; };
-		460838FD223718BB00A3D643 /* Authentication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Authentication.cpp; path = ../../../../../WeCycle/cryptopp/Authentication.cpp; sourceTree = "<group>"; };
-		460838FE223718BB00A3D643 /* DataManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataManager.cpp; path = ../../../../../WeCycle/cryptopp/DataManager.cpp; sourceTree = "<group>"; };
-		460838FF223718BB00A3D643 /* StorageListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StorageListener.h; path = ../../../../../WeCycle/cryptopp/StorageListener.h; sourceTree = "<group>"; };
-		46083900223718BB00A3D643 /* Rank.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Rank.cpp; path = ../../../../../WeCycle/cryptopp/Rank.cpp; sourceTree = "<group>"; };
-		46083901223718BB00A3D643 /* WeCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeCycle.h; path = ../../../../../WeCycle/cryptopp/WeCycle.h; sourceTree = "<group>"; };
-		46083902223718BB00A3D643 /* FirebaseManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FirebaseManager.cpp; path = ../../../../../WeCycle/cryptopp/FirebaseManager.cpp; sourceTree = "<group>"; };
-		46083903223718BB00A3D643 /* PushableObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PushableObject.cpp; path = ../../../../../WeCycle/cryptopp/PushableObject.cpp; sourceTree = "<group>"; };
-		46083905223718BB00A3D643 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = ../../../../../WeCycle/cryptopp/DataManager.h; sourceTree = "<group>"; };
-		46083907223718BC00A3D643 /* Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Authentication.h; path = ../../../../../WeCycle/cryptopp/Authentication.h; sourceTree = "<group>"; };
-		46083908223718BC00A3D643 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = ../../../../../WeCycle/cryptopp/CMakeLists.txt; sourceTree = "<group>"; };
-		46083909223718BC00A3D643 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = ../../../../../WeCycle/cryptopp/Account.h; sourceTree = "<group>"; };
-		460839C52237196F00A3D643 /* PushableObjectWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PushableObjectWrapper.hpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/PushableObjectWrapper.hpp"; sourceTree = "<group>"; };
-		460839C62237197000A3D643 /* FirebaseManagerWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FirebaseManagerWrapper.hpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/FirebaseManagerWrapper.hpp"; sourceTree = "<group>"; };
-		460839C72237197000A3D643 /* StorageManagerWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StorageManagerWrapper.cpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/StorageManagerWrapper.cpp"; sourceTree = "<group>"; };
-		460839C82237197000A3D643 /* StorageManagerWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StorageManagerWrapper.hpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/StorageManagerWrapper.hpp"; sourceTree = "<group>"; };
-		460839C92237197000A3D643 /* DataManagerWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataManagerWrapper.cpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/DataManagerWrapper.cpp"; sourceTree = "<group>"; };
-		460839CA2237197000A3D643 /* PushableObjectWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PushableObjectWrapper.cpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/PushableObjectWrapper.cpp"; sourceTree = "<group>"; };
-		460839CB2237197000A3D643 /* FirebaseManagerWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FirebaseManagerWrapper.cpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/FirebaseManagerWrapper.cpp"; sourceTree = "<group>"; };
-		460839CC2237197000A3D643 /* AuthenticationWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AuthenticationWrapper.hpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/AuthenticationWrapper.hpp"; sourceTree = "<group>"; };
-		460839CD2237197000A3D643 /* DataManagerWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DataManagerWrapper.hpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/DataManagerWrapper.hpp"; sourceTree = "<group>"; };
-		460839CE2237197000A3D643 /* AccountWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AccountWrapper.hpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/AccountWrapper.hpp"; sourceTree = "<group>"; };
-		460839CF2237197000A3D643 /* AccountWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AccountWrapper.cpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/AccountWrapper.cpp"; sourceTree = "<group>"; };
-		460839D02237197000A3D643 /* AuthenticationWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AuthenticationWrapper.cpp; path = "../../../../../WeCycle/WeCycle/c-headers-wrappers/AuthenticationWrapper.cpp"; sourceTree = "<group>"; };
 		46083A3422371B1600A3D643 /* json.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = json.hpp; path = "New Group/json.hpp"; sourceTree = "<group>"; };
 		460BE73F2232A40200251611 /* google-services.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "google-services.json"; sourceTree = "<group>"; };
 		460CA91E222B4AA00015A2BE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -108,6 +77,36 @@
 		469DB9FC221E0B940051279D /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		469DB9FE221E46C40051279D /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		46FEB9B3221F727C0031A93F /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
+		BA2FEB0622389A6700C8DB52 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		BA3B90C322388C8A00EBACF3 /* WeCycle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WeCycle.cpp; path = ../../../WeCycle/WeCycle/WeCycle.cpp; sourceTree = "<group>"; };
+		BA3B90C422388C8B00EBACF3 /* StorageListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StorageListener.h; path = ../../../WeCycle/WeCycle/StorageListener.h; sourceTree = "<group>"; };
+		BA3B90C722388C8B00EBACF3 /* WeCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WeCycle.h; path = ../../../WeCycle/WeCycle/WeCycle.h; sourceTree = "<group>"; };
+		BA3B90C822388C8B00EBACF3 /* FirebaseManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FirebaseManager.cpp; path = ../../../WeCycle/WeCycle/FirebaseManager.cpp; sourceTree = "<group>"; };
+		BA3B90C922388C8B00EBACF3 /* Authentication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Authentication.cpp; path = ../../../WeCycle/WeCycle/Authentication.cpp; sourceTree = "<group>"; };
+		BA3B90CA22388C8B00EBACF3 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = ../../../WeCycle/WeCycle/CMakeLists.txt; sourceTree = "<group>"; };
+		BA3B90CB22388C8B00EBACF3 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Account.h; path = ../../../WeCycle/WeCycle/Account.h; sourceTree = "<group>"; };
+		BA3B90CC22388C8B00EBACF3 /* FirebaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FirebaseManager.h; path = ../../../WeCycle/WeCycle/FirebaseManager.h; sourceTree = "<group>"; };
+		BA3B90CD22388C8B00EBACF3 /* Account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Account.cpp; path = ../../../WeCycle/WeCycle/Account.cpp; sourceTree = "<group>"; };
+		BA3B90CE22388C8B00EBACF3 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataManager.h; path = ../../../WeCycle/WeCycle/DataManager.h; sourceTree = "<group>"; };
+		BA3B90CF22388C8B00EBACF3 /* StorageManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StorageManager.cpp; path = ../../../WeCycle/WeCycle/StorageManager.cpp; sourceTree = "<group>"; };
+		BA3B90D022388C8B00EBACF3 /* Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Authentication.h; path = ../../../WeCycle/WeCycle/Authentication.h; sourceTree = "<group>"; };
+		BA3B90D122388C8B00EBACF3 /* StorageListener.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StorageListener.cpp; path = ../../../WeCycle/WeCycle/StorageListener.cpp; sourceTree = "<group>"; };
+		BA3B90D222388C8B00EBACF3 /* PushableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PushableObject.h; path = ../../../WeCycle/WeCycle/PushableObject.h; sourceTree = "<group>"; };
+		BA3B90D322388C8C00EBACF3 /* DataManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataManager.cpp; path = ../../../WeCycle/WeCycle/DataManager.cpp; sourceTree = "<group>"; };
+		BA3B90D422388C8C00EBACF3 /* PushableObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PushableObject.cpp; path = ../../../WeCycle/WeCycle/PushableObject.cpp; sourceTree = "<group>"; };
+		BA3B90D522388C8C00EBACF3 /* StorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StorageManager.h; path = ../../../WeCycle/WeCycle/StorageManager.h; sourceTree = "<group>"; };
+		BA3B90E022388C9400EBACF3 /* PushableObjectWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PushableObjectWrapper.cpp; path = "../../../WeCycle/WeCycle/c-headers-wrappers/PushableObjectWrapper.cpp"; sourceTree = "<group>"; };
+		BA3B90E122388C9400EBACF3 /* PushableObjectWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PushableObjectWrapper.hpp; path = "../../../WeCycle/WeCycle/c-headers-wrappers/PushableObjectWrapper.hpp"; sourceTree = "<group>"; };
+		BA3B90E222388C9400EBACF3 /* StorageManagerWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StorageManagerWrapper.cpp; path = "../../../WeCycle/WeCycle/c-headers-wrappers/StorageManagerWrapper.cpp"; sourceTree = "<group>"; };
+		BA3B90E322388C9400EBACF3 /* AuthenticationWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AuthenticationWrapper.hpp; path = "../../../WeCycle/WeCycle/c-headers-wrappers/AuthenticationWrapper.hpp"; sourceTree = "<group>"; };
+		BA3B90E422388C9400EBACF3 /* FirebaseManagerWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FirebaseManagerWrapper.hpp; path = "../../../WeCycle/WeCycle/c-headers-wrappers/FirebaseManagerWrapper.hpp"; sourceTree = "<group>"; };
+		BA3B90E522388C9400EBACF3 /* DataManagerWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataManagerWrapper.cpp; path = "../../../WeCycle/WeCycle/c-headers-wrappers/DataManagerWrapper.cpp"; sourceTree = "<group>"; };
+		BA3B90E622388C9400EBACF3 /* StorageManagerWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = StorageManagerWrapper.hpp; path = "../../../WeCycle/WeCycle/c-headers-wrappers/StorageManagerWrapper.hpp"; sourceTree = "<group>"; };
+		BA3B90E722388C9400EBACF3 /* AccountWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AccountWrapper.hpp; path = "../../../WeCycle/WeCycle/c-headers-wrappers/AccountWrapper.hpp"; sourceTree = "<group>"; };
+		BA3B90E822388C9400EBACF3 /* DataManagerWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DataManagerWrapper.hpp; path = "../../../WeCycle/WeCycle/c-headers-wrappers/DataManagerWrapper.hpp"; sourceTree = "<group>"; };
+		BA3B90E922388C9400EBACF3 /* AuthenticationWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AuthenticationWrapper.cpp; path = "../../../WeCycle/WeCycle/c-headers-wrappers/AuthenticationWrapper.cpp"; sourceTree = "<group>"; };
+		BA3B90EA22388C9400EBACF3 /* AccountWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AccountWrapper.cpp; path = "../../../WeCycle/WeCycle/c-headers-wrappers/AccountWrapper.cpp"; sourceTree = "<group>"; };
+		BA3B90EB22388C9400EBACF3 /* FirebaseManagerWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FirebaseManagerWrapper.cpp; path = "../../../WeCycle/WeCycle/c-headers-wrappers/FirebaseManagerWrapper.cpp"; sourceTree = "<group>"; };
 		FD126D1984AB0359882E69CE /* Pods-WeCycle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeCycle.release.xcconfig"; path = "Target Support Files/Pods-WeCycle/Pods-WeCycle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,37 +131,35 @@
 			isa = PBXGroup;
 			children = (
 				46083A3422371B1600A3D643 /* json.hpp */,
-				460839CF2237197000A3D643 /* AccountWrapper.cpp */,
-				460839CE2237197000A3D643 /* AccountWrapper.hpp */,
-				460839D02237197000A3D643 /* AuthenticationWrapper.cpp */,
-				460839CC2237197000A3D643 /* AuthenticationWrapper.hpp */,
-				460839C92237197000A3D643 /* DataManagerWrapper.cpp */,
-				460839CD2237197000A3D643 /* DataManagerWrapper.hpp */,
-				460839CB2237197000A3D643 /* FirebaseManagerWrapper.cpp */,
-				460839C62237197000A3D643 /* FirebaseManagerWrapper.hpp */,
-				460839CA2237197000A3D643 /* PushableObjectWrapper.cpp */,
-				460839C52237196F00A3D643 /* PushableObjectWrapper.hpp */,
-				460839C72237197000A3D643 /* StorageManagerWrapper.cpp */,
-				460839C82237197000A3D643 /* StorageManagerWrapper.hpp */,
-				460838F6223718BA00A3D643 /* Account.cpp */,
-				46083909223718BC00A3D643 /* Account.h */,
-				460838FD223718BB00A3D643 /* Authentication.cpp */,
-				46083907223718BC00A3D643 /* Authentication.h */,
-				46083908223718BC00A3D643 /* CMakeLists.txt */,
-				460838FE223718BB00A3D643 /* DataManager.cpp */,
-				46083905223718BB00A3D643 /* DataManager.h */,
-				46083902223718BB00A3D643 /* FirebaseManager.cpp */,
-				460838F7223718BB00A3D643 /* FirebaseManager.h */,
-				46083903223718BB00A3D643 /* PushableObject.cpp */,
-				460838FC223718BB00A3D643 /* PushableObject.h */,
-				46083900223718BB00A3D643 /* Rank.cpp */,
-				460838F5223718BA00A3D643 /* Rank.h */,
-				460838F8223718BB00A3D643 /* StorageListener.cpp */,
-				460838FF223718BB00A3D643 /* StorageListener.h */,
-				460838F9223718BB00A3D643 /* StorageManager.cpp */,
-				460838FA223718BB00A3D643 /* StorageManager.h */,
-				460838FB223718BB00A3D643 /* WeCycle.cpp */,
-				46083901223718BB00A3D643 /* WeCycle.h */,
+				BA3B90EA22388C9400EBACF3 /* AccountWrapper.cpp */,
+				BA3B90E722388C9400EBACF3 /* AccountWrapper.hpp */,
+				BA3B90E922388C9400EBACF3 /* AuthenticationWrapper.cpp */,
+				BA3B90E322388C9400EBACF3 /* AuthenticationWrapper.hpp */,
+				BA3B90E522388C9400EBACF3 /* DataManagerWrapper.cpp */,
+				BA3B90E822388C9400EBACF3 /* DataManagerWrapper.hpp */,
+				BA3B90EB22388C9400EBACF3 /* FirebaseManagerWrapper.cpp */,
+				BA3B90E422388C9400EBACF3 /* FirebaseManagerWrapper.hpp */,
+				BA3B90E022388C9400EBACF3 /* PushableObjectWrapper.cpp */,
+				BA3B90E122388C9400EBACF3 /* PushableObjectWrapper.hpp */,
+				BA3B90E222388C9400EBACF3 /* StorageManagerWrapper.cpp */,
+				BA3B90E622388C9400EBACF3 /* StorageManagerWrapper.hpp */,
+				BA3B90CD22388C8B00EBACF3 /* Account.cpp */,
+				BA3B90CB22388C8B00EBACF3 /* Account.h */,
+				BA3B90C922388C8B00EBACF3 /* Authentication.cpp */,
+				BA3B90D022388C8B00EBACF3 /* Authentication.h */,
+				BA3B90CA22388C8B00EBACF3 /* CMakeLists.txt */,
+				BA3B90D322388C8C00EBACF3 /* DataManager.cpp */,
+				BA3B90CE22388C8B00EBACF3 /* DataManager.h */,
+				BA3B90C822388C8B00EBACF3 /* FirebaseManager.cpp */,
+				BA3B90CC22388C8B00EBACF3 /* FirebaseManager.h */,
+				BA3B90D422388C8C00EBACF3 /* PushableObject.cpp */,
+				BA3B90D222388C8B00EBACF3 /* PushableObject.h */,
+				BA3B90D122388C8B00EBACF3 /* StorageListener.cpp */,
+				BA3B90C422388C8B00EBACF3 /* StorageListener.h */,
+				BA3B90CF22388C8B00EBACF3 /* StorageManager.cpp */,
+				BA3B90D522388C8C00EBACF3 /* StorageManager.h */,
+				BA3B90C322388C8A00EBACF3 /* WeCycle.cpp */,
+				BA3B90C722388C8B00EBACF3 /* WeCycle.h */,
 			);
 			path = "Backend Files ";
 			sourceTree = "<group>";
@@ -197,6 +194,7 @@
 				469DB9FE221E46C40051279D /* MainCollectionViewCell.swift */,
 				460CA926222BA1890015A2BE /* NewsCollectionViewCell.swift */,
 				461B4E17221BC05F00A8DB3A /* Main.storyboard */,
+				BA2FEB0622389A6700C8DB52 /* CircleView.swift */,
 				46FEB9B3221F727C0031A93F /* CircularTransition.swift */,
 				461B4E0C221BBE0800A8DB3A /* Assets.xcassets */,
 				460CA91E222B4AA00015A2BE /* GoogleService-Info.plist */,
@@ -305,7 +303,7 @@
 			files = (
 				460CA91F222B4AA00015A2BE /* GoogleService-Info.plist in Resources */,
 				461B4E0D221BBE0800A8DB3A /* Assets.xcassets in Resources */,
-				46083914223718BC00A3D643 /* CMakeLists.txt in Resources */,
+				BA3B90DA22388C8C00EBACF3 /* CMakeLists.txt in Resources */,
 				461B4E22221BC3CB00A8DB3A /* LaunchScreen.storyboard in Resources */,
 				461B4E18221BC05F00A8DB3A /* Main.storyboard in Resources */,
 				460BE7402232A40300251611 /* google-services.json in Resources */,
@@ -378,33 +376,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46083912223718BC00A3D643 /* PushableObject.cpp in Sources */,
+				BA3B90EC22388C9400EBACF3 /* PushableObjectWrapper.cpp in Sources */,
 				461B4E1A221BC0B900A8DB3A /* ClarifaiHelper.swift in Sources */,
-				4608390F223718BC00A3D643 /* DataManager.cpp in Sources */,
-				4608390A223718BC00A3D643 /* Account.cpp in Sources */,
-				460839D22237197000A3D643 /* DataManagerWrapper.cpp in Sources */,
-				4608390E223718BC00A3D643 /* Authentication.cpp in Sources */,
+				BA3B90DE22388C8C00EBACF3 /* DataManager.cpp in Sources */,
 				469DB9FF221E46C40051279D /* MainCollectionViewCell.swift in Sources */,
-				460839D42237197000A3D643 /* FirebaseManagerWrapper.cpp in Sources */,
+				BA3B90DF22388C8C00EBACF3 /* PushableObject.cpp in Sources */,
+				BA3B90D622388C8C00EBACF3 /* WeCycle.cpp in Sources */,
+				BA3B90D922388C8C00EBACF3 /* Authentication.cpp in Sources */,
 				461B4E1C221BC0EB00A8DB3A /* CameraViewController.swift in Sources */,
-				46083910223718BC00A3D643 /* Rank.cpp in Sources */,
+				BA3B90D822388C8C00EBACF3 /* FirebaseManager.cpp in Sources */,
+				BA3B90F022388C9400EBACF3 /* AccountWrapper.cpp in Sources */,
+				BA3B90DC22388C8C00EBACF3 /* StorageManager.cpp in Sources */,
 				460CA927222BA1890015A2BE /* NewsCollectionViewCell.swift in Sources */,
-				460839D52237197000A3D643 /* AccountWrapper.cpp in Sources */,
+				BA3B90DD22388C8C00EBACF3 /* StorageListener.cpp in Sources */,
 				461B4E08221BBE0700A8DB3A /* ViewController.swift in Sources */,
 				469DB9FD221E0B940051279D /* ScrollViewController.swift in Sources */,
 				46FEB9B4221F727C0031A93F /* CircularTransition.swift in Sources */,
-				460839D32237197000A3D643 /* PushableObjectWrapper.cpp in Sources */,
 				469DB9F9221E0B760051279D /* RightScreenViewController.swift in Sources */,
 				469DB9FB221E0B850051279D /* LeftScreenViewController.swift in Sources */,
-				4608390C223718BC00A3D643 /* StorageManager.cpp in Sources */,
+				BA2FEB0722389A6700C8DB52 /* CircleView.swift in Sources */,
 				461B4E1E221BC0F100A8DB3A /* PreviewViewController.swift in Sources */,
 				461B4E06221BBE0700A8DB3A /* AppDelegate.swift in Sources */,
-				46083911223718BC00A3D643 /* FirebaseManager.cpp in Sources */,
-				460839D12237197000A3D643 /* StorageManagerWrapper.cpp in Sources */,
 				460F872B223495F400CA4D58 /* SettingsViewController.swift in Sources */,
-				460839D62237197000A3D643 /* AuthenticationWrapper.cpp in Sources */,
-				4608390D223718BC00A3D643 /* WeCycle.cpp in Sources */,
-				4608390B223718BC00A3D643 /* StorageListener.cpp in Sources */,
+				BA3B90EE22388C9400EBACF3 /* DataManagerWrapper.cpp in Sources */,
+				BA3B90EF22388C9400EBACF3 /* AuthenticationWrapper.cpp in Sources */,
+				BA3B90ED22388C9400EBACF3 /* StorageManagerWrapper.cpp in Sources */,
+				BA3B90F122388C9400EBACF3 /* FirebaseManagerWrapper.cpp in Sources */,
+				BA3B90DB22388C8C00EBACF3 /* Account.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,7 +533,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3VQJV9CA53;
+				DEVELOPMENT_TEAM = 98R2BUP44H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -667,7 +665,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3VQJV9CA53;
+				DEVELOPMENT_TEAM = 98R2BUP44H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
