@@ -11,33 +11,37 @@ import Foundation
 class Account{
 
     var email: String = ""
-    var rank: Int = 0
+    var rank: String = ""
     var xp: Int = 0
+    var friends: [Account] = []
     
-    init(user: String, rank: Int, xp: Int) {
+    init(user: String, rank: String, xp: Int) {
         email = user
         self.rank = rank
         self.xp = xp
-        
     }
 
     func account(user: String) {
         
         email = user
-        rank = 0
+        rank = "Novice Recycler"
         xp = 0
         
     }
     
-    func updateRank(num: Int) {
-        rank += num
+    func updateFriends(friend: Account) {
+        friends.append(friend)
+    }
+    
+    func updateRank(num: String) {
+        rank = num
     }
     
     func updateXP(num: Int) {
         xp += num
     }
     
-    func getRank() -> Int {
+    func getRank() -> String {
         return rank
     }
     
@@ -47,6 +51,10 @@ class Account{
     
     func getEmail() -> String {
         return email
+    }
+    
+    func getFriends() -> [Account] {
+        return friends
     }
     
     

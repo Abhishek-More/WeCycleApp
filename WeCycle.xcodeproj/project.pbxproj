@@ -24,6 +24,8 @@
 		461B4E1C221BC0EB00A8DB3A /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E1B221BC0EB00A8DB3A /* CameraViewController.swift */; };
 		461B4E1E221BC0F100A8DB3A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461B4E1D221BC0F100A8DB3A /* PreviewViewController.swift */; };
 		461B4E22221BC3CB00A8DB3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461B4E21221BC3CB00A8DB3A /* LaunchScreen.storyboard */; };
+		4637D02122396AD600AC131E /* FinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4637D02022396AD600AC131E /* FinderViewController.swift */; };
+		4637D02322396D9300AC131E /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4637D02222396D9300AC131E /* FriendsTableViewCell.swift */; };
 		469DB9F9221E0B760051279D /* RightScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DB9F8221E0B760051279D /* RightScreenViewController.swift */; };
 		469DB9FB221E0B850051279D /* LeftScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DB9FA221E0B850051279D /* LeftScreenViewController.swift */; };
 		469DB9FD221E0B940051279D /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DB9FC221E0B940051279D /* ScrollViewController.swift */; };
@@ -72,6 +74,8 @@
 		461B4E1B221BC0EB00A8DB3A /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		461B4E1D221BC0F100A8DB3A /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		461B4E21221BC3CB00A8DB3A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4637D02022396AD600AC131E /* FinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderViewController.swift; sourceTree = "<group>"; };
+		4637D02222396D9300AC131E /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		469DB9F8221E0B760051279D /* RightScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightScreenViewController.swift; sourceTree = "<group>"; };
 		469DB9FA221E0B850051279D /* LeftScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftScreenViewController.swift; sourceTree = "<group>"; };
 		469DB9FC221E0B940051279D /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 				460DB18122393C55003CC0D9 /* Account.swift */,
 				460CA926222BA1890015A2BE /* NewsCollectionViewCell.swift */,
 				461B4E17221BC05F00A8DB3A /* Main.storyboard */,
+				4637D02222396D9300AC131E /* FriendsTableViewCell.swift */,
 				BA2FEB0622389A6700C8DB52 /* CircleView.swift */,
 				46FEB9B3221F727C0031A93F /* CircularTransition.swift */,
 				461B4E0C221BBE0800A8DB3A /* Assets.xcassets */,
@@ -217,6 +222,7 @@
 				469DB9F8221E0B760051279D /* RightScreenViewController.swift */,
 				461B4E1D221BC0F100A8DB3A /* PreviewViewController.swift */,
 				460F872A223495F400CA4D58 /* SettingsViewController.swift */,
+				4637D02022396AD600AC131E /* FinderViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -393,6 +399,7 @@
 				461B4E1A221BC0B900A8DB3A /* ClarifaiHelper.swift in Sources */,
 				46E88DD42238B69400FE0A0C /* AccountWrapper.cpp in Sources */,
 				469DB9FF221E46C40051279D /* MainCollectionViewCell.swift in Sources */,
+				4637D02322396D9300AC131E /* FriendsTableViewCell.swift in Sources */,
 				461B4E1C221BC0EB00A8DB3A /* CameraViewController.swift in Sources */,
 				46E88DC62238B67000FE0A0C /* Authentication.cpp in Sources */,
 				46E88DC32238B67000FE0A0C /* DataManager.cpp in Sources */,
@@ -413,6 +420,7 @@
 				46E88DC52238B67000FE0A0C /* StorageListener.cpp in Sources */,
 				46E88DBE2238B67000FE0A0C /* WeCycle.cpp in Sources */,
 				46E88DBD2238B67000FE0A0C /* PushableObject.cpp in Sources */,
+				4637D02122396AD600AC131E /* FinderViewController.swift in Sources */,
 				461B4E1E221BC0F100A8DB3A /* PreviewViewController.swift in Sources */,
 				461B4E06221BBE0700A8DB3A /* AppDelegate.swift in Sources */,
 				460F872B223495F400CA4D58 /* SettingsViewController.swift in Sources */,
@@ -547,8 +555,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V79782M5XQ;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -664,6 +672,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.droptable.wecycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "WeCycle/WeCycle-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -679,8 +688,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = V79782M5XQ;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -696,6 +705,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.droptable.wecycle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "WeCycle/WeCycle-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
