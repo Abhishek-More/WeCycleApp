@@ -24,7 +24,7 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
 //        let x: UnsafePointer<Int8> = rank(account)
 //        quoteText.text = String(cString: x)
         
-        print(account.getEmail())
+//        print(account.getEmail())
         
         scrollView.delegate = self
         centerShutter = shutter.center.y
