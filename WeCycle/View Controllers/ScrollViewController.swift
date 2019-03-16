@@ -16,6 +16,7 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
     
     var middle: CameraViewController!
     var left: LeftScreenViewController!
+    var right: RightScreenViewController!
     var centerShutter: CGFloat = 0.0
 
     override func viewDidLoad() {
@@ -43,7 +44,7 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
         middleFrame.origin.x = self.view.frame.width
         middle.view.frame = middleFrame
         
-        let right = self.storyboard?.instantiateViewController(withIdentifier: "right") as! RightScreenViewController
+        right = self.storyboard?.instantiateViewController(withIdentifier: "right") as! RightScreenViewController
         self.addChild(right)
         self.scrollView.addSubview(right.view)
         self.didMove(toParent: self)
@@ -61,6 +62,7 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
         
         middle.blurring(num: Double(scrollView.contentOffset.x))
         left.swipeReaction(num: Double(scrollView.contentOffset.x))
+        right.swipeReaction(num: Double(scrollView.contentOffset.x))
         
         self.shutter.transform = CGAffineTransform(scaleX: 1 - (0.3) * (abs((375 - scrollView.contentOffset.x) / 375)), y: 1 - (0.3) * (abs((375 - scrollView.contentOffset.x) / 375)))
         

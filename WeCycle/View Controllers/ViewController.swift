@@ -204,14 +204,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         signInUser(authenticationObject, account, strdup(username), strdup(password))
 
-        UIView.animate(withDuration: 1) {
-            self.view.center.y -= 800
-        }
-    
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.performSegue(withIdentifier: "signInSegue", sender: self)
-            let x: UnsafePointer<Int8> = rank(account)
-            print(String(cString: x))
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            if(checkAccount(account)) {
+                self.performSegue(withIdentifier: "signInSegue", sender: self)
+                let x: UnsafePointer<Int8> = rank(account)
+                print(String(cString: x))
+            } else {
+                print("Account not valid")
+            }
+            
         }
         
     }
