@@ -14,6 +14,7 @@ class RightScreenViewController: UIViewController, UICollectionViewDelegate, UIC
     @IBOutlet weak var topRect: UIImageView!
     var collectionViewCenter: CGFloat!
     var topRectCenter: CGFloat!
+    @IBOutlet weak var coins: UILabel!
     
     var selectionArr = [false, false, false]
     
@@ -22,7 +23,6 @@ class RightScreenViewController: UIViewController, UICollectionViewDelegate, UIC
 
         collectionViewCenter = collectionView.center.y
         topRectCenter = topRect.center.y
-        
     }
     
     func swipeReaction(num: Double) {
@@ -30,6 +30,9 @@ class RightScreenViewController: UIViewController, UICollectionViewDelegate, UIC
         collectionView.alpha = CGFloat(abs(1 - num / 125))
         collectionView.center.y = collectionViewCenter + CGFloat(500 * abs(((num - 750) / 375)))
         topRect.center.y = topRectCenter - CGFloat(75 * abs(((num - 750) / 375)))
+        
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        coins.text = String(delegate.coins) + " Coins"
     }
     
     // MARK: UICollectionView
@@ -65,7 +68,14 @@ class RightScreenViewController: UIViewController, UICollectionViewDelegate, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if !selectionArr[indexPath.row] {
+            let delegate = UIApplication.shared.delegate as! AppDelegate
+            delegate.coins -= 40
+            coins.text = String(delegate.coins) + " Coins"
+        }
         selectionArr[indexPath.row] = true
         collectionView.reloadData()
     }
+
+
 }

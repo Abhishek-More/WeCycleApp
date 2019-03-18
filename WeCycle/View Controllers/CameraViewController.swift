@@ -24,6 +24,7 @@ class CameraViewController: UIViewController{
     var toggleCameraGestureRecognizer = UITapGestureRecognizer()
     var image: UIImage?
     var imageByte: Data?
+    var recy = false
     @IBOutlet var cameraFrame: UIView!
     @IBOutlet var blackView: UIView!
     @IBOutlet var shutterFrame: UIButton!
@@ -32,17 +33,18 @@ class CameraViewController: UIViewController{
     @IBOutlet var greenBlur: UIImageView!
     
     
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         self.shutterFrame.alpha = 0
         
-//        setUpCaptureSession()
-//        setUpDevice()
-//        setUpInputOutput()
-//        setUpPreviewLayer()
-//        startRunningCaptureSession()
+        setUpCaptureSession()
+        setUpDevice()
+        setUpInputOutput()
+        setUpPreviewLayer()
+        startRunningCaptureSession()
         
         blackView.alpha = 1 
         toggleCameraGestureRecognizer.numberOfTapsRequired = 2
@@ -230,20 +232,26 @@ class CameraViewController: UIViewController{
             previewViewController.image = self.image
             previewViewController.imageData = self.imageByte
             blackView.alpha = 1
+            previewViewController.lel = recy
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func yes(_ sender: Any) {
+        
+        recy = true
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        delegate.coins += 20
+        delegate.xp += 20
     }
-    */
+    
+    @IBAction func no(_ sender: Any) {
+        
+        recy  = false
+    }
+    
 
+    
+    
 }
 
 extension CameraViewController: AVCapturePhotoCaptureDelegate {

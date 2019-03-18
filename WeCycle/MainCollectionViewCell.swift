@@ -12,4 +12,7 @@ class MainCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var tagName: UILabel!
     
+    @IBOutlet weak var recyLabel: UILabel!
+    
+    
 }

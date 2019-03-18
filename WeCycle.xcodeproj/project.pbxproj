@@ -225,9 +225,9 @@
 				461B4E1B221BC0EB00A8DB3A /* CameraViewController.swift */,
 				469DB9FA221E0B850051279D /* LeftScreenViewController.swift */,
 				469DB9F8221E0B760051279D /* RightScreenViewController.swift */,
-				461B4E1D221BC0F100A8DB3A /* PreviewViewController.swift */,
 				460F872A223495F400CA4D58 /* SettingsViewController.swift */,
 				4637D02022396AD600AC131E /* FinderViewController.swift */,
+				461B4E1D221BC0F100A8DB3A /* PreviewViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -561,8 +561,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 98R2BUP44H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -694,8 +695,9 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 98R2BUP44H;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

@@ -26,6 +26,7 @@ class PreviewViewController: UIViewController, UICollectionViewDataSource, UICol
     var tagList: [String] = []
     @IBOutlet var blackView: UIView!
     let transition = CircularTransition()
+    var lel: Bool = false
     
     @IBOutlet var menuButton: UIButton!
     
@@ -33,7 +34,7 @@ class PreviewViewController: UIViewController, UICollectionViewDataSource, UICol
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.center.x += 350
+//        collectionView.center.x += 350
         blackView.alpha = 0
         
         uploadImageToFirebaseStorage(data: imageData! as NSData)
@@ -65,6 +66,14 @@ class PreviewViewController: UIViewController, UICollectionViewDataSource, UICol
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MainCollectionViewCell
         
         cell.tagName.text = tagList[indexPath.item]
+        if(lel) {
+        cell.recyLabel.textColor = .green
+        cell.recyLabel.text = "Recyclable"
+        } else {
+        cell.recyLabel.textColor = .red
+        cell.recyLabel.text = "Not Recyclable"
+        }
+        
         
         return cell
         
@@ -137,11 +146,11 @@ class PreviewViewController: UIViewController, UICollectionViewDataSource, UICol
                                 self.optimizeList()
                                 self.collectionView.reloadData()
                                 
-                                
-                                UIView.animate(withDuration: 1) {
-                                    self.collectionView.center.x -= 350
-                                    self.blackView.alpha = 0.5
-                                }
+//
+//                                UIView.animate(withDuration: 1) {
+//                                    self.collectionView.center.x -= 350
+//                                    self.blackView.alpha = 0.5
+//                                }
                                 
                             }  else {
                                 

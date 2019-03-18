@@ -237,35 +237,38 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let password = passwordText.text
         
 //      account.account(user: "bobsmith@gmail.com")
+//        
+//        let rawFilename = "/Users/abhishek/WeCycleApp/WeCycle/google-services.json"
+//        let cStringFile = strdup(rawFilename)
+//        let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
+//
+//        let databaseManagerObject = UnsafeMutableRawPointer(mutating: initializeDataManager(firebaseObject))
+//
+//        let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject, databaseManagerObject))
+//
+//        let account = UnsafeMutableRawPointer(mutating: initializeAccount(databaseManagerObject))
+//
+//        signInUser(authenticationObject, account, strdup(username), strdup(password))
+//
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//            updateRank(account)
+//        }
+//        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//            if(checkAccount(account)) {
+//                self.performSegue(withIdentifier: "signInSegue", sender: self)
+//                
+//                let x: UnsafePointer<Int8> = rank(account)
+//                print(String(cString: x))
+//                
+//            } else {
+//                print("Account not valid")
+//            }
+//            
+//        }
         
-        let rawFilename = "/Users/abhishek/WeCycleApp/WeCycle/google-services.json"
-        let cStringFile = strdup(rawFilename)
-        let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
+        performSegue(withIdentifier: "signInSegue", sender: self)
 
-        let databaseManagerObject = UnsafeMutableRawPointer(mutating: initializeDataManager(firebaseObject))
-
-        let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject, databaseManagerObject))
-
-        let account = UnsafeMutableRawPointer(mutating: initializeAccount(databaseManagerObject))
-
-        signInUser(authenticationObject, account, strdup(username), strdup(password))
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            updateRank(account)
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            if(checkAccount(account)) {
-                self.performSegue(withIdentifier: "signInSegue", sender: self)
-                
-                let x: UnsafePointer<Int8> = rank(account)
-                print(String(cString: x))
-                
-            } else {
-                print("Account not valid")
-            }
-            
-        }
         
     }
     
@@ -280,28 +283,30 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let username = emailText.text
         let password = passwordText.text
 
+//
+//        let rawFilename = "/Users/abhishek/WeCycleApp/WeCycle/google-services.json"
+//        let cStringFile = strdup(rawFilename)
+//        let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
+//
+//        let databaseManagerObject = UnsafeMutableRawPointer(mutating: initializeDataManager(firebaseObject))
+//
+//        let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject, databaseManagerObject))
+//
+//        let account = UnsafeMutableRawPointer(mutating: initializeAccount(databaseManagerObject))
+//
+//        createAndRegisterAccount(authenticationObject, account, strdup(username), strdup(password))
         
-        let rawFilename = "/Users/abhishek/WeCycleApp/WeCycle/google-services.json"
-        let cStringFile = strdup(rawFilename)
-        let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
-
-        let databaseManagerObject = UnsafeMutableRawPointer(mutating: initializeDataManager(firebaseObject))
-
-        let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject, databaseManagerObject))
-
-        let account = UnsafeMutableRawPointer(mutating: initializeAccount(databaseManagerObject))
-
-        createAndRegisterAccount(authenticationObject, account, strdup(username), strdup(password))
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//            if(checkAccount(account)) {
+//                self.performSegue(withIdentifier: "signInSegue", sender: self)
+//            } else {
+//                print("Account not valid")
+//            }
+//
+//        }
+        performSegue(withIdentifier: "signInSegue", sender: self)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            if(checkAccount(account)) {
-                self.performSegue(withIdentifier: "signInSegue", sender: self)
-            } else {
-                print("Account not valid")
-            }
-
-        }
-            
+        
     }
     
     @IBAction func newAccount(_ sender: Any) {

@@ -17,6 +17,8 @@ class LeftScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet var topRect: UIImageView!
     @IBOutlet var profileHolder: UIView!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var coins: UILabel!
+    @IBOutlet weak var xpLabel: UILabel!
     
     var profileCenter: CGFloat = 0
     var friendsCenter: CGFloat = 0
@@ -32,7 +34,6 @@ class LeftScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     
-    
     func swipeReaction(num: Double) {
         
         rankText.alpha = CGFloat(abs(1 - num / 125))
@@ -40,7 +41,10 @@ class LeftScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         profileHolder.center.y = profileCenter - CGFloat(500 * abs((num / 375)))
         containerView.center.y = friendsCenter + CGFloat(500 * abs((num / 375)))
         topRect.center.y = topRectCenter - CGFloat(75 * abs((num / 375)))
-
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        coins.text = String(delegate.coins)
+        coins.textAlignment = .right
+        xpLabel.text = String(delegate.xp) + " XP"
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -59,7 +63,22 @@ class LeftScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell(style: .default, reuseIdentifier: "default")
-        
+        var buttonLabel: UILabel!
+        var buttonImage: UIImageView!
+        for subview in cell.contentView.subviews {
+            if subview.tag == 1 {
+                buttonImage = subview as? UIImageView
+            } else if subview.tag == 2 {
+                buttonLabel = subview as? UILabel
+            }
+        }
+        if indexPath.row % 2 == 0 {
+            buttonLabel.text = "John Smith"
+            buttonImage.image = UIImage(named: "pf1")
+        } else {
+            buttonLabel.text = "Dan Lee"
+            buttonImage.image = UIImage(named: "pf2")
+        }
         return cell
     }
     
