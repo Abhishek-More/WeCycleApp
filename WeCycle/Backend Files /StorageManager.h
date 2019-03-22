@@ -14,13 +14,18 @@
 class StorageManager {
 
 private:
+
+	Account *acc;
+
 	firebase::storage::Storage *storage;
 	firebase::storage::StorageReference storage_ref;
 public:
-	StorageManager(FirebaseManager *fbManager);
+	StorageManager(FirebaseManager *fbManager, Account *account);
 	~StorageManager();
-	void uploadImageRetreiveLink(std::string filepath, bool *result);
+	void uploadImageLink(std::string filepath, std::string storagePath, bool *result);
 	void downloadImageLink(std::string imageRef, std::string *result);
+
+	const char* uploadImageRetreiveLink(const char *filepath);
 
 
 };

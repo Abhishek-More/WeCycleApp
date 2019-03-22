@@ -216,11 +216,28 @@
                                     <outlet property="delegate" destination="Kpy-p1-kGE" id="Yg4-pG-8CF"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3fL-P2-tIX">
+                                <rect key="frame" x="49" y="428" width="273" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgR-3p-E8O">
+                                <rect key="frame" x="116" y="509" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="searchButtClicked:" destination="Kpy-p1-kGE" eventType="touchUpInside" id="ywk-1x-yaO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TF1-hJ-O9m"/>
                     </view>
                     <connections>
+                        <outlet property="searchButt" destination="pgR-3p-E8O" id="lQK-hu-WQf"/>
+                        <outlet property="searchField" destination="3fL-P2-tIX" id="uCN-X7-wYB"/>
                         <outlet property="tableView" destination="jFy-Dw-cSA" id="UwE-J9-l5I"/>
                     </connections>
                 </viewController>
@@ -320,7 +337,7 @@
                                         <rect key="frame" x="24" y="65" width="295" height="93"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="60" id="REq-cw-uGN">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="60" id="REq-cw-uGN" customClass="FriendsTableViewCell" customModule="WeCycle" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="295" height="60"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="REq-cw-uGN" id="vti-aS-e81">
@@ -328,23 +345,12 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="John Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETl-fx-uW1">
-                                                            <rect key="frame" x="51" y="11" width="86" height="20"/>
+                                                            <rect key="frame" x="15" y="11" width="86" height="20"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                             <color key="textColor" red="0.27843540909999998" green="0.27440661189999999" blue="0.27843222020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EPA Agent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qba-Bm-mO9">
-                                                            <rect key="frame" x="51" y="31" width="53" height="12"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
-                                                            <color key="textColor" red="0.70145840159981376" green="0.69806971366937987" blue="0.70484708953024766" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Green Rect" translatesAutoresizingMaskIntoConstraints="NO" id="5L8-Wq-6GH" customClass="CircleView" customModule="WeCycle" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="11" width="38" height="38"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="750 XP" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vr3-0Z-Fes">
                                                             <rect key="frame" x="225" y="20" width="55" height="20"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -352,8 +358,20 @@
                                                             <color key="textColor" red="0.57457025507848991" green="0.56899190308743652" blue="0.58014860706954319" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EPA Agent" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qba-Bm-mO9">
+                                                            <rect key="frame" x="15" y="33" width="53" height="12"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="10"/>
+                                                            <color key="textColor" red="0.70145840159981376" green="0.69806971366937987" blue="0.70484708953024766" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="nameLabel" destination="ETl-fx-uW1" id="I45-fU-aFd"/>
+                                                    <outlet property="qualifierLabel" destination="Qba-Bm-mO9" id="yCr-Py-acX"/>
+                                                    <outlet property="xpLabel" destination="Vr3-0Z-Fes" id="qGh-tJ-20z"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
@@ -368,7 +386,7 @@
                                             <color key="titleColor" red="0.094210468229999997" green="0.82414251569999997" blue="0.98826104400000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Kpy-p1-kGE" kind="show" id="mUs-uf-xzI"/>
+                                            <action selector="addFriends:" destination="9o3-U7-rcJ" eventType="touchUpInside" id="jFU-k1-orK"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -420,16 +438,75 @@
                         <outlet property="coinText" destination="zpG-sd-rkL" id="gl7-5V-2e4"/>
                         <outlet property="containerView" destination="79r-nt-Wt0" id="FtT-Fq-LD6"/>
                         <outlet property="display" destination="AWj-Nj-SkZ" id="FUF-AZ-i15"/>
+                        <outlet property="emailField" destination="Laj-Uj-bhm" id="fM7-YY-lu9"/>
                         <outlet property="friendsCard" destination="jVq-Kx-7UO" id="Abe-hx-ASq"/>
+                        <outlet property="popUp" destination="x3B-4f-btX" id="ufP-Nq-Aaf"/>
                         <outlet property="profileCard" destination="aXx-IZ-xZ4" id="GNF-ye-Obg"/>
                         <outlet property="profileHolder" destination="x0K-cg-U8n" id="r4j-ZH-O5C"/>
                         <outlet property="profileText" destination="eUN-pt-ph7" id="XSm-7X-F2T"/>
                         <outlet property="rankText" destination="bhJ-bg-srM" id="eUj-BG-Exu"/>
+                        <outlet property="tableViewRee" destination="GSA-la-LLo" id="qO5-QG-RyG"/>
                         <outlet property="topRect" destination="SUn-06-7oG" id="NXW-kN-gAi"/>
                         <outlet property="xpLabel" destination="6FT-Y9-j4Q" id="aQz-uX-i1N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hn0-OU-3s7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="x3B-4f-btX">
+                    <rect key="frame" x="0.0" y="0.0" width="340" height="158"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Elevated Card" translatesAutoresizingMaskIntoConstraints="NO" id="T48-Dl-qNW">
+                            <rect key="frame" x="0.0" y="0.0" width="340" height="158"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3v-8y-U8u">
+                            <rect key="frame" x="27" y="20" width="131" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                            <color key="textColor" red="0.27633681510000002" green="0.27500185459999998" blue="0.2776717755" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Laj-Uj-bhm">
+                            <rect key="frame" x="27" y="53" width="285" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Line" translatesAutoresizingMaskIntoConstraints="NO" id="BTB-tc-WpA">
+                            <rect key="frame" x="26" y="77" width="287" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Blue Bubble" translatesAutoresizingMaskIntoConstraints="NO" id="ZJy-H5-4qe">
+                            <rect key="frame" x="27" y="114" width="286" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAM-kO-Hux">
+                            <rect key="frame" x="105" y="116" width="131" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voW-y6-2rN">
+                            <rect key="frame" x="26" y="114" width="287" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <action selector="addFriend:" destination="9o3-U7-rcJ" eventType="touchUpInside" id="sfa-1D-U64"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ben-0E-oOc">
+                            <rect key="frame" x="292" y="20" width="20" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="Cross"/>
+                            <connections>
+                                <action selector="closeFriendPopup:" destination="9o3-U7-rcJ" eventType="touchUpInside" id="GAv-RL-QCH"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="Eo7-Jb-etY"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="-924" y="187.55622188905548"/>
         </scene>
@@ -1016,6 +1093,7 @@
         <image name="COINS" width="57" height="24"/>
         <image name="Cancel" width="29" height="16"/>
         <image name="Circle Back" width="375" height="667"/>
+        <image name="Cross" width="30" height="29"/>
         <image name="Divider" width="91" height="7"/>
         <image name="Elevated Card" width="360" height="270"/>
         <image name="Gray Circle" width="81" height="81"/>
@@ -1031,6 +1109,6 @@
         <image name="tee" width="429" height="455"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sJN-7R-nIz"/>
+        <segue reference="cc8-u4-cg7"/>
     </inferredMetricsTieBreakers>
 </document>

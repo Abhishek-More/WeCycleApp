@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var coins: Int = 0
     var xp: Int = 0
     var account: UnsafeMutableRawPointer?
+    var friend: UnsafeMutableRawPointer?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()

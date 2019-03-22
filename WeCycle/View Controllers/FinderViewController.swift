@@ -13,6 +13,10 @@ import UIKit
 class FinderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var searchField: UITextField!
+    @IBOutlet var searchButt: UIButton!
+    
+    
     
     var array: [Account] = []
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,6 +45,28 @@ class FinderViewController: UIViewController, UITableViewDelegate, UITableViewDa
         array.append(account1)
         array.append(account2)
         
-    }
 
+        
+    }
+    @IBAction func searchButtClicked(_ sender: Any) {
+        
+        let rawFilename = "/Users/abhishek/WeCycleApp/WeCycle/google-services.json"
+        let cStringFile = strdup(rawFilename)
+        let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
+        let databaseManagerObject = UnsafeMutableRawPointer(mutating: initializeDataManager(firebaseObject))
+        let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject, databaseManagerObject))
+        let account = UnsafeMutableRawPointer(mutating: initializeAccount(databaseManagerObject))
+        
+        signInUser(authenticationObject, account, searchField.text, "password")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+        
+            print(coins(account))
+            
+        }
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 }

@@ -21,6 +21,43 @@ DataManager::~DataManager() {
 	//delete database;
 }
 
+void DataManager::pushData(PushableObject *objectToPass) {
+
+	for (auto &x : objectToPass->dataMap()) {
+		firebase::Variant firstKey = x.first;
+		if (x.second.is_vector()) {
+			std::string firstK = firstKey.mutable_string();
+			try {
+				firebase::Future<void> future = dbref.Child(firstK).SetValue(x.second);
+				future.OnCompletion([](const firebase::Future<void>& future, void* user_data) {
+					if (future.error() == 0) {
+						std::cout << "Push Successful" << std::endl;
+					}
+					else {
+						std::cout << "Push Failed" << future.error_message() << std::endl;
+					}
+				}, nullptr);
+			}
+			catch (std::exception &e) {
+				std::cout << e.what() << std::endl;
+			}
+		}
+		else {
+			firebase::Variant value = x.second;
+			firebase::Future<void> future = dbref.Child(firstKey.mutable_string()).SetValue(value);
+			future.OnCompletion([](const firebase::Future<void>& future, void* user_data) {
+				if (future.error() == 0) {
+					std::cout << "Push Successful" << std::endl;
+				}
+				else {
+					std::cout << "Push Failed" << future.error_message() << std::endl;
+				}
+			}, nullptr);
+		}
+	}
+
+}
+
 void DataManager::pushData(PushableObject *objectToPass, std::string parent) {
 	
 	for (auto &x : objectToPass->dataMap()) {
@@ -114,13 +151,7 @@ void DataManager::updateData(firebase::Variant objectToPass) { //Object is of ty
 	}, nullptr);
 }
 
-/*
-void DataManager::retrieveData_account(std::string parent, Account *acc) {
-	AccountValueListener *listener = new AccountValueListener(acc);
-	dbref.Child("Account Info").Child(parent).AddValueListener(listener);
-	//dbref.GetReference().AddValueListener(listener);
-}
-*/
+
 firebase::Variant retrieveData_thread(firebase::Future<firebase::database::DataSnapshot> result, firebase::Variant object) {
 	std::this_thread::sleep_for(std::chrono::milliseconds(500));
 	firebase::Variant variant;
@@ -163,10 +194,22 @@ firebase::Variant retrieveData_thread(firebase::Future<firebase::database::DataS
 }
 
 void DataManager::retrieveData(std::string parent, firebase::Variant &object) {
-
 	firebase::Future<firebase::database::DataSnapshot> result = dbref.Child(parent).GetValue();
-	std::future<firebase::Variant> future = std::async(std::launch::deferred, retrieveData_thread, result, object);
-	object = future.get();
+	result.OnCompletion([](const firebase::Future<firebase::database::DataSnapshot>& result, void* user_data) {
+		firebase::Variant *ob = static_cast<firebase::Variant*>(user_data);
+		firebase::Variant childList;
+		if (result.error() == firebase::database::kErrorNone) {
+			std::cout << "Retrival Complete" << std::endl;
+			childList = result.result()->value();
+			std::cout << childList.is_vector() << std::endl;
+			if (childList.is_vector()) {
+				ob = &childList;
+			}
+		}
+		else {
+			std::cout << "Error Retrieving Data" << std::endl;
+		}
+	}, &object);
 	/*
 	result.OnCompletion([](const firebase::Future<firebase::database::DataSnapshot>& result, void* user_data) {
 		firebase::Variant ob = static_cast<firebase::Variant*>(user_data);
@@ -205,8 +248,21 @@ void DataManager::retrieveData(std::string parent, firebase::Variant &object) {
 void DataManager::retrieveData(std::string parent, std::string key, firebase::Variant &object) {
 
 	firebase::Future<firebase::database::DataSnapshot> result = dbref.Child(parent).Child(key).GetValue();
-	std::future<firebase::Variant> future = std::async(std::launch::deferred, retrieveData_thread, result, object);
-	object = future.get();
+	result.OnCompletion([](const firebase::Future<firebase::database::DataSnapshot>& result, void* user_data) {
+		firebase::Variant *ob = static_cast<firebase::Variant*>(user_data);
+		firebase::Variant childList;
+		if (result.error() == firebase::database::kErrorNone) {
+			std::cout << "Retrival Complete" << std::endl;
+			childList = result.result()->value();
+			std::cout << childList.is_vector() << std::endl;
+			if (childList.is_vector()) {
+				ob = &childList;
+			}
+		}
+		else {
+			std::cout << "Error Retrieving Data" << std::endl;
+		}
+	}, &object);
 }
 
 firebase::database::DatabaseReference DataManager::getDBref() {

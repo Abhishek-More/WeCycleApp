@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScrollViewController: UIViewController, UIViewControllerTransitioningDelegate, UIScrollViewDelegate {
+class ScrollViewController: UIViewController, UIViewControllerTransitioningDelegate, UIScrollViewDelegate, LeftScreenDelegate {
 
     @IBOutlet var cameraButton: UIButton!
     @IBOutlet var scrollView: UIScrollView!
@@ -20,6 +20,10 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
     var right: RightScreenViewController!
     let delegate = UIApplication.shared.delegate as! AppDelegate
     var centerShutter: CGFloat = 0.0
+    
+    func setScrolling(enabled: Bool) {
+        scrollView.isScrollEnabled = enabled
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,7 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
         centerShutter = shutter.center.y
 
         left = (self.storyboard?.instantiateViewController(withIdentifier: "left") as! LeftScreenViewController)
+        left.del = self
         self.addChild(left)
         self.scrollView.addSubview(left.view)
         self.didMove(toParent: self)
@@ -94,4 +99,9 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
 
     }
     
+}
+
+
+protocol LeftScreenDelegate {
+    func setScrolling(enabled: Bool)
 }

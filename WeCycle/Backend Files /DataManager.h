@@ -22,7 +22,7 @@ private:
 public:
 	DataManager(FirebaseManager *fbManager);
 	~DataManager(); //Called at the object's termination
-
+	void pushData(PushableObject *objectToPass);
 	void pushData(PushableObject *objectToPass, std::string parent);
 	void pushData(PushableObject *objectToPass, std::string parent, std::string child);
 

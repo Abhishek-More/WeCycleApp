@@ -33,3 +33,7 @@ void updateUserPFPLink(const void *auth, const void *acc, const char* pfplink) {
 	Account *account = (Account *)acc;
 	authObject->updateUserPFPLink(account, pfplink);
 }
+const char* getUID(const void *auth, const char* email) {
+	Authentication *authObject = (Authentication *)auth;
+	return authObject->getUID(email);
+}

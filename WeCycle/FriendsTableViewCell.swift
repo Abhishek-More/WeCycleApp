@@ -10,6 +10,9 @@ import UIKit
 
 class FriendsTableViewCell: UITableViewCell {
 
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var qualifierLabel: UILabel!
+    @IBOutlet var xpLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -46,3 +46,7 @@ void PlayerAchievements::addAchievement(Account *acc, std::string achievementID)
 	dbm->pushData(this, "User Achievements");
 }
 //TODO IMPLEMENT AUTOMATIC CHECKING USING VALUE LISTENERS
+
+class AchievementListener : public firebase::database::ValueListener {
+
+};

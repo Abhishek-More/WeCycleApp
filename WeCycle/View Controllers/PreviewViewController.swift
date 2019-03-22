@@ -115,14 +115,16 @@ class PreviewViewController: UIViewController, UICollectionViewDataSource, UICol
         
         //send image to firebase
         //retrieve link
-        
         uploadImageToFirebaseStorage(data: imageData! as NSData)
         
     }
     
     func uploadImageToFirebaseStorage(data: NSData) {
+
         let storageRef = Storage.storage().reference(withPath: "Pictures/DemoPictures.jpg")
         let uploadMetaData = StorageMetadata()
+        
+        
         uploadMetaData.contentType = "image/jpeg"
         _ = storageRef.putData(data as Data, metadata: uploadMetaData) { (metadata, error) in
             if(error != nil) {
@@ -169,7 +171,9 @@ class PreviewViewController: UIViewController, UICollectionViewDataSource, UICol
     }
 }
 
+
 extension String {
+    
     func capitalizingFirstLetter() -> String {
         return prefix(1).capitalized + dropFirst()
     }

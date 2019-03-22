@@ -10,6 +10,7 @@ extern "C" {
 	void signOutUser(const void *auth);
 	void updateUserProfile(const void *auth, const void *acc, const char* pfplink, const char* displayname);
 	void updateUserPFPLink(const void *auth, const void *acc, const char* pfplink);
+	const char* getUID(const void *auth, const char* email);
 #ifdef __cplusplus
 }
 #endif

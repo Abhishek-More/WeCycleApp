@@ -2,17 +2,16 @@
 
 //TODO: ADD AUTHENTICATION TO FIREBASE
 
-StorageManager::StorageManager(FirebaseManager *fbManager) {
-	
+StorageManager::StorageManager(FirebaseManager *fbManager, Account *account) {
 	storage = firebase::storage::Storage::GetInstance(fbManager->getApp());
 	storage_ref = storage->GetReferenceFromUrl("gs://wecycle-316c1.appspot.com");
-
+	acc = account;
 }
 
 StorageManager::~StorageManager() {}
 
-void StorageManager::uploadImageRetreiveLink(std::string filepath, bool *result) {
-	firebase::storage::StorageReference image_ref = storage_ref.Child(filepath);
+void StorageManager::uploadImageLink(std::string filepath, std::string storagePath, bool *result) {
+	firebase::storage::StorageReference image_ref = storage_ref.Child(storagePath);
 	StorageListener listener;
 	StorageListener *listenerPtr = &listener; 
 	firebase::storage::Controller *controller = new firebase::storage::Controller();
@@ -27,7 +26,7 @@ void StorageManager::uploadImageRetreiveLink(std::string filepath, bool *result)
 			resultPtr = true;
 		}
 		else {
-			std::cout << "Error" << std::endl;
+			std::cout << "Upload Failed..." << std::endl;
 			resultPtr = false;
 		}
 	}, result);
@@ -39,9 +38,12 @@ void StorageManager::downloadImageLink(std::string imageRef, std::string *result
 	firebase::storage::StorageReference download_ref = storage_ref.Child(imageRef);
 	firebase::Future<std::string> futureDownloadLink = download_ref.GetDownloadUrl();
 	futureDownloadLink.OnCompletion([](const firebase::Future<std::string>& futureDownloadLink, void* user_data) {
-		const std::string *result = static_cast<std::string *>(user_data);
+		std::string *result = static_cast<std::string *>(user_data);
 		if (futureDownloadLink.error() == firebase::storage::kErrorNone) {
-			result = futureDownloadLink.result();
+			const std::string *link = futureDownloadLink.result();
+			result->assign(link->c_str());
+			
+			std::cout << "Link retrieved!" << std::endl;
 		}
 		else {
 			std::cout << "Error" << std::endl;
@@ -49,4 +51,17 @@ void StorageManager::downloadImageLink(std::string imageRef, std::string *result
 
 	}, result);
 
+}
+
+const char* StorageManager::uploadImageRetreiveLink(const char *filepath) {
+	bool uploadResult = false;
+	const char* result = nullptr;
+	std::string storagePath ="User Images/" + this->acc->uidA() + "/image.jpg";
+	uploadImageLink(filepath, storagePath, &uploadResult);
+	std::this_thread::sleep_for(std::chrono::milliseconds(1500));
+	std::string imageLink;
+	downloadImageLink(storagePath, &imageLink);
+	std::this_thread::sleep_for(std::chrono::milliseconds(500));
+	result = strdup(imageLink.c_str());
+	return result;
 }

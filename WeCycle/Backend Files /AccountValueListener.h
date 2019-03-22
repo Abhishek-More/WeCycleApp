@@ -4,7 +4,7 @@
 #include <firebase/database/listener.h>
 #include <firebase/database/data_snapshot.h>
 
-
+class Account;
 class AccountValueListener : public firebase::database::ValueListener {
 private:
 	Account *acc;

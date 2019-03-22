@@ -21,13 +21,15 @@ void Authentication::createAndRegisterAccount(Account *acc, std::string emailO, 
 	firebase::Future<firebase::auth::User*> result = auth->CreateUserWithEmailAndPassword(email, password);
 	std::future<void> future = std::async(std::launch::async, printWait1);
 	future.wait();
+	acc->updateEmail(email);
 	result.OnCompletion([](const firebase::Future<firebase::auth::User*>& result, void* user_data) {
-		std::cout << "reuslt completed" << std::endl;
+		std::cout << "result completed" << std::endl;
 		if (result.error() == firebase::auth::kAuthErrorNone) {
 			Account *acc = static_cast<Account *>(user_data);
 			firebase::auth::User *user = *result.result();
 			std::string uID = user->uid();
 			acc->createNewAccount(uID);
+			acc->registerFriendsListeners();
 			acc->updateCheckAccount(true);
 			std::cout << "Successfully created account: " << user->email() << std::endl;
 		}
@@ -50,7 +52,7 @@ void Authentication::signInUser(Account *acc, std::string emailO, std::string pa
 	future.wait();
 	//while (result.status() != firebase::kFutureStatusComplete) {}
 
-
+	acc->updateEmail(email);
 	result.OnCompletion([](const firebase::Future<firebase::auth::User*>& result, void* user_data) {
 		if (result.error() == firebase::auth::kAuthErrorNone) {
 			std::cout << "result completed" << std::endl;
@@ -59,6 +61,7 @@ void Authentication::signInUser(Account *acc, std::string emailO, std::string pa
 			std::string uID = user->uid();
 			acc->updateUID(uID);
 			acc->registerAccountListener();
+			acc->registerFriendsListeners();
 			acc->updateCheckAccount(true);
 			printf("Sign in succeeded for email %s\n", user->email().c_str());
 		}
@@ -68,7 +71,7 @@ void Authentication::signInUser(Account *acc, std::string emailO, std::string pa
 			printf("Sign in failed with error '%s'\n", result.error_message());
 		}
 	}, acc);
-
+	
 
 }
 
@@ -116,3 +119,21 @@ void Authentication::updateUserPFPLink(Account *acc, const char* pfplink) {
 		acc->updatePFP(profile.photo_url);
 	}
 }
+
+std::string findAndRemovePeriod1(std::string inp) {
+	std::string input = inp;
+	std::size_t index = input.find(".");
+	input.erase(input.begin() + index);
+	return input;
+}
+
+const char *Authentication::getUID(const char *email) { 
+	firebase::Variant string;
+	EmailsValueListener *listener = new EmailsValueListener(&string);
+	std::string emailO = findAndRemovePeriod1(email);
+    this->dbManage->getDBref().Child("Emails").Child(emailO).AddValueListener(listener);
+	std::this_thread::sleep_for(std::chrono::milliseconds(5000));
+	const char *result = strdup(string.mutable_string().c_str());
+	return result;
+}
+

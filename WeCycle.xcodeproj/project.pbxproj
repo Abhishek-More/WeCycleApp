@@ -11,7 +11,6 @@
 		46042C7C223011670019433F /* firebase_analytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C77223011660019433F /* firebase_analytics.framework */; };
 		46042C7D223011670019433F /* firebase_database.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C78223011660019433F /* firebase_database.framework */; };
 		46042C7E223011670019433F /* firebase_auth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C79223011670019433F /* firebase_auth.framework */; };
-		460439B1224341DF006D5470 /* Account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 460439B0224341DE006D5470 /* Account.cpp */; };
 		460838282236BA2700A3D643 /* firebase_storage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46042C75223011640019433F /* firebase_storage.framework */; };
 		460BE7402232A40300251611 /* google-services.json in Resources */ = {isa = PBXBuildFile; fileRef = 460BE73F2232A40200251611 /* google-services.json */; };
 		460CA927222BA1890015A2BE /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460CA926222BA1890015A2BE /* NewsCollectionViewCell.swift */; };
@@ -33,11 +32,9 @@
 		4644A229223FF659007E0E9E /* StorageManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4644A219223FF657007E0E9E /* StorageManager.cpp */; };
 		4644A22A223FF659007E0E9E /* StorageListener.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4644A21B223FF658007E0E9E /* StorageListener.cpp */; };
 		4644A22C223FF659007E0E9E /* DataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4644A220223FF658007E0E9E /* DataManager.cpp */; };
-		4644A22D223FF659007E0E9E /* WeCycle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4644A221223FF658007E0E9E /* WeCycle.cpp */; };
 		4644A22F223FF659007E0E9E /* FirebaseManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4644A224223FF659007E0E9E /* FirebaseManager.cpp */; };
 		4644A230223FF659007E0E9E /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4644A226223FF659007E0E9E /* CMakeLists.txt */; };
 		4644A231223FF659007E0E9E /* PlayerAchievements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4644A227223FF659007E0E9E /* PlayerAchievements.cpp */; };
-		4644A243223FF6C7007E0E9E /* AccountWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4644A235223FF6C5007E0E9E /* AccountWrapper.cpp */; };
 		4644A244223FF6C7007E0E9E /* StorageManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4644A237223FF6C5007E0E9E /* StorageManagerWrapper.cpp */; };
 		4644A245223FF6C7007E0E9E /* PushableObjectWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4644A238223FF6C5007E0E9E /* PushableObjectWrapper.cpp */; };
 		4644A246223FF6C7007E0E9E /* DataManagerWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4644A23A223FF6C6007E0E9E /* DataManagerWrapper.cpp */; };
@@ -48,6 +45,9 @@
 		469DB9FB221E0B850051279D /* LeftScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DB9FA221E0B850051279D /* LeftScreenViewController.swift */; };
 		469DB9FD221E0B940051279D /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DB9FC221E0B940051279D /* ScrollViewController.swift */; };
 		469DB9FF221E46C40051279D /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469DB9FE221E46C40051279D /* MainCollectionViewCell.swift */; };
+		46AE65442244781000F4E10B /* AccountWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46AE65432244781000F4E10B /* AccountWrapper.cpp */; };
+		46AE65482244787C00F4E10B /* Account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46AE65452244787B00F4E10B /* Account.cpp */; };
+		46AE65492244787C00F4E10B /* WeCycle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46AE65472244787C00F4E10B /* WeCycle.cpp */; };
 		46E88DDD2238BC4100FE0A0C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 46E88DDC2238BC4100FE0A0C /* GoogleService-Info.plist */; };
 		46FEB9B4221F727C0031A93F /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FEB9B3221F727C0031A93F /* CircularTransition.swift */; };
 		BA2FEB0722389A6700C8DB52 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2FEB0622389A6700C8DB52 /* CircleView.swift */; };
@@ -63,9 +63,6 @@
 		46042C78223011660019433F /* firebase_database.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase_database.framework; sourceTree = "<group>"; };
 		46042C79223011670019433F /* firebase_auth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = firebase_auth.framework; sourceTree = "<group>"; };
 		46042CB62230162B0019433F /* WeCycle-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeCycle-Bridging-Header.h"; sourceTree = "<group>"; };
-		460439B0224341DE006D5470 /* Account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Account.cpp; sourceTree = "<group>"; };
-		460439B2224341E8006D5470 /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
-		460439B322434200006D5470 /* json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
 		460BE73F2232A40200251611 /* google-services.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "google-services.json"; sourceTree = "<group>"; };
 		460CA926222BA1890015A2BE /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		460DB18122393C55003CC0D9 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -94,14 +91,12 @@
 		4644A21D223FF658007E0E9E /* WeCycle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeCycle.h; sourceTree = "<group>"; };
 		4644A21E223FF658007E0E9E /* Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Authentication.h; sourceTree = "<group>"; };
 		4644A220223FF658007E0E9E /* DataManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataManager.cpp; sourceTree = "<group>"; };
-		4644A221223FF658007E0E9E /* WeCycle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WeCycle.cpp; sourceTree = "<group>"; };
 		4644A222223FF658007E0E9E /* PushableObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushableObject.h; sourceTree = "<group>"; };
 		4644A224223FF659007E0E9E /* FirebaseManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FirebaseManager.cpp; sourceTree = "<group>"; };
 		4644A225223FF659007E0E9E /* StorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StorageManager.h; sourceTree = "<group>"; };
 		4644A226223FF659007E0E9E /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		4644A227223FF659007E0E9E /* PlayerAchievements.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerAchievements.cpp; sourceTree = "<group>"; };
 		4644A234223FF69B007E0E9E /* PlayerAchievements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerAchievements.h; sourceTree = "<group>"; };
-		4644A235223FF6C5007E0E9E /* AccountWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AccountWrapper.cpp; sourceTree = "<group>"; };
 		4644A236223FF6C5007E0E9E /* AccountWrapper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AccountWrapper.hpp; sourceTree = "<group>"; };
 		4644A237223FF6C5007E0E9E /* StorageManagerWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StorageManagerWrapper.cpp; sourceTree = "<group>"; };
 		4644A238223FF6C5007E0E9E /* PushableObjectWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PushableObjectWrapper.cpp; sourceTree = "<group>"; };
@@ -119,6 +114,11 @@
 		469DB9FA221E0B850051279D /* LeftScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftScreenViewController.swift; sourceTree = "<group>"; };
 		469DB9FC221E0B940051279D /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		469DB9FE221E46C40051279D /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		46AE65422244656300F4E10B /* json.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = json.hpp; sourceTree = "<group>"; };
+		46AE65432244781000F4E10B /* AccountWrapper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AccountWrapper.cpp; path = "../../../WeCycle/WeCycle/c-headers-wrappers/AccountWrapper.cpp"; sourceTree = "<group>"; };
+		46AE65452244787B00F4E10B /* Account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Account.cpp; sourceTree = "<group>"; };
+		46AE65462244787B00F4E10B /* Account.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
+		46AE65472244787C00F4E10B /* WeCycle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WeCycle.cpp; sourceTree = "<group>"; };
 		46E88DDC2238BC4100FE0A0C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46FEB9B3221F727C0031A93F /* CircularTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularTransition.swift; sourceTree = "<group>"; };
 		BA2FEB0622389A6700C8DB52 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
@@ -145,10 +145,10 @@
 		46042CB7223018470019433F /* Backend Files  */ = {
 			isa = PBXGroup;
 			children = (
-				460439B322434200006D5470 /* json.hpp */,
+				46AE65422244656300F4E10B /* json.hpp */,
 				463D1DB8224121AA006F7E15 /* AccountValueListener.cpp */,
 				463D1DB7224121AA006F7E15 /* AccountValueListener.h */,
-				4644A235223FF6C5007E0E9E /* AccountWrapper.cpp */,
+				46AE65432244781000F4E10B /* AccountWrapper.cpp */,
 				4644A236223FF6C5007E0E9E /* AccountWrapper.hpp */,
 				4644A23F223FF6C7007E0E9E /* AuthenticationWrapper.cpp */,
 				4644A23B223FF6C6007E0E9E /* AuthenticationWrapper.hpp */,
@@ -162,8 +162,9 @@
 				4644A242223FF6C7007E0E9E /* PushableObjectWrapper.hpp */,
 				4644A237223FF6C5007E0E9E /* StorageManagerWrapper.cpp */,
 				4644A241223FF6C7007E0E9E /* StorageManagerWrapper.hpp */,
-				460439B2224341E8006D5470 /* Account.h */,
-				460439B0224341DE006D5470 /* Account.cpp */,
+				46AE65452244787B00F4E10B /* Account.cpp */,
+				46AE65462244787B00F4E10B /* Account.h */,
+				46AE65472244787C00F4E10B /* WeCycle.cpp */,
 				4644A21E223FF658007E0E9E /* Authentication.h */,
 				463D1DBD22412452006F7E15 /* Authentication.cpp */,
 				4644A226223FF659007E0E9E /* CMakeLists.txt */,
@@ -179,7 +180,6 @@
 				4644A218223FF657007E0E9E /* StorageListener.h */,
 				4644A219223FF657007E0E9E /* StorageManager.cpp */,
 				4644A225223FF659007E0E9E /* StorageManager.h */,
-				4644A221223FF658007E0E9E /* WeCycle.cpp */,
 				4644A21D223FF658007E0E9E /* WeCycle.h */,
 			);
 			path = "Backend Files ";
@@ -231,9 +231,9 @@
 			isa = PBXGroup;
 			children = (
 				469DB9FC221E0B940051279D /* ScrollViewController.swift */,
+				469DB9FA221E0B850051279D /* LeftScreenViewController.swift */,
 				461B4E07221BBE0700A8DB3A /* ViewController.swift */,
 				461B4E1B221BC0EB00A8DB3A /* CameraViewController.swift */,
-				469DB9FA221E0B850051279D /* LeftScreenViewController.swift */,
 				469DB9F8221E0B760051279D /* RightScreenViewController.swift */,
 				460F872A223495F400CA4D58 /* SettingsViewController.swift */,
 				4637D02022396AD600AC131E /* FinderViewController.swift */,
@@ -416,13 +416,14 @@
 				469DB9FF221E46C40051279D /* MainCollectionViewCell.swift in Sources */,
 				4637D02322396D9300AC131E /* FriendsTableViewCell.swift in Sources */,
 				4644A229223FF659007E0E9E /* StorageManager.cpp in Sources */,
+				46AE65442244781000F4E10B /* AccountWrapper.cpp in Sources */,
 				4644A22F223FF659007E0E9E /* FirebaseManager.cpp in Sources */,
 				461B4E1C221BC0EB00A8DB3A /* CameraViewController.swift in Sources */,
 				4644A248223FF6C7007E0E9E /* AuthenticationWrapper.cpp in Sources */,
+				46AE65482244787C00F4E10B /* Account.cpp in Sources */,
 				4644A249223FF6C7007E0E9E /* FirebaseManagerWrapper.cpp in Sources */,
 				460CA927222BA1890015A2BE /* NewsCollectionViewCell.swift in Sources */,
 				461B4E08221BBE0700A8DB3A /* ViewController.swift in Sources */,
-				4644A243223FF6C7007E0E9E /* AccountWrapper.cpp in Sources */,
 				469DB9FD221E0B940051279D /* ScrollViewController.swift in Sources */,
 				46FEB9B4221F727C0031A93F /* CircularTransition.swift in Sources */,
 				463D1DBE22412453006F7E15 /* Authentication.cpp in Sources */,
@@ -434,7 +435,6 @@
 				4644A247223FF6C7007E0E9E /* PlayerAchievementsWrapper.cpp in Sources */,
 				4644A231223FF659007E0E9E /* PlayerAchievements.cpp in Sources */,
 				4644A246223FF6C7007E0E9E /* DataManagerWrapper.cpp in Sources */,
-				4644A22D223FF659007E0E9E /* WeCycle.cpp in Sources */,
 				BA2FEB0722389A6700C8DB52 /* CircleView.swift in Sources */,
 				4644A244223FF6C7007E0E9E /* StorageManagerWrapper.cpp in Sources */,
 				4637D02122396AD600AC131E /* FinderViewController.swift in Sources */,
@@ -442,8 +442,8 @@
 				461B4E06221BBE0700A8DB3A /* AppDelegate.swift in Sources */,
 				460F872B223495F400CA4D58 /* SettingsViewController.swift in Sources */,
 				4644A245223FF6C7007E0E9E /* PushableObjectWrapper.cpp in Sources */,
+				46AE65492244787C00F4E10B /* WeCycle.cpp in Sources */,
 				463D1DB9224121AA006F7E15 /* AccountValueListener.cpp in Sources */,
-				460439B1224341DF006D5470 /* Account.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
