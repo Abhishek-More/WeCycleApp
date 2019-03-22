@@ -14,8 +14,3 @@ void pushData(const void *object, const void *pushableobject, const char *parent
 	PushableObject *objectToPush = (PushableObject *)pushableobject;
 	return dataManager->pushData(objectToPush, parent);
 }
-
-const char **retrieveData(const void *object, const char *parent, const char *key) {
-	DataManager *dataManager = (DataManager *)object;
-	return dataManager->retrieveData(std::string(parent),std::string(key));
-}

@@ -14,8 +14,10 @@ class RightScreenViewController: UIViewController, UICollectionViewDelegate, UIC
     @IBOutlet weak var topRect: UIImageView!
     var collectionViewCenter: CGFloat!
     var topRectCenter: CGFloat!
-    @IBOutlet weak var coins: UILabel!
+    @IBOutlet weak var coinText: UILabel!
     
+    let cost = 10
+    let delegate = UIApplication.shared.delegate as! AppDelegate
     var selectionArr = [false, false, false]
     
     override func viewDidLoad() {
@@ -31,11 +33,9 @@ class RightScreenViewController: UIViewController, UICollectionViewDelegate, UIC
         collectionView.center.y = collectionViewCenter + CGFloat(500 * abs(((num - 750) / 375)))
         topRect.center.y = topRectCenter - CGFloat(75 * abs(((num - 750) / 375)))
         
-        let delegate = UIApplication.shared.delegate as! AppDelegate
-        coins.text = String(delegate.coins) + " Coins"
+
+        coinText.text = String("\(coins(delegate.account)) Coins")
     }
-    
-    // MARK: UICollectionView
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -57,25 +57,27 @@ class RightScreenViewController: UIViewController, UICollectionViewDelegate, UIC
                 buttonLabel = subview as? UILabel
             }
         }
-        if selectionArr[indexPath.row] {
+        if selectionArr[indexPath.row] && coins(delegate.account) >= cost {
             buttonLabel.text = "Entered"
             buttonImage.alpha = 0.3
         } else {
             buttonLabel.text = "Join"
-            buttonImage.alpha = 0.6
+            buttonImage.alpha = 0.9
         }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if !selectionArr[indexPath.row] {
-            let delegate = UIApplication.shared.delegate as! AppDelegate
-            delegate.coins -= 40
-            coins.text = String(delegate.coins) + " Coins"
+            if coins(delegate.account) >= cost {
+            updateCoins(delegate.account, -10)
+            coinText.text = String(coins(delegate.account)) + " Coins"
+            } else {
+                print("Not Enough")
+            }
         }
         selectionArr[indexPath.row] = true
         collectionView.reloadData()
     }
-
 
 }

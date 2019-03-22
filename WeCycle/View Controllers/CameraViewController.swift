@@ -31,6 +31,7 @@ class CameraViewController: UIViewController{
     @IBOutlet var blueBlur: UIImageView!
     @IBOutlet var blue: UIVisualEffectView!
     @IBOutlet var greenBlur: UIImageView!
+    let delegate = UIApplication.shared.delegate as! AppDelegate
     
     
     
@@ -63,6 +64,7 @@ class CameraViewController: UIViewController{
         shapeLayer.opacity = 0.35
 
         view.layer.addSublayer(shapeLayer)
+ 
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -239,9 +241,9 @@ class CameraViewController: UIViewController{
     @IBAction func yes(_ sender: Any) {
         
         recy = true
-        let delegate = UIApplication.shared.delegate as! AppDelegate
         delegate.coins += 20
         delegate.xp += 20
+        print(coins(delegate.account))
     }
     
     @IBAction func no(_ sender: Any) {

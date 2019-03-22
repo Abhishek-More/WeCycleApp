@@ -1,105 +1,118 @@
 #include "Authentication.h"
 
-Authentication::Authentication(FirebaseManager *fbManager) {
+Authentication::Authentication(FirebaseManager *fbManager, DataManager *dbManager) {
 	app = fbManager->getApp();
 	auth = firebase::auth::Auth::GetAuth(app);
-	//crypto = Crypto(dbManager);
+	this->dbManage = dbManager;
 }
 
 Authentication::~Authentication() {}
 
-std::string Authentication::createAndRegisterAccount(Account *acc) {
-	
-	std::string uID = "";
+void printWait1() {
+	std::this_thread::sleep_for(std::chrono::seconds(2));
+	printf("Done!\n");
+}
 
-	const char *email = strdup(acc->getEmail().c_str());
-	//const char *password = crypto.hashSHAKE128(acc->getPassword()).c_str();
-    const char *password = acc->getPassword().c_str();
+void Authentication::createAndRegisterAccount(Account *acc, std::string emailO, std::string passwordO) {
+
+	const char *email = strdup(emailO.c_str());
+	const char *password = strdup(passwordO.c_str());
 
 	firebase::Future<firebase::auth::User*> result = auth->CreateUserWithEmailAndPassword(email, password);
-
-	if (result.status() == firebase::kFutureStatusComplete) {
+	std::future<void> future = std::async(std::launch::async, printWait1);
+	future.wait();
+	result.OnCompletion([](const firebase::Future<firebase::auth::User*>& result, void* user_data) {
+		std::cout << "reuslt completed" << std::endl;
 		if (result.error() == firebase::auth::kAuthErrorNone) {
+			Account *acc = static_cast<Account *>(user_data);
 			firebase::auth::User *user = *result.result();
-			uID = user->uid();
+			std::string uID = user->uid();
+			acc->createNewAccount(uID);
+			acc->updateCheckAccount(true);
 			std::cout << "Successfully created account: " << user->email() << std::endl;
 		}
 		else {
+			Account *acc = static_cast<Account *>(user_data);
+			acc->updateCheckAccount(false);
 			std::cout << "Error creating account..." << result.error_message() << std::endl;
 		}
-	}
-
-	return uID;
+	}, acc);
 }
-std::string Authentication::createAndRegisterAccount(std::string emailO, std::string passwordO) {
 
-	std::string uID = "";
+void Authentication::signInUser(Account *acc, std::string emailO, std::string passwordO) {
 
 	const char *email = strdup(emailO.c_str());
-	//const char *password = crypto.hashSHAKE128(passwordO).c_str();
-    const char *password = passwordO.c_str();
-
-	firebase::Future<firebase::auth::User*> result = auth->CreateUserWithEmailAndPassword(email, password);
-
-	if (result.status() == firebase::kFutureStatusComplete) {
-		if (result.error() == firebase::auth::kAuthErrorNone) {
-			firebase::auth::User *user = *result.result();
-			uID = user->uid();
-			std::cout << "Successfully created account: " << user->email() << std::endl;
-		}
-		else {
-			std::cout << "Error creating account..." << result.error_message() <<std::endl;
-		}
-	}
-
-	return uID;
-}
-
-std::string Authentication::signInUser(Account *acc) {
-
-	std::string uID = "";
-
-	const char *email = strdup(acc->getEmail().c_str());
-	//const char *password = crypto.hashSHAKE128(acc->getPassword()).c_str();
-    const char *password = acc->getPassword().c_str();
-    
-	firebase::Future<firebase::auth::User*> result =
-		auth->SignInWithEmailAndPassword(email, password);
-
-	if (result.status() == firebase::kFutureStatusComplete) {
-		if (result.error() == firebase::auth::kAuthErrorNone) {
-			firebase::auth::User* user = *result.result();
-			uID = user->uid();
-			printf("Sign in succeeded for email %s\n", user->email().c_str());
-		}
-		else {
-			printf("Sign in failed with error '%s'\n", result.error_message());
-		}
-	}
-
-	return uID;
-}
-std::string Authentication::signInUser(std::string emailO, std::string passwordO) {
-
-	std::string uID = "";
-
-	const char *email = strdup(emailO.c_str());
-	//const char *password = crypto.hashSHAKE128(passwordO).c_str();
-    const char *password = passwordO.c_str();
+	const char *password = strdup(passwordO.c_str());
 
 	firebase::Future<firebase::auth::User*> result =
 		auth->SignInWithEmailAndPassword(email, password);
+	std::future<void> future = std::async(std::launch::async, printWait1);
+	future.wait();
+	//while (result.status() != firebase::kFutureStatusComplete) {}
 
-	if (result.status() == firebase::kFutureStatusComplete) {
+
+	result.OnCompletion([](const firebase::Future<firebase::auth::User*>& result, void* user_data) {
 		if (result.error() == firebase::auth::kAuthErrorNone) {
+			std::cout << "result completed" << std::endl;
+			Account *acc = static_cast<Account *>(user_data);
 			firebase::auth::User* user = *result.result();
-			uID = user->uid();
+			std::string uID = user->uid();
+			acc->updateUID(uID);
+			acc->registerAccountListener();
+			acc->updateCheckAccount(true);
 			printf("Sign in succeeded for email %s\n", user->email().c_str());
 		}
 		else {
+			Account *acc = static_cast<Account *>(user_data);
+			acc->updateCheckAccount(false);
 			printf("Sign in failed with error '%s'\n", result.error_message());
 		}
-	}
+	}, acc);
 
-	return uID;
+
+}
+
+void Authentication::signOutUser() {
+	auth->SignOut();
+}
+
+void Authentication::updateUserProfile(Account *acc, const char* pfplink, const char* displayname) {
+	firebase::auth::User *user = auth->current_user();
+	if (user != nullptr) {
+		firebase::auth::User::UserProfile profile;
+		profile.display_name = displayname;
+		profile.photo_url = pfplink;
+		firebase::Future<void> future = user->UpdateUserProfile(profile);
+		//while (future.status() != firebase::kFutureStatusComplete);
+		future.OnCompletion([](const firebase::Future<void>& future, void* user_data) {
+			Account *acc = static_cast<Account *>(user_data);
+			if (future.error() == 0) {
+				printf("Updated user profile");
+			}
+			else {
+				printf("Failed to update user profile");
+			}
+		}, acc);
+		acc->updatePFP(profile.photo_url);
+		acc->updateDisplayName(profile.display_name);
+	}
+}
+void Authentication::updateUserPFPLink(Account *acc, const char* pfplink) {
+	firebase::auth::User *user = auth->current_user();
+	if (user != nullptr) {
+		firebase::auth::User::UserProfile profile;
+		profile.photo_url = pfplink;
+		printf(user->display_name().c_str());
+		profile.display_name = strdup(user->display_name().c_str());
+		firebase::Future<void> future = user->UpdateUserProfile(profile);
+		future.OnCompletion([](const firebase::Future<void>& future, void* user_data) {
+			if (future.error() == 0) {
+				printf("Updated user profile pic link");
+			}
+			else {
+				printf("Failed to update user profile pic link");
+			}
+		}, nullptr);
+		acc->updatePFP(profile.photo_url);
+	}
 }

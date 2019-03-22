@@ -6,10 +6,18 @@
 
 FirebaseManager::FirebaseManager(const char* filename) {
 	//Initializing firebase app
+#ifdef  _WIN32
 	firebase::AppOptions *appOps = &appOptions;
 	loadFirebaseJSON(filename, appOps);
 	app = firebase::App::Create(appOptions);
-	std::cout << "Firebase manager successfully built" << std::endl;
+
+#else
+	app = firebase::App::Create();
+#endif //  _WIN32
+	if (app != nullptr)
+		std::cout << "Firebase manager successfully built" << std::endl;
+	else
+		std::cout << "Firebase manager failed to build" << std::endl;
 }
 
 FirebaseManager::FirebaseManager() {

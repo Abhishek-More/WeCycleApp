@@ -29,6 +29,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var confirmText: UITextField!
     @IBOutlet var dontHaveButton: UIButton!
     @IBOutlet var haveButton: UIButton!
+    @IBOutlet var signUpPop: UIView!
+    @IBOutlet var background: UIImageView!
+    @IBOutlet var displayName: UITextField!
     
     var emailGest: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(emailUp))
     var passGest: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(passUp))
@@ -38,6 +41,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var emailTextUp: Bool = false
     var passTextUp: Bool = false
     var confirmTextUp: Bool = false
+    var center: CGPoint?
+    let delegate = UIApplication.shared.delegate as! AppDelegate
     
     func HideKeyboard() {
         
@@ -48,6 +53,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @objc func dismissKeyboard () {
         view.endEditing(true)
+    
+        
+        
         if((emailText.text == "" || emailText.text == nil) && emailTextUp) {
             UIView.animate(withDuration: 0.25) {
                 
@@ -87,6 +95,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             confirmGest.isEnabled = true
             
         }
+        
     }
     
     func authenticate() {
@@ -96,11 +105,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.HideKeyboard()
-    
+        self.view.addSubview(self.signUpPop)
+        
         titleText.alpha =  0
         titleText.center.y -= 30
         quoteText.alpha = 0
         quoteText.center.y -= 30
+        center = view.center
+        signUpPop.center.x = view.center.x
+        signUpPop.center.y = center!.y + 700
         
         confirmLine.center.x += 400
         confirmText.center.x += 400
@@ -108,18 +121,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
         confirmLine.alpha = 0
         confirmText.alpha = 0
         confirmLabel.alpha = 0
-        
         haveButton.alpha = 0
+        background.transform = CGAffineTransform(scaleX: 5, y: 5)
         
         
-            UIView.animate(withDuration: 1) {
+        
+        
+        UIView.animate(withDuration: 1) {
                 
-                self.titleText.center.y += 30
-                self.quoteText.center.y += 30
-                self.quoteText.alpha = 0.6
-                self.titleText.alpha = 1
-                
-            }
+            self.titleText.center.y += 30
+            self.quoteText.center.y += 30
+            self.quoteText.alpha = 0.6
+            self.titleText.alpha = 1
+            self.background.transform = CGAffineTransform(scaleX: 1, y: 1)
+    
+        }
         
         
         emailGest = UITapGestureRecognizer(target: self, action: #selector(emailUp))
@@ -235,41 +251,38 @@ class ViewController: UIViewController, UITextFieldDelegate {
         bubble.alpha = 1
         let username = emailText.text
         let password = passwordText.text
-        
-//      account.account(user: "bobsmith@gmail.com")
-//        
-//        let rawFilename = "/Users/abhishek/WeCycleApp/WeCycle/google-services.json"
-//        let cStringFile = strdup(rawFilename)
-//        let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
-//
-//        let databaseManagerObject = UnsafeMutableRawPointer(mutating: initializeDataManager(firebaseObject))
-//
-//        let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject, databaseManagerObject))
-//
-//        let account = UnsafeMutableRawPointer(mutating: initializeAccount(databaseManagerObject))
-//
-//        signInUser(authenticationObject, account, strdup(username), strdup(password))
-//
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//            updateRank(account)
-//        }
-//        
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//            if(checkAccount(account)) {
-//                self.performSegue(withIdentifier: "signInSegue", sender: self)
-//                
-//                let x: UnsafePointer<Int8> = rank(account)
-//                print(String(cString: x))
-//                
-//            } else {
-//                print("Account not valid")
-//            }
-//            
-//        }
-        
-        performSegue(withIdentifier: "signInSegue", sender: self)
+       
+        if(view.center != center) {
+        UIView.animate(withDuration: 0.25) {
+            self.view.center.y += 250
+        }
+        }
 
+        let rawFilename = "/Users/abhishek/WeCycleApp/WeCycle/google-services.json"
+        let cStringFile = strdup(rawFilename)
+        let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
+
+        let databaseManagerObject = UnsafeMutableRawPointer(mutating: initializeDataManager(firebaseObject))
+
+        let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject, databaseManagerObject))
+ 
+        //delegate.account = UnsafeMutableRawPointer(mutating: initializeAccount(databaseManagerObject))
+        let account = UnsafeMutableRawPointer(mutating: initializeAccount(databaseManagerObject))
+
+        signInUser(authenticationObject, account, strdup(username), strdup(password))
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            if(checkAccount(account)) {
+                
+                self.delegate.account = account
+                self.performSegue(withIdentifier: "signInSegue", sender: self)
+                
+            } else {
+                print("Account not valid")
+            }
+            
+        }
+
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -283,31 +296,34 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let username = emailText.text
         let password = passwordText.text
 
-//
-//        let rawFilename = "/Users/abhishek/WeCycleApp/WeCycle/google-services.json"
-//        let cStringFile = strdup(rawFilename)
-//        let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
-//
-//        let databaseManagerObject = UnsafeMutableRawPointer(mutating: initializeDataManager(firebaseObject))
-//
-//        let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject, databaseManagerObject))
-//
-//        let account = UnsafeMutableRawPointer(mutating: initializeAccount(databaseManagerObject))
-//
-//        createAndRegisterAccount(authenticationObject, account, strdup(username), strdup(password))
+        let rawFilename = "/Users/abhishek/WeCycleApp/WeCycle/google-services.json"
+        let cStringFile = strdup(rawFilename)
+        let firebaseObject = UnsafeMutableRawPointer(mutating: initializeFirebase(cStringFile))
+        let databaseManagerObject = UnsafeMutableRawPointer(mutating: initializeDataManager(firebaseObject))
+        let authenticationObject = UnsafeMutableRawPointer(mutating: initializeAuthentication(firebaseObject, databaseManagerObject))
+        let account = UnsafeMutableRawPointer(mutating: initializeAccount(databaseManagerObject))
+
+        createAndRegisterAccount(authenticationObject, account, strdup(username), strdup(password))
         
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//            if(checkAccount(account)) {
-//                self.performSegue(withIdentifier: "signInSegue", sender: self)
-//            } else {
-//                print("Account not valid")
-//            }
-//
-//        }
-        performSegue(withIdentifier: "signInSegue", sender: self)
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
+            if(checkAccount(account)) {
+                
+                self.delegate.account = account
+                updateRank_override(self.delegate.account, "Novice")
+            
+                UIView.animate(withDuration: 0.5) {
+                    
+                    self.signUpPop.center = self.center!
+                    
+                }
+            
+            } else {
+                print("Account not valid")
+            }
         
+        }
         
-    }
+     }
     
     @IBAction func newAccount(_ sender: Any) {
         
@@ -327,9 +343,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.signInReal.alpha = 0
             self.signInUserbutton.center.x -= 400
             self.signInUserbutton.alpha = 1
+            
+
         
         }
-        
         haveButton.isEnabled = true
         dontHaveButton.isEnabled = false
         
@@ -361,4 +378,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    @IBAction func displayClick(_ sender: Any) {
+        
+        if(displayName.text != "") {
+            
+            updateDisplayName(delegate.account, displayName.text)
+            self.performSegue(withIdentifier: "signInSegue", sender: self)
+            
+        } else {
+            print("empty")
+        }
+        
+    }
 }

@@ -17,8 +17,10 @@ class LeftScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet var topRect: UIImageView!
     @IBOutlet var profileHolder: UIView!
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var coins: UILabel!
+    @IBOutlet weak var coinText: UILabel!
     @IBOutlet weak var xpLabel: UILabel!
+    let delegate = UIApplication.shared.delegate as! AppDelegate
+    @IBOutlet var display: UILabel!
     
     var profileCenter: CGFloat = 0
     var friendsCenter: CGFloat = 0
@@ -30,6 +32,8 @@ class LeftScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         profileCenter = profileHolder.center.y
         friendsCenter = containerView.center.y
         topRectCenter = topRect.center.y
+
+        
         
     }
     
@@ -41,17 +45,18 @@ class LeftScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         profileHolder.center.y = profileCenter - CGFloat(500 * abs((num / 375)))
         containerView.center.y = friendsCenter + CGFloat(500 * abs((num / 375)))
         topRect.center.y = topRectCenter - CGFloat(75 * abs((num / 375)))
-        let delegate = UIApplication.shared.delegate as! AppDelegate
-        coins.text = String(delegate.coins)
-        coins.textAlignment = .right
-        xpLabel.text = String(delegate.xp) + " XP"
+        coinText.text = String(coins(delegate.account))
+        xpLabel.text = String(experience(delegate.account)) + " XP"
+        let rankString: UnsafePointer<Int8> = rank(delegate.account)
+        rankText.text = String(cString: rankString)
+        let displayString: UnsafePointer<Int8> = displayName(delegate.account)
+        display.text = String(cString: displayString)
+
     }
     
     override var prefersStatusBarHidden: Bool {
         return true
     }
-    
-    // MARK: UITableView stuffs
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

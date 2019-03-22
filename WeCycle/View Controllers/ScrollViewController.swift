@@ -13,20 +13,17 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
     @IBOutlet var cameraButton: UIButton!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var shutter: UIImageView!
+    @IBOutlet var greyCircle: UIImageView!
     
     var middle: CameraViewController!
     var left: LeftScreenViewController!
     var right: RightScreenViewController!
+    let delegate = UIApplication.shared.delegate as! AppDelegate
     var centerShutter: CGFloat = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        let x: UnsafePointer<Int8> = rank(account)
-//        quoteText.text = String(cString: x)
-        
-//        print(account.getEmail())
-        
+    
         scrollView.delegate = self
         centerShutter = shutter.center.y
 
@@ -55,7 +52,7 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
         
         self.scrollView.contentSize = CGSize(width: (self.view.frame.width) * 3 , height: (self.view.frame.height))
         scrollView.contentOffset.x = view.frame.width
-        
+    
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -65,13 +62,16 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
         right.swipeReaction(num: Double(scrollView.contentOffset.x))
         
         self.shutter.transform = CGAffineTransform(scaleX: 1 - (0.3) * (abs((375 - scrollView.contentOffset.x) / 375)), y: 1 - (0.3) * (abs((375 - scrollView.contentOffset.x) / 375)))
-        
+        self.greyCircle.transform = CGAffineTransform(scaleX: 1 - (0.3) * (abs((375 - scrollView.contentOffset.x) / 375)), y: 1 - (0.3) * (abs((375 - scrollView.contentOffset.x) / 375)))
         self.shutter.center.y = centerShutter + 30 * (abs((375 - scrollView.contentOffset.x) / 375))
+        self.greyCircle.center.y = centerShutter + 30 * (abs((375 - scrollView.contentOffset.x) / 375))
+       
+        self.shutter.alpha = 1 - (abs((375 - scrollView.contentOffset.x) / 375))
         
         if(scrollView.contentOffset.x == 375) {
             
             self.cameraButton.center.y += 200
-            
+    
         } else {
             
             self.cameraButton.center = self.shutter.center
@@ -90,7 +90,8 @@ class ScrollViewController: UIViewController, UIViewControllerTransitioningDeleg
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+
     }
     
 }

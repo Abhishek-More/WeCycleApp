@@ -6,6 +6,7 @@
 #include <firebase/storage/metadata.h>
 #include "FirebaseManager.h"
 #include "StorageListener.h"
+#include "Account.h"
 
 //TODO: ADD AUTHENTICATION TO FIREBASE
 
@@ -18,7 +19,8 @@ private:
 public:
 	StorageManager(FirebaseManager *fbManager);
 	~StorageManager();
-	const char *uploadImageRetreiveLink(std::string filepath);
+	void uploadImageRetreiveLink(std::string filepath, bool *result);
+	void downloadImageLink(std::string imageRef, std::string *result);
 
 
 };

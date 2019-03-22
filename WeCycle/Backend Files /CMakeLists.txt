@@ -11,7 +11,8 @@ include_directories(${PROJECT_SOURCE_DIR}/WeCycle ${PROJECT_SOURCE_DIR}/firebase
 # Add source to this project's executable.
 add_executable (WeCycle "WeCycle.cpp" "WeCycle.h" "Account.cpp" "Account.h" "DataManager.cpp" "DataManager.h" "PushableObject.cpp" 
 				"PushableObject.h" "FirebaseManager.h" "FirebaseManager.cpp" "StorageManager.h" "StorageManager.cpp" "StorageListener.h" 
-				"StorageListener.cpp" "Authentication.cpp" "Authentication.h" "Crypto.h" "Crypto.cpp"
+				"StorageListener.cpp" "Authentication.cpp" "Authentication.h" "Crypto.h" "Crypto.cpp" "PlayerAchievements.h" "PlayerAchievements.cpp"
+				"AccountValueListener.h" "AccountValueListener.cpp"
 				"c-headers-wrappers/DataManagerWrapper.hpp"
 				"c-headers-wrappers/DataManagerWrapper.cpp" 
 				"c-headers-wrappers/AccountWrapper.hpp"
@@ -23,7 +24,9 @@ add_executable (WeCycle "WeCycle.cpp" "WeCycle.h" "Account.cpp" "Account.h" "Dat
 				"c-headers-wrappers/StorageManagerWrapper.hpp" 
 				"c-headers-wrappers/StorageManagerWrapper.cpp"
 				"c-headers-wrappers/AuthenticationWrapper.hpp"
-				"c-headers-wrappers/AuthenticationWrapper.cpp")
+				"c-headers-wrappers/AuthenticationWrapper.cpp"
+				"c-headers-wrappers/PlayerAchievementsWrapper.hpp"
+				"c-headers-wrappers/PlayerAchievementsWrapper.cpp")
 
 
 target_link_libraries(WeCycle ${CMAKE_SOURCE_DIR}/Firebase_libs/Debug/firebase_admob.lib 
